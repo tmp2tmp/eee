@@ -40,11 +40,11 @@
 		    page.code-width={{ page.code-width }}<br>
 		    code-width class='.code-width-{{ page.code-width }}'<br>
 		    <hr>
-		    page.title = {{ page.title }}<br>
-		    site.github.repository_name = {{ site.github.repository_name }}<br>
-		    page.title | default: site.github.repository_name = {{ page.title | default: site.github.repository_name }}<br>
+		    page.title = [{{ page.title }}]<br>
+		    site.github.repository_name = [{{ site.github.repository_name }}]<br>
+		    page.title | default: site.github.repository_name = [{{ page.title | default: site.github.repository_name }}]<br>
 		    <hr>
-		    site.github.project_tagline = {{ site.github.project_tagline }}<br>
+		    site.github.project_tagline = [{{ site.github.project_tagline }}]<br>
 	      </div>
         {{ content }}
       </section>
