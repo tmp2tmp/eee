@@ -56,9 +56,12 @@
 		    <hr>
 		    {% assign samples = site.samples | where:"type", "c++" %}
 		    {% for sample in samples %}
+			<hr>
 			sample.title = [{{ sample.title }}]<br>
 			sample.type  = [{{ sample.type}}]<br>
+			<div style='border:5px solid gray'>
 			[{{ sample.content }}]
+			</div>
 		    {% endfor %}
 	      </div>
         {{ content }}
