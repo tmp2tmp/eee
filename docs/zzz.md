@@ -1,5 +1,5 @@
 ---
-title: "    "	#aaaaaa
+title: zzzz #aaaaaa
 #code-width: 1000px
 ---
 
@@ -9,7 +9,7 @@ title: "    "	#aaaaaa
 
 ---
 
-title: "     "  
+title: zzzz #aaaaa  
 code-width: 1000px
 
 ```c++
