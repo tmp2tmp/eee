@@ -55,6 +55,7 @@
 		    site.theme=[{{ site.theme }}]<br>
 		    <hr>
 		    {% assign samples = site.samples | where:"type", "c++" %}
+		    samples = [{{ samples }}]<br>
 		    {% for sample in samples %}
 			<hr>
 			sample.title = [{{ sample.title }}]<br>
