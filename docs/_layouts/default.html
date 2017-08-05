@@ -16,11 +16,11 @@
 
   </head>
 {% if page.url == "/" %}
-    {% assign class_github_url = "github_url " %}
+    {% assign class_github_url = "github_url" %}
 {% endif %}
 
 {% if page.code-width %}
-  <body class='code-width-{{ page.code-width | prepend class_github_url }}'>
+  <body class='code-width-{{ page.code-width }} {{ class_gitnug_url }}'>
 {% else %}
   <body class='{{ class_github_url }}'>
 {% endif %}
