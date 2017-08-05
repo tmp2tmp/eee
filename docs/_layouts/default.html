@@ -28,7 +28,7 @@
         <header class="inner">
           <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
 
-	  <div> {{ site.title | default: site.github.repository_name }} </div> 
+	  <div class="_home_link"> {{ site.title | default: site.github.repository_name }} </div> 
           <h1 id="project_title">{{ page.title | default: site.github.repository_name }}</h1>
           <h2 id="project_tagline">{{ page.description | default: site.github.project_tagline }}</h2>
 
@@ -51,12 +51,13 @@
 		    site.baseurl = {{ site.baseurl }}<br>
 		    site.github.repository_url =[{{ site.github.repository_url }}]<br>
 		    site.github.url =[{{ site.github.url }}]<br>
+		    site.github.name =[{{ site.github.name }}]<br>
+		    site.github.repository_name = [{{ site.github.repository_name }}]<br>
 		    <hr>
 		    page.code-width={{ page.code-width }}<br>
-		    code-width class='.code-width-{{ page.code-width }}'<br>
+		    code-width class='.code-width-{{ page.code-width }}'   &nbsp; &nbsp;//user variable<br>
 		    <hr>
 		    page.title = [{{ page.title }}]<br>
-		    site.github.repository_name = [{{ site.github.repository_name }}]<br>
 		    page.title | default: site.github.repository_name = [{{ page.title | default: site.github.repository_name }}]<br>
 		    <hr>
 		    site.github.project_tagline = [{{ site.github.project_tagline }}]<br>
