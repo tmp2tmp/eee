@@ -1,5 +1,5 @@
 ---
-title: ///xxx.md
+title:  
 code-width: 1000px
 ---
 
@@ -7,5 +7,5 @@ code-width: 1000px
 
 ---
 ---
-title: ///xxx.md  
+title: (blank)
 code-width: 1000px
