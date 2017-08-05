@@ -3,5 +3,5 @@ theme: jekyll-theme-slate
 
 collections:
   samples
-    output: true
     title: samples___
+#    output: true
