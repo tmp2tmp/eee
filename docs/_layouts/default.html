@@ -13,7 +13,11 @@
 
   </head>
 
+{% if page.code-width %}
+  <body class='.code-width-{{ page.code-width }}'>
+{% else %}
   <body>
+{% endif %}
 
 
     <!-- HEADER -->

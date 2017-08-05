@@ -2,4 +2,10 @@
 ---
 
 @import "{{ site.theme }}";
+
+/*
 @import "my-theme";
+*/
+.highlight, .highlight * { font-family: Consolas !important}
+
+BODY.code-width-1000px PRE.highlight { width: 100px !important}
