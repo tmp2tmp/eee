@@ -53,6 +53,10 @@
 		    <hr>
 		    site.github.project_tagline = [{{ site.github.project_tagline }}]<br>
 		    site.theme=[{{ site.theme }}]<br>
+		    <hr>
+		    {% for sample in samples %}
+			sample.title = [{{ sample.title }}]<br>
+		    {% end for %}
 	      </div>
         {{ content }}
       </section>
