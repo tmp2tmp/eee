@@ -2,6 +2,6 @@ theme: jekyll-theme-slate
 #show_downloads: true
 
 collections:
-    - samples
-      output: true
-      title: samples___
+  samples
+    output: true
+    title: samples___
