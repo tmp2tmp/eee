@@ -47,8 +47,8 @@
 <!--debug
 -->
 	      <div style='border:5px solid darkblue'>
-		    site.url = {{ site.url }}<br>
-		    site.url-pretty = {{ site.url-pretty }}</a> 
+		    site.url = [{{ site.url }}]<br>
+		    site.url-pretty = [{{ site.url-pretty }}]</a> <br>
 		    site.baseurl = {{ site.baseurl }}<br>
 		    '/aaa' | prepend: site.baseurl = [{{ '/aaa' | prepend: site.baseurl }}]<br>
 		    <hr>
@@ -57,15 +57,26 @@
 		    site.github.repository_name = [{{ site.github.repository_name }}]<br>
 		    <hr>
 		    site.time = {{ site.time }}<br>
+		    site.time | date: '%Y' = [{{ site.time | date: '%Y' }}]<br>
+		    <hr>
+		    site.github.project_tagline = [{{ site.github.project_tagline }}]<br>
+		    site.theme=[{{ site.theme }}]<br>
+		    <hr>
 		    <hr>
 		    page.code-width={{ page.code-width }}<br>
 		    code-width class='.code-width-{{ page.code-width }}'   &nbsp; &nbsp;//user variable<br>
 		    <hr>
 		    page.title = [{{ page.title }}]<br>
 		    page.title | default: site.github.repository_name = [{{ page.title | default: site.github.repository_name }}]<br>
+		    page.url = [{{ page.url }}]<br>
+		    page.date = [{{ page.date }}]<br>
+		    page.id = [{{ page.id }}]<br>
 		    <hr>
-		    site.github.project_tagline = [{{ site.github.project_tagline }}]<br>
-		    site.theme=[{{ site.theme }}]<br>
+		    page.categories = [{{ page.categories }}]<br>
+		    page.tags = [{{ page.tags }}]<br>
+		    page.path = [{{ page.path }}]<br>
+		    page.next = [{{ page.next }}]<br>
+		    page.previous = [{{ page.previous }}]<br>
 	      </div>
         {{ content }}
       </section>
