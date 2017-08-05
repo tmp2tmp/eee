@@ -54,8 +54,10 @@
 		    site.github.project_tagline = [{{ site.github.project_tagline }}]<br>
 		    site.theme=[{{ site.theme }}]<br>
 		    <hr>
+		    {% assign samples = site.samples | where:"type", "c++" %}
 		    {% for sample in samples %}
-			sample.title<br>
+			sample.title = [{{ sample.title }}]<br>
+			sample.type  = [{{ sample.type}}]<br>
 		    {% end for %}
 	      </div>
         {{ content }}

@@ -1,5 +1,6 @@
 ---
-title: fffffff.cc
+title: fff.cc
+type: c++
 ---
 
 #include <iostream>
