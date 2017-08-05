@@ -56,10 +56,13 @@
 		    <hr>
 		    {% assign samples = site.samples | where:"type", "c++" %}
 		    samples = [{{ samples }}]<br>
+		    samples.title = [{{ samples.title }}]<br>
+		    samples.output = [{{ samples.output}}]<br>
 		    {% for sample in samples %}
 			<hr>
 			sample.title = [{{ sample.title }}]<br>
 			sample.type  = [{{ sample.type}}]<br>
+			sample.uuu   = [{{ sample.uuu}}]<br>
 			<div class="language-c++ highlighter-rouge" style='border:5px solid gray'>
 			    <pre class="highlight">{{ sample.content }}</pre>
 			</div>
