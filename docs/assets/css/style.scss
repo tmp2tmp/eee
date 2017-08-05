@@ -2,13 +2,14 @@
 ---
 
 @import "{{ site.theme }}";
-
 /*
 @import "my-theme";
-*/
-.highlight, .highlight * { font-family: Consolas !important}
-
-/*
 BODY.code-width-1000px PRE.highlight { width: 1000px !important}
 BODY.code-width-148ex  PRE.highlight { width: 148ex !important}
 */
+
+.highlight, .highlight * { font-family: Consolas !important}
+#forkme_banner {display: none}
+header{padding-top:0; padding-bottom:0}
+#project_tagline{display:none}
+
