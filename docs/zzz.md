@@ -1,6 +1,6 @@
 ---
 title: zzzz #aaaaaa
-#code-width: 1000px
+code-width: 1000px
 ---
 
 # zzzzzzzzzzzzzzzzzzzzzzzzzzzz
