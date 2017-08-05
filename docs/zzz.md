@@ -1,6 +1,5 @@
 ---
 title: zzzz #aaaaaa
-code-width: 1000px
 ---
 
 # zzzzzzzzzzzzzzzzzzzzzzzzzzzz
@@ -10,7 +9,6 @@ code-width: 1000px
 ---
 
 title: zzzz #aaaaa  
-code-width: 1000px
 
 ```c++
 #include <iostream> //required
