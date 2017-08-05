@@ -1,5 +1,6 @@
 ---
-
+title: " "
+code-width: 1000px
 ---
 
 # zzzzzzzzzzzzzzzzzzzzzzzzzzzz
@@ -7,6 +8,9 @@
 ---
 
 ---
+
+title: " "
+code-width: 1000px
 
 ```c++
 #include <iostream>

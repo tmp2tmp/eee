@@ -1,5 +1,5 @@
 ---
-title:  
+title: " "
 code-width: 1000px
 ---
 
@@ -7,5 +7,5 @@ code-width: 1000px
 
 ---
 ---
-title: (blank)
+title: " "
 code-width: 1000px
