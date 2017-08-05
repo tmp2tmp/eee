@@ -1,5 +1,4 @@
 ---
-title: ggg.cc
 type: c++
 ---
 
