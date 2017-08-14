@@ -1,5 +1,5 @@
 ---
-code-width: 115ex
+code-width: 114ex
 ---
 
 # xxx.md------
@@ -20,7 +20,7 @@ struct C {
 	C(const char *c) : name(c) {}
 };
 
-using varg = vane::varg<int ,C, string, vector<int>>;
+using varg = vane::varg <int ,C, string, vector<int>>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
