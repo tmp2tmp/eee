@@ -7,7 +7,7 @@ code-width: 146ex
 
 ---
 ---
-'''c++
+```c++
 #include "__tmp.h"
 #include "../varg-0.h"
 #undef	____
@@ -77,4 +77,4 @@ s=ssssss; c=ccccc; i=1234; v=|0|11|22|33|999| ----from print_Vs()
 */
 
 
-'''
+```
