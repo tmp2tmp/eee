@@ -8,11 +8,6 @@ code-width: 146ex
 ---
 ---
 ```c++
-#include "__tmp.h"
-#include "../varg-0.h"
-#undef	____
-//////////////////////////////////////////////////////////////////////
-//vg-make_shared.cc
 #include "vane.h"   //required
 #include <stdio.h>
 #include <string>
