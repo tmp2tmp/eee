@@ -1,6 +1,5 @@
 ---
-title: ""
-code-width: 146ex
+code-width: 100ex
 ---
 
 # xxx.md------
