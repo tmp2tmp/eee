@@ -1,5 +1,5 @@
 ---
-code-width: 124ex
+code-width: 122ex
 ---
 
 # xxx.md------
