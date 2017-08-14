@@ -49,12 +49,12 @@ catch( std::exception &x ) { printf("\nexception: %s\n", x.what()); }
 
 int main()
 {
-    std::unique_ptr <varg::of<int>> ip
-            = vane::make_unique <int, varg>(1234);
+    std::unique_ptr <varg::of<int>> 
+         ip = vane::make_unique <int, varg>(1234);
     auto cp = vane::make_unique <C, varg>("ccccc");
 
-    std::shared_ptr <varg::of<string>> sp
-            = vane::make_shared <string, varg>("ssssss");
+    std::shared_ptr <varg::of<string>>
+         sp = vane::make_shared <string, varg>("ssssss");
     auto vp = vane::make_shared <vector<int>, varg>(0,11,22,33);
 
     vp->push_back(999);
