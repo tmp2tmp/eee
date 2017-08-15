@@ -28,11 +28,7 @@ struct Fx
 {
     using type = void (int&, varg*, varg*);
 
-//  using domains = tuple< tuple<A,B>, tuple<X,Y> >;
-    using domains = tuple<
-                        tuple<A,B>, //for A&&
-                        tuple<X,Y>  //for O&&
-                    >;
+    using domains = tuple< tuple<A,B>, tuple<X,Y> >;
 
 //specialized functions:
     void operator()(int &i, A *a, Y *x) { printf("%3d| %c %c --> fAY\n", i++, a->n, x->n); }
