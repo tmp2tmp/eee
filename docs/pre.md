@@ -1,6 +1,8 @@
 ---
 code-width: 111ex
 ---
+# runtime errors
+
 sample code
 ```c++
 #include "vane.h"   //required
