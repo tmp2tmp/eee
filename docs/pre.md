@@ -62,12 +62,12 @@ int main()
                      fx( i, &a, &y);
     i=20;   call(&mfunc, i, &b, &x);
                      fx( i, &b, &x);
-    i=100;  call(&mfunc, i, &b, &y);    //runtime error: function not found or ambiguous call
-                //   fx( i, &b, &y);    //compile error: call is ambiguous
-    i=200;  call(&mfunc, i, &a, &x);    //runtime error: function not found or ambiguous call
-                //   fx( i, &a, &x);    //compile error: no matching call
-    i=300;  call(&mfunc, i, &a, &o);    //runtime error: argument type out of domain
-                //   fx( i, &a, &o);    //compile error: no matching call
+    i=100;  call(&mfunc, i, &b, &y);  //runtime error: function not found or ambiguous call
+                //   fx( i, &b, &y);  //compile error: call is ambiguous
+    i=200;  call(&mfunc, i, &a, &x);  //runtime error: function not found or ambiguous call
+                //   fx( i, &a, &x);  //compile error: no matching call
+    i=300;  call(&mfunc, i, &a, &o);  //runtime error: argument type out of domain
+                //   fx( i, &a, &o);  //compile error: no matching call
 }
 
 /* output **********************************************************************
@@ -80,14 +80,5 @@ real args    actually called
 200| exception : multi-function error: function not found or ambiguous call
 300| exception : multi-function error: argument type out of domain
 */
-#if 0
-real args    actually called
- 10| a y --> fAY
- 11| a y --> fAY
- 20| b x --> fBX
- 21| b x --> fBX
-100| exception : multi-function error: function not found or ambiguous call
-200| exception : multi-function error: function not found or ambiguous call
-300| exception : multi-function error: argument type out of domain
-#endif
+
 ```
