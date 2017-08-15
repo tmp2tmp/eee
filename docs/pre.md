@@ -19,7 +19,7 @@ struct X : O    { X(char c='x') : O(c) {}   };
 struct Y : X    { Y(char c='y') : X(c) {}   };
 
 
-using varg = vane::varg<A,B,O,X,Y>;
+using varg = vane::varg <A,B,O,X,Y>;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -80,4 +80,14 @@ real args    actually called
 200| exception : multi-function error: function not found or ambiguous call
 300| exception : multi-function error: argument type out of domain
 */
+#if 0
+real args    actually called
+ 10| a y --> fAY
+ 11| a y --> fAY
+ 20| b x --> fBX
+ 21| b x --> fBX
+100| exception : multi-function error: function not found or ambiguous call
+200| exception : multi-function error: function not found or ambiguous call
+300| exception : multi-function error: argument type out of domain
+#endif
 ```
