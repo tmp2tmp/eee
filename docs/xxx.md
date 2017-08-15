@@ -1,5 +1,5 @@
 ---
-code-width: 140ex
+code-width: 108ex
 ---
 
 # xxx.md------
@@ -7,6 +7,7 @@ code-width: 140ex
 ---
 ---
 ```c++
+//vg-make_shared.cc
 #include "vane.h"   //required
 #include <stdio.h>
 #include <string>
@@ -17,15 +18,15 @@ using std::tuple;
 
 
 struct C {
-    const char *name;
     C(const char *c) : name(c) {}
+    const char *name;
 };
 
-using varg = vane::varg <int ,C, string, vector<int>>;
+using varg = vane::varg <int, C, string, vector<int>>;
 
 
-void print_fixed_typed  (string &s, vector<int> &v, C &c, int &i);
-void print_varged       (varg &s, varg &v, varg &c, varg &i);
+void print_fixed_typed (string &s, vector<int> &v, C &c, int &i);
+void print_varged      (varg &s, varg &v, varg &c, varg &i);
 
 //demonstrates std::make_shared'ed varg types
 int main()
@@ -35,17 +36,17 @@ int main()
     auto cp = vane::make_unique <C, varg>("ccccc");  //<--> std::make_unique <C>("ccccc")
 
     std::shared_ptr <varg::of<string>>
-         sp = vane::make_shared <string, varg>("ssssss");         //<--> std::make_shared <string>("ssssss");   
-    auto vp = vane::make_shared <vector<int>, varg>(0,11,22,33);  //<--> std::make_shared <vector<int>>(0,11,22,33);
+         sp = vane::make_shared <string, varg>("ssssss");
+    auto vp = vane::make_shared <vector<int>, varg>(0,11,22,33);
 
 
-    //the same as ordinary shared pointers:
+    //as shared pointers:
     vp->push_back(999);
 
     printf("\ns=%s; c=%s; i=%d; v=|%d|...", sp->c_str(), cp->name, (int&)*ip, (*vp)[0] );
     print_fixed_typed (*sp, *vp, *cp, *ip);
 
-    //and also as varg pinters:
+    //as varg pointers:
     print_varged      (*sp, *vp, *cp, *ip);
 }
 
@@ -57,8 +58,7 @@ void print_fixed_typed(string &s, vector<int> &v, C &c, int &i) {
     for(int x: v) printf("%d|", x);
 }
 
-
-void print_varged(varg &s, varg &v, varg &c, varg &i)
+void print_varged(varg &s, varg &v, varg &c, varg &i)  //just an argument-varg'ed printer only for demonstration
 try {
     struct Fx {
         using type = void (varg*, varg*, varg *, varg*);
@@ -68,7 +68,6 @@ try {
             print_fixed_typed(*s, *v, *c, *i);
             printf(" ----from print_varged()");
         }
-        //.... .... .... ....
     };
 
     vane::multi_func<Fx>()(&s, &v, &c, &i);
@@ -80,5 +79,4 @@ s=ssssss; c=ccccc; i=1234; v=|0|...
 s=ssssss; c=ccccc; i=1234; v=|0|11|22|33|999|
 s=ssssss; c=ccccc; i=1234; v=|0|11|22|33|999| ----from print_varged()
 */
-
 ```
