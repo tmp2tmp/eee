@@ -1,5 +1,5 @@
 ---
-code-width: 105ex
+code-width: 114ex
 ---
 ```c++
 #include "vane.h"   //required
