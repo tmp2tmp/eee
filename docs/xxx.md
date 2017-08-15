@@ -7,6 +7,11 @@ code-width: 106ex
 ---
 ---
 ```c++
+#include "__tmp.h"
+#include "../varg-0.h"
+#undef  ____
+//////////////////////////////////////////////////////////////////////
+//vg-make_shared.cc
 #include "vane.h"   //required
 #include <stdio.h>
 #include <string>
@@ -24,31 +29,35 @@ struct C {
 using varg = vane::varg <int ,C, string, vector<int>>;
 
 
-void print_fixed  (string &s, vector<int> &v, C &c, int &i);
-void print_varged (varg &s, varg &v, varg &c, varg &i);
+void print_fixed_typed  (string &s, vector<int> &v, C &c, int &i);
+void print_varged       (varg &s, varg &v, varg &c, varg &i);
 
+//demonstrates std::make_shared'ed varg types
 int main()
 {
     std::unique_ptr <varg::of<int>>
-         ip = vane::make_unique <int, varg>(1234);
-    auto cp = vane::make_unique <C, varg>("ccccc");
+         ip = vane::make_unique <int, varg>(1234);   //<--> std::make_unique <int>(1234)
+    auto cp = vane::make_unique <C, varg>("ccccc");  //<--> std::make_unique <C>("ccccc")
 
     std::shared_ptr <varg::of<string>>
-         sp = vane::make_shared <string, varg>("ssssss");
-    auto vp = vane::make_shared <vector<int>, varg>(0,11,22,33);
+         sp = vane::make_shared <string, varg>("ssssss");         //<--> std::make_shared <string>("ssssss");   
+    auto vp = vane::make_shared <vector<int>, varg>(0,11,22,33);  //<--> std::make_shared <vector<int>>(0,11,22,33);
 
+
+    //the same as ordinary shared pointers:
     vp->push_back(999);
 
     printf("\ns=%s; c=%s; i=%d; v=|%d|...", sp->c_str(), cp->name, (int&)*ip, (*vp)[0] );
+    print_fixed_typed (*sp, *vp, *cp, *ip);
 
-    print_fixed (*sp, *vp, *cp, *ip);
-    print_varged(*sp, *vp, *cp, *ip);
+    //and also as varg pinters:
+    print_varged      (*sp, *vp, *cp, *ip);
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void print_fixed(string &s, vector<int> &v, C &c, int &i) {
+void print_fixed_typed(string &s, vector<int> &v, C &c, int &i) {
     printf("\ns=%s; c=%s; i=%d; v=|", s.data(), c.name, i);
     for(int x: v) printf("%d|", x);
 }
@@ -61,9 +70,10 @@ try {
         using domains = tuple <tuple<string>, tuple<vector<int>>, tuple<C>, tuple<int>>;
 
         void operator()(string *s, vector<int> *v, C *c, int *i) {
-            print_fixed(*s, *v, *c, *i);
+            print_fixed_typed(*s, *v, *c, *i);
             printf(" ----from print_varged()");
         }
+        //.... .... .... ....
     };
 
     vane::multi_func<Fx>()(&s, &v, &c, &i);
@@ -75,4 +85,5 @@ s=ssssss; c=ccccc; i=1234; v=|0|...
 s=ssssss; c=ccccc; i=1234; v=|0|11|22|33|999|
 s=ssssss; c=ccccc; i=1234; v=|0|11|22|33|999| ----from print_varged()
 */
+
 ```
