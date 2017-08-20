@@ -1,5 +1,5 @@
 ---
-code-width: 97ex
+code-width: 98ex
 ---
 ```c++
 //vt-vargs.cc
