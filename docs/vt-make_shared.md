@@ -12,8 +12,8 @@ using vane::_virtual;   //for _virtual<Shape>
 
 
 struct Shape {
-                virtual ~Shape() {} //polymorphic base is required
-                const char *name;
+    virtual ~Shape() {}  //polymorphic base is required
+    const char *name;
                            Shape    (const char *c) : name(c)  {} };
 struct Rectangle : Shape { Rectangle(const char *c) : Shape(c) {} };
 struct Ellipse   : Shape { Ellipse  (const char *c) : Shape(c) {} };
@@ -24,14 +24,14 @@ void print_virtualed (_virtual<Shape>&, _virtual<Shape>*);
 
 int main()
 {
-    //make_shared
+    //make_shared equiv.'s
     auto shared_Rp =  std::make_shared <_virtual<Shape>::of<Rectangle>>("shard_R");
     auto shared_Ep = vane::make_shared <Ellipse, _virtual<Shape>>      ("shared_E");
 
     printf("\n%s; %s", shared_Rp->name, shared_Ep->name);
     print_virtualed (*shared_Rp, &*shared_Ep);
 
-____//make_unique
+____//make_unique equiv.'s
     auto unique_Rp =  std::make_unique <_virtual<Shape>::of<Rectangle>>("unique_R");
     auto unique_Pp = vane::make_unique <Polygon, _virtual<Shape>>      ("unique_P");
 
