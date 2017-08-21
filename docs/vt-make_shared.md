@@ -58,9 +58,9 @@ catch( std::exception &x ) { printf("\nexception: %s\n", x.what()); }
 
 /* output **********************************************************************
 shard_R; shared_E
-shard_R, shared_E   @fxRE
+shard_R, shared_E	@fxRE
 -----------------------------------------
 unique_R; unique_P
-unique_R, unique_P  @fxRP
+unique_R, unique_P	@fxRP
 */
 ```
