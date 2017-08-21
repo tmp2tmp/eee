@@ -2,7 +2,7 @@
 code-width: 118ex
 ---
 
-.........
+# make_shared _virtual
 
 ```c++
 #include "vane.h"   //required
