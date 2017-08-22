@@ -35,7 +35,7 @@ struct Fx
     using type  = void (const char*, Speak*, What&);
                      // polymorphic (Speak*, What&) are the virtual parameters
 
-    //argument type selectors:  eventually confines the specialzed function set
+    //argument type selectors:  eventually confines the specialized function set
     using domains = std::tuple<
         std::tuple<Speak, Hello, Open>,   //types for Speak*: must be one of them or their subclasses
         std::tuple<What,  World, Sesame>  //for What&
