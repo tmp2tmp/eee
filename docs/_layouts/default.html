@@ -55,6 +55,11 @@
 <!--debug
 -->
 	      <div style='border:5px solid darkblue'>
+		  	{% assign author_name = "dave" %}
+		  	{% assign author = site.data.people[author_name] %}
+		  	site.data.people[author_name] = {{ site.data.people[author_name]  }}<br>
+			{{ author }}
+			<hr>
 		    site.url = [{{ site.url }}]<br>
 		    site.url-pretty = [{{ site.url-pretty }}]</a> <br>
 		    site.baseurl = {{ site.baseurl }}<br>
