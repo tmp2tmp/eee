@@ -21,6 +21,7 @@ HEADER{padding-top:1ex!important; padding-bottom:0!important}
 #header_wrap .inner {padding-top: 0 !important}
 
 
+#forkme_banner {background-color: gray; padding-top:6px; padding-bottom:6px}
 /*
 #forkme_banner {display: none}
 
@@ -59,13 +60,14 @@ footer p {text-align: center}
 /*----------------------------------------------------------------------*/
 /*specifics-------------------------------------------------------------*/
 /*BODY.page_url_root -----------------------------------------------------------*/
-#forkme_banner {background-color: gray; padding-top:6px; padding-bottom:6px}
+BODY.page_url_root, BODY.page_url_root #main_content_wrap {background:white}
 body:not(.page_url_root) { background: #f2f2f2}
 BODY.page_url_root #header_wrap {background-color: #f2f2f2 !important}
 BODY.page_url_root #header_wrap .inner :not(#forkme_banner) {display:none}
 BODY.page_url_root #main_content_wrap {border-top:0 !important}
-BODY.page_url_root #main_content h1:first-of-type {font-size:6em; text-align:center}
-body.page_url_root #abstract, body.page_url_root #abstract + p { text-align:center}
 
-BODY.page_url_root, BODY.page_url_root #main_content_wrap {background:white}
+/*BODY.page_url_root: title stuff -----------------------------------------------------------*/
+BODY.page_url_root #main_content h1:first-of-type {font-size:6em; text-align:center}
+BODY.page_url_root #main_content h1:first-of-type + *{text-align:center}
+body.page_url_root #abstract, body.page_url_root #abstract + p { text-align:center}
 
