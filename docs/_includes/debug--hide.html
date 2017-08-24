@@ -1,4 +1,6 @@
 {% if page.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx %}
+		<script src={{ "/js/default.js" | prepend: site.baseurl }}></script>
+
 	<a id="home_link" href="{{ site.github.url }}"> {{ site.title | default: site.github.repository_name }} </a> 
 	{% if page.code-width %}
 		<style>BODY.code-width-{{ page.code-width }} PRE.highlight { width: {{ page.code-width }} !important}</style>
