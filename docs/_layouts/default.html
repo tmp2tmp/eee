@@ -47,6 +47,7 @@
       </section>
     </div>
 
+{% if page.url == "/" %}
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
@@ -59,6 +60,7 @@
 	    </p>
       </footer>
     </div>
+{% endif %}
 
     {% if site.google_analytics %}
       <script type="text/javascript">
