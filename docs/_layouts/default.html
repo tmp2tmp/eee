@@ -14,7 +14,7 @@
 <!--
     <style>BODY.code-width-{{ page.code-width }} PRE.highlight { width: {{ page.code-width }} !important}</style>
 -->
-    <style>BODY.code-width-{{ page.code-width }} PRE.highlight { width: {{ site.data.params[page.url] }} !important}</style>
+    <style>BODY.code-width-{{ page.code-width }} PRE.highlight { width: {{ site.data.params[page.url].code-width }} !important}</style>
 {% endif %}
 
   </head>
@@ -60,7 +60,7 @@
 	      <div style='border:5px solid darkblue'>
 			page.url = {{ page.url }}<br>
 			site.data.params[page.url] = {{ site.data.params[page.url] }}<br>
-			site.data.params[page.url] | default: "aaa" = {{ site.data.params[page.url] | default: "aaa" }}<br>
+			site.data.params[page.url].code-width | default: "aaa" = {{ site.data.params[page.url] | default: "aaa" }}<br>
 			<hr>
 		  	{% assign author_name = "dave" %}
 		  	{% assign author = site.data.people[author_name] %}
