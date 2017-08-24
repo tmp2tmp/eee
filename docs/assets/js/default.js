@@ -1,4 +1,3 @@
-alert('assets - default.js')
 function searchUp(el, predicate) {
 	while( el && ! predicate(el) ) {
 		el=el.parentElement;
