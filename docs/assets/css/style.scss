@@ -20,7 +20,7 @@ HEADER{padding-top:1ex!important; padding-bottom:0!important}
 #home_link {color: #90c0d0; font-family:Trebuchet MS; font-weight:bold; float:left; margin-left: 1em}
 BODY.github_url #home_link {visibility:hidden !important}
 
-a:hover, a:focus { font-weight: initial }
-footer a {text-decoration: initial }
+a:hover, a:focus { font-weight: inherit }
+footer a {text-decoration: inherit }
 
 
