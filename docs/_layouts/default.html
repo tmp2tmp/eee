@@ -15,7 +15,11 @@
 {% endif %}
 
   </head>
+{% if page.url == "/" %}
+  <body class=''>
+{% else %}
   <body>
+{% endif %}
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
