@@ -25,6 +25,7 @@ HEADER{padding-top:1ex!important; padding-bottom:0!important}
 BODY.site_root #header_wrap {background-color: #f2f2f2 !important}
 BODY.site_root #header_wrap .inner :not(#forkme_banner) {display:none}
 BODY.site_root #main_content_wrap {border-top:0 !important}
+BODY.site_root #main_content h1:first-of-type {font-size:6em}
 
 /*
 #forkme_banner {display: none}
