@@ -43,10 +43,14 @@ footer p {text-align: center}
 
 /*--------------------------------------------------------------------*/
 /*folding*/
+/*cursor*/
+.highlight * { cursor: default}
+.highlight.collapse * { cursor: pointer }
+
 .--highlight {box-sizing: border-box}
 .--highlight.collapse { padding: 0px; height: 2em ! important; overflow: hidden; border: 10px solid gray; width: 530px ! important; }
 .highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border: 10px solid gray; width: 530px ! important; }
-.highlight.collapse:hover {font-weight: bold}
+.--highlight.collapse:hover {font-weight: bold}
 
 .highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.25s; }
 /*
@@ -56,8 +60,5 @@ footer p {text-align: center}
 .--highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s; }
 .--highlight { cursor: pointer; overflow-y:hidden; transition: height,0.06s; }
 */
-/*cursor*/
-.highlight * { cursor: default}
-.highlight.collapse * { cursor: pointer }
 </style>
 
