@@ -11,7 +11,10 @@
 
     <title> {{ page.title | default: site.github.repository_name }} </title>
 {% if page.code-width %}
+<!--
     <style>BODY.code-width-{{ page.code-width }} PRE.highlight { width: {{ page.code-width }} !important}</style>
+-->
+    <style>BODY.code-width-{{ page.code-width }} PRE.highlight { width: {{ site.data.params[page.url] }} !important}</style>
 {% endif %}
 
   </head>
@@ -55,6 +58,10 @@
 <!--debug
 -->
 	      <div style='border:5px solid darkblue'>
+			page.url = {{ page.url }}<br>
+			site.data.params[page.url] = {{ site.data.params[page.url] }}<br>
+			site.data.params[page.url] | default: "aaa" = {{ site.data.params[page.url] | default: "aaa" }}<br>
+			<hr>
 		  	{% assign author_name = "dave" %}
 		  	{% assign author = site.data.people[author_name] %}
 		  	site.data.people[author_name] = {{ site.data.people[author_name]  }}<br>
@@ -70,6 +77,7 @@
 		  	site.data.code-widths["/hello_world-poly.html"] = {{ site.data.code-widths["/hello_world-poly.html"] }}<br>
 		  	site.data.code-widths[page.url] = {{ site.data.code-widths[page.url] }}<br>
 
+			<hr>
 			<hr>
 		    site.url = [{{ site.url }}]<br>
 		    site.url-pretty = [{{ site.url-pretty }}]</a> <br>
