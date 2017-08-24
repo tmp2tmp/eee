@@ -1,8 +1,3 @@
----
-code-width: 122ex
----
-
-
 # hello_world  (polymorphism-based)
 
 ```c++

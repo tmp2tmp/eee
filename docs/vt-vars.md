@@ -1,6 +1,5 @@
----
-code-width: 98ex
----
+# vt-vars.cc
+
 ```c++
 //vt-vargs.cc
 #include "vane.h"   //required

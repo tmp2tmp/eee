@@ -1,6 +1,5 @@
 ---
 title: hello world #zzzzz
-code-width: 146ex
 ---
 
 # zzzzzzzzzzzzzzzzzzzzzzzzzzzz
