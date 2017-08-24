@@ -68,6 +68,11 @@
 <!--debug
 -->
 	      <div style='border:5px solid darkblue'>
+{% if 1 %}
+			11111111111111111111111111111111
+{% else %}
+			else of 111111111111111111111111
+{% endif %}
 			page.url = {{ page.url }}<br>
 			site.data.params[page.url] = {{ site.data.params[page.url] }}<br>
 			site.data.params[page.url].code-width | default: "aaa" = {{ site.data.params[page.url] | default: "aaa" }}<br>
