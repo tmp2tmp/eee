@@ -69,9 +69,24 @@
 -->
 	      <div style='border:5px solid darkblue'>
 {% if 1 %}
-			11111111111111111111111111111111
+			11111111111111111111111111111111<br>
 {% else %}
-			else of 111111111111111111111111
+			else of 111111111111111111111111<br>
+{% endif %}
+{% if 0 %}
+			0000000000000000000000000000000000<br>
+{% else %}
+			else of 00000000000000000000000000<br>
+{% endif %}
+{% if true %}
+			true--------------------<br>
+{% else %}
+			else of true---------------<br>
+{% endif %}
+{% if false %}
+			false--------------------<br>
+{% else %}
+			else of false ---------------<br>
 {% endif %}
 			page.url = {{ page.url }}<br>
 			site.data.params[page.url] = {{ site.data.params[page.url] }}<br>
