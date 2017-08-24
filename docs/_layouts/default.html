@@ -12,7 +12,10 @@
     <title> {{ page.title | default: site.github.repository_name }} </title>
 
 {% if page.url != "/" %}
-	<script src={{ "/js/default.js" | prepend: site.baseurl }}></script>
+	{%if false %}
+		<script src={{ "/js/default.js" | prepend: site.baseurl }}></script>
+	{% endif %}
+	{% javascript default %}
 {% endif %}
 {% if site.data.params[page.url].code-width %}
     <style>PRE.highlight { width: {{ site.data.params[page.url].code-width }} !important}</style>
@@ -44,7 +47,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-{% if true %}
+{% if false %}
 		{% include debug.html %}
 {% endif %}
         {{ content }}
