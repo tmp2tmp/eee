@@ -60,5 +60,4 @@ footer p {text-align: center}
 .--highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s; }
 .--highlight { cursor: pointer; overflow-y:hidden; transition: height,0.06s; }
 */
-</style>
 
