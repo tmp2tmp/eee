@@ -68,6 +68,6 @@ BODY.page_url_root #main_content_wrap {border-top:0 !important}
 
 /*BODY.page_url_root: title stuff -----------------------------------------------------------*/
 BODY.page_url_root #main_content h1:first-of-type {font-size:6em; text-align:center}
-BODY.page_url_root #main_content h1:first-of-type + *{text-align:center}
+BODY.page_url_root #main_content h1:first-of-type + *{text-align:center; font-size:1.24em; margin:auto}
 body.page_url_root #abstract, body.page_url_root #abstract + p { text-align:center}
 
