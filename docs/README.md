@@ -1,6 +1,6 @@
 # Vee
 
-#### --  An Open multi-method library for C++14 -- +including some meta-programming facilities
+#### ---  An Open multi-method library for C++14 --- +including some meta-programming facilities
 
 
 ### including some meta-programming facilities
