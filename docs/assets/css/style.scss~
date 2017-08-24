@@ -17,6 +17,7 @@ HEADER{padding-top:1ex!important; padding-bottom:0!important}
 #project_title a { color: #f2f2f2 !important}
 #project_title a:hover { color: white !important}
 
+#main_content_wrap {border: 0 !important; padding-bottom:2em}
 
 /*BODY.site_root -----------------------------------------------------------*/
 #forkme_banner {background-color: gray}
