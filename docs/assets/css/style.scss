@@ -21,7 +21,7 @@ HEADER{padding-top:1ex!important; padding-bottom:0!important}
 #header_wrap .inner {padding-top: 0 !important}
 
 /*BODY.site_root -----------------------------------------------------------*/
-#forkme_banner {background-color: gray}
+#forkme_banner {background-color: gray; padding-top:6px; padding-bottom:6px}
 BODY.site_root #header_wrap {background-color: #f2f2f2 !important}
 BODY.site_root #header_wrap .inner :not(#forkme_banner) {display:none}
 BODY.site_root #main_content_wrap {border-top:0 !important}
