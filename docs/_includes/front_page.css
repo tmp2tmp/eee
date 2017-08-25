@@ -10,7 +10,7 @@ BODY, BODY #main_content_wrap {background:white}
 }
 
 hr{border: 1px inset}
-#abstract, #abstract + p { text-align:center}
+#--abstract, #--abstract + p { text-align:center}
 #abstract {margin-bottom:0}
 #vee-is {margin-bottom:0}
 #vee-implements {margin-bottom:0}
