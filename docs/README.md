@@ -1,8 +1,5 @@
 # Vee
 
-
-
-
 **---  An open multi-method library for C++14 ---  
      + including some meta-programming facilities**  
 &nbsp;  
@@ -29,6 +26,8 @@ Vane also includes meta-programming facilities that make meta-programming much e
 
 ****
 
+### Introduction
+&nbsp;  
 ### Features
 
 111111111111111111111111111111
