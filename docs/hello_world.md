@@ -73,6 +73,8 @@ virtual_func --> Hello
 virtual_func --> World 
 */
 ```
+&nbsp;  
+&nbsp;  
 
 - by wrapper class \_virtual&lt;&gt;
 
