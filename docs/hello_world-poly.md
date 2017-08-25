@@ -1,9 +1,14 @@
 # hello_world  (polymorphism-based)
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 ```c++
 //file: hello_world-poly.cc
 #include "vane.h"   //required
 #include <stdio.h>
+using std::tuple;
+
 
 
 /* inheritance hierachy:
@@ -29,11 +34,12 @@ struct Fx
     //declare the type signature of the multi-function
     using type  = void (const char*, Speak*, What&);
                      // polymorphic (Speak*, What&) are the virtual parameters
+                     //    *,&,&& are supported;   also return type is supported
 
     //argument type selectors:  eventually confines the specialized function set
-    using domains = std::tuple<
-        std::tuple<Speak, Hello, Open>,   //types for Speak*: must be one of them or their subclasses
-        std::tuple<What,  World, Sesame>  //for What&
+    using domains = tuple<
+        tuple <Speak, Hello, Open>,   //types for Speak*: must be one of them or their subclasses
+        tuple <What,  World, Sesame>  //for What&
         >;
 
 //specify argument-specialized functions:
@@ -45,8 +51,7 @@ struct Fx
 
 ////////////////////////////////////////////////////////////////////////////////
 template<typename Func>
-void call_baseTyped(Func *func, const char *p, Speak *s, What &w)
-{
+void test_call_baseTyped(Func *func, const char *p, Speak *s, What &w) {
     (*func) (p, s, w);
 }
 
@@ -54,7 +59,7 @@ int main() try
 {
     vane::multi_func <Fx>   multi_func;
     vane::virtual_func <void (const char*, Speak*, What&)>
-         *virtual_func = &multi_func;   //a multi_func is a virtual_func
+         *virtual_func = &multi_func;
 
     Fx  func;  //ordinary function object
 
@@ -64,10 +69,10 @@ int main() try
     Open   open;
     Sesame sesame;
 
-    call_baseTyped (       &func,         "func", &hello, world);
-    call_baseTyped (       &func,         "func", &open,  sesame);
-    call_baseTyped ( &multi_func,   "multi_func", &hello, world);
-    call_baseTyped (virtual_func, "virtual_func", &open,  sesame);
+    test_call_baseTyped (      &func,         "func",  &hello, world);
+    test_call_baseTyped (      &func,         "func",  &open,  sesame);
+    test_call_baseTyped ( &multi_func,   "multi_func", &hello, world);
+    test_call_baseTyped (virtual_func, "virtual_func", &open,  sesame);
 }
 catch(const std::exception &e) {
     fprintf(stderr,"\n\nexception : %s", e.what());
