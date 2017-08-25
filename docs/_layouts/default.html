@@ -17,10 +17,13 @@
 {% if site.data.params[page.url].code-width %}
     <style>PRE.highlight { width: {{ site.data.params[page.url].code-width }} !important}</style>
 {% endif %}
+{% if page.url == "/" %}
+    <style> {% include front_page.css %} </style>
+{% else %}
 
   </head>
 {% if page.url == "/" %}
-  <body class='page_url_root'>
+  <body class='front_page'>
 {% else %}
   <body>
 {% endif %}

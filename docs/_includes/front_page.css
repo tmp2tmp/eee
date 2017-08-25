@@ -1,0 +1,17 @@
+BODY, BODY #main_content_wrap {background:white}
+#header_wrap {background-color: #f2f2f2 !important}
+#header_wrap .inner :not(#forkme_banner) {display:none}
+#main_content_wrap {border-top:0 !important}
+
+/*title stuff -----------------------------------------------------------*/
+#main_content h1:first-of-type {font-size:6em; text-align:center}
+#main_content h1:first-of-type + *{text-align:center; 
+	font-size:1.2em; margin:auto; line-height:1.3em;
+	letter-spacing: -1px;
+}
+
+hr{border-width: 1px inset}
+#abstract, #abstract + p { text-align:center}
+#vee-is + p {margin-left:3ex; margin-top:0}
+
+

@@ -59,19 +59,24 @@ footer p {text-align: center}
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
 /*specifics-------------------------------------------------------------*/
-/*BODY.page_url_root -----------------------------------------------------------*/
-BODY.page_url_root, BODY.page_url_root #main_content_wrap {background:white}
-body:not(.page_url_root) { background: #f2f2f2}
-BODY.page_url_root #header_wrap {background-color: #f2f2f2 !important}
-BODY.page_url_root #header_wrap .inner :not(#forkme_banner) {display:none}
-BODY.page_url_root #main_content_wrap {border-top:0 !important}
-
-/*BODY.page_url_root: title stuff -----------------------------------------------------------*/
-BODY.page_url_root #main_content h1:first-of-type {font-size:6em; text-align:center}
-BODY.page_url_root #main_content h1:first-of-type + *{text-align:center; 
+/*BODY.front_page -----------------------------------------------------------*/
+/*
+BODY.front_page, BODY.front_page #main_content_wrap {background:white}
+body:not(.front_page) { background: #f2f2f2}
+BODY.front_page #header_wrap {background-color: #f2f2f2 !important}
+BODY.front_page #header_wrap .inner :not(#forkme_banner) {display:none}
+BODY.front_page #main_content_wrap {border-top:0 !important}
+*/
+/*BODY.front_page: title stuff -----------------------------------------------------------*/
+/*
+BODY.front_page #main_content h1:first-of-type {font-size:6em; text-align:center}
+BODY.front_page #main_content h1:first-of-type + *{text-align:center; 
 	font-size:1.2em; margin:auto; line-height:1.3em;
 	letter-spacing: -1px;
 }
-body.page_url_root #abstract, body.page_url_root #abstract + p { text-align:center}
 
 hr{border-width: 1px inset}
+body.front_page #abstract, body.front_page #abstract + p { text-align:center}
+#vee-is + p {margin-left:3ex; margin-top:0}
+*/
+
