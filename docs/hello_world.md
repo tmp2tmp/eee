@@ -10,7 +10,6 @@
 //file: hello_world-unary-poly.cc
 #include "vane.h"   //required
 #include <stdio.h>
-using std::tuple;
-	
+
 ................
 ```
