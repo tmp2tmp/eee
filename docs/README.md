@@ -17,7 +17,7 @@ dynamically dispatching mutiple arguments of
 - wrapper classes of arbitrary (including non-polymorphic or primitive) types  
   //The 3rd way is not exactly of open multi-methods.  
 
-None of them requires the existing class code to be modified.
+None of them requires the existing class code to be modified.  
 Vane also includes meta-programming facilities that make meta-programming much easier.
 &nbsp;  
 &nbsp;  
