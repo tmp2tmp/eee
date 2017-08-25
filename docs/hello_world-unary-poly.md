@@ -51,8 +51,8 @@ int main() try
     Hello  hello; 
     World  world;
 
-    call_test_baseTyped (      &func,          "func", hello);
-    call_test_baseTyped (      &func,          "func", world);
+    call_test_baseTyped (       &func,         "func", hello);
+    call_test_baseTyped (       &func,         "func", world);
     call_test_baseTyped ( &multi_func,   "multi_func", hello);
     call_test_baseTyped ( &multi_func,   "multi_func", world);
     call_test_baseTyped (virtual_func, "virtual_func", hello);
