@@ -1,6 +1,6 @@
 # hello world sggggggggggggg
 
-- multi-func by polymorphic args
+
 ```c++
 //file: hello_world-unary-poly.cc
 #include "vane.h"   //required
