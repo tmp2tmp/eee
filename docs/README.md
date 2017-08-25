@@ -8,7 +8,8 @@
 &nbsp;  
 &nbsp;  
 &nbsp;  
-### Vee implements
+### Abstract
+Vee implements
 open multi-methods in three ways  
 dynamically dispatching mutiple arguments of  
 - intact ordinal polymorphic classes
