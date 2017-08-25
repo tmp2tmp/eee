@@ -72,6 +72,8 @@ virtual_func --> Hello
 virtual_func --> World 
 */
 ```
+&nbsp;  
+&nbsp;  
 
 - multi-function by wrapper class \_virtual<>
 ```c++
