@@ -29,11 +29,4 @@ struct Fx
     using domains = tuple<
         tuple <Base, Hello, World> //types for Hello& must be one of them or their subclasses
         >;
-
-//specify argument-specialized functions:
-    void operator()(const char *p, Base* ) { printf("%12s --> Base??\n", p);  } //f0
-    void operator()(const char *p, Hello*) { printf("%12s --> Hello \n", p);  } //f0
-    void operator()(const char *p, World*) { printf("%12s --> World \n", p);  } //f1
-};
-
 ```
