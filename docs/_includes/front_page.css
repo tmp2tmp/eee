@@ -20,5 +20,5 @@ hr{border: 1px inset}
 #vee-implements+*, #vee-implements+*+*, #vee-implements+*+*+*, #vee-implements+*+*+*+*
 	{margin-top:0;margin-bottom:0}
 
-#main_content > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {margin-left: 3ex}
+#main_content > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(hr) {margin-left: 3ex}
 
