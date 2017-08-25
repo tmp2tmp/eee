@@ -36,44 +36,4 @@ struct Fx
     void operator()(const char *p, World*) { printf("%12s --> World \n", p);  } //f1
 };
 
-
-////////////////////////////////////////////////////////////////////////////////
-template<typename Func>
-void call_test_baseTyped(Func *func, const char *p, _virtual<Base> *b) {
-    (*func) (p, b);
-}
-
-void call_test_baseTyped(Fx *func, const char *p, Base *b) {
-    (*func) (p, b);
-}
-
-int main() try 
-{
-    vane::multi_func <Fx>   multi_func;
-    vane::virtual_func <void (const char*, _virtual<Base>*)>
-         *virtual_func = &multi_func;
-
-    Fx  func;  //ordinary function object
-
-
-    _virtual<Base>::of<Hello>  hello; 
-    _virtual<Base>::of<World>  world;
-
-    call_test_baseTyped (       &func,         "func", &hello);
-    call_test_baseTyped (       &func,         "func", &world);
-    call_test_baseTyped ( &multi_func,   "multi_func", &hello);
-    call_test_baseTyped ( &multi_func,   "multi_func", &world);
-    call_test_baseTyped (virtual_func, "virtual_func", &hello);
-    call_test_baseTyped (virtual_func, "virtual_func", &world);
-}
-catch(const std::exception &e) { fprintf(stderr,"\n\nexception : %s", e.what()); }
-
-/* output **********************************************************************
-        func --> Base??
-        func --> Base??
-  multi_func --> Hello 
-  multi_func --> World 
-virtual_func --> Hello 
-virtual_func --> World 
-*/
 ```
