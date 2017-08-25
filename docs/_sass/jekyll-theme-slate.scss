@@ -478,8 +478,11 @@ Small Device Styles
 
 }
 
-
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*syntax highlight*/
 .highlight, .highlight * { font-family: Consolas !important}
+
+
 HEADER{padding-top:1ex!important; padding-bottom:0!important}
 #project_tagline{display:none}
 
@@ -504,7 +507,7 @@ a:hover, a:focus { font-weight: inherit }
 footer a {text-decoration: inherit }
 footer p {text-align: center}
 
-
+body { background: #f2f2f2}
 
 /*--------------------------------------------------------------------*/
 /*folding*/
