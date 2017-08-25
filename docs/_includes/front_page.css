@@ -9,7 +9,7 @@ BODY, BODY #main_content_wrap {background:white}
 	letter-spacing: -1px;
 }
 
-hr{border: 1px inset}
+hr{border: 1px inset #373737}
 #--abstract, #--abstract + p { text-align:center}
 
 /*
