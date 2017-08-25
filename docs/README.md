@@ -11,7 +11,7 @@
 ### Abstract
 Vane implements open multi-methods in three ways  
 dynamically dispatching mutiple arguments of
-- intact ordinal polymorphic classes
+- intact ordinary polymorphic classes
 - wrapper classes of polymorphic classes that have the same base
 - wrapper classes of arbitrary (including non-polymorphic or primitive) types  
 
