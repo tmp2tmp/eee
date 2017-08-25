@@ -5,7 +5,7 @@
 &nbsp;  
 &nbsp;  
 &nbsp;  
-### Abstract
+#### Abstract
 Vane implements open multi-methods in three ways  
 dynamically dispatching mutiple arguments of
 - intact ordinary polymorphic classes
@@ -26,9 +26,9 @@ Vane also includes meta-programming facilities that make meta-programming much e
 
 ****
 
-### Introduction
+#### Introduction
 &nbsp;  
-### Features
+#### Features
 
 111111111111111111111111111111
 
@@ -40,6 +40,6 @@ Vane also includes meta-programming facilities that make meta-programming much e
 [xxx](xxx.md)  
 [pre](pre.md)  
 
-### [Resources & Referrences](resources.md)
+#### [Resources & Referrences](resources.md)
 
 
