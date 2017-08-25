@@ -557,3 +557,5 @@ body.front_page #abstract, body.front_page #abstract + p { text-align:center}
 */
 
 
+body:not(.font_page) main_content > h1:first-of-type { margin-bottom: 2em }
+
