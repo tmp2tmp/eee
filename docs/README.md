@@ -21,7 +21,7 @@ None of them requires the existing class code to be modified.
 Vane is easy to use, requires no chaotic boilerplate devices to be put on the classes.  
 vane::multi\_func itself is polymorphic  
 ; you can change the whole behavior of a 'mult\_func' at runtime  
-by replacing it with another instance of a different multi\_func class  
+by simply replacing it with another instance of a different multi\_func class  
 just as you can do with ordinary polymorphic classes.  
 Vane also includes meta-programming facilities that make meta-programming much easier.
 &nbsp;  
