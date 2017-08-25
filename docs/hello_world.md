@@ -14,6 +14,4 @@ using std::tuple;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi-function
-struct Fx
 ```
