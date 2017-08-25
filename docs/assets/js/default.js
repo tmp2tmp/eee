@@ -19,9 +19,18 @@ window.onclick=function(ev) {
 		}
 	}
 }
-
-window.onload=function(ev) {
+/*
+window.__onload=function(ev) {
 	Array.forEach(document.getElementsByClassName('highlight'),x=>{
+		console.log( x.style.height,  getComputedStyle(x).height);
+		x.style.height = getComputedStyle(x).height;
+		x.classList.add('collapse');
+	});
+}
+*/
+window.onload=function(ev) {
+//	Array.forEach(document.getElementsByClassName('highlight'),x=>{	//firefox
+	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), x=>{	//M$
 		console.log( x.style.height,  getComputedStyle(x).height);
 		x.style.height = getComputedStyle(x).height;
 		x.classList.add('collapse');
