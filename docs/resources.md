@@ -1,4 +1,7 @@
 # Resources & Referrences
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 - Bjarne Stroustrup; Yuriy Solodkyy; Peter Pirkelbauer (2007). [Open Multi-Methods for C++ (PDF)](http://www.stroustrup.com/multimethods.pdf).
 ACM 6th International Conference on Generative Programming and Component Engineering.  
