@@ -7,7 +7,8 @@ function searchUp(el, predicate) {
 }
 
 window.onclick=function(ev) {
-	var pre = searchUp(ev.target, el=>el.classList.contains('highlight'));
+//	var pre = searchUp(ev.target, el=>el.classList.contains('highlight'));
+	var pre = searchUp(ev.target, el=>{return el.classList.contains('highlight')});	//for IE11
 
 	console.log(pre && pre.localName);
 	if( pre ) {
