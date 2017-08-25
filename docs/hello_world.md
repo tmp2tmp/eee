@@ -11,4 +11,9 @@
 #include "vane.h"   //required
 #include <stdio.h>
 using std::tuple;
+
+
+////////////////////////////////////////////////////////////////////////////////
+//co-class that defines the traits & function set for a multi-function
+struct Fx
 ```
