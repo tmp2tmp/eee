@@ -2,8 +2,9 @@
 
 - [Multiple dispatch @wikipedia](https://en.wikipedia.org/wiki/Multiple_dispatch)  
 - [Double dispatch @wikipedia](https://www.wikiwand.com/en/Double_dispatch)  
-- [Visitor pattern @wikipedia](https://www.wikiwand.com/en/Visitor_pattern)
+- [Visitor pattern @wikipedia](https://www.wikiwand.com/en/Visitor_pattern)  
   
+
 - Bjarne Stroustrup; Yuriy Solodkyy; Peter Pirkelbauer (2007). [Open Multi-Methods for C++ (PDF)](http://www.stroustrup.com/multimethods.pdf).  
 ACM 6th International Conference on Generative Programming and Component Engineering.  
 - [yomm11 - A multi-methods library homepage](http://www.yorel.be/mm/)  
