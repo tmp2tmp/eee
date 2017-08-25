@@ -16,7 +16,7 @@ dynamically dispatching mutiple arguments of
 - wrapper classes of arbitrary (including non-polymorphic or primitive) types  
 
 //The 3rd way is not exactly of open multi-methods but of 'multi-functions'  
-, so being named 'multi\_func'.  
+, so being named 'vane::multi\_func'.  
 None of them requires the existing class code to be modified.  
 Vane is easy to use, requires no chaotic boiler plating devices.  
 vane::multi\_func is implemented as a class and itself is polymorphic  
