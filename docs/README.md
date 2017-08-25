@@ -3,7 +3,7 @@
 
 
 
-**---  An Open multi-method library for C++14 ---  
+**---  An open multi-method library for C++14 ---  
      + including some meta-programming facilities**  
 &nbsp;  
 &nbsp;  
@@ -15,7 +15,7 @@ dynamically dispatching mutiple arguments of
 - intact ordinal polymorphic classes
 - wrapper classes of polymorphic classes that have the same base
 - wrapper classes of arbitrary (including non-polymorphic or primitive) types  
-  //The 3rd way is not exactly of Open multi-methods; Vane implements multi-functions actually.
+  //The 3rd way is not exactly of open multi-methods; Vane implements multi-functions actually.
 
 None of them requires the existing class code to be modified.  
 Vane also includes meta-programming facilities that make meta-programming much easier.
