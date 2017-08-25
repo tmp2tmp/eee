@@ -7,5 +7,5 @@
 
 - multi-function
 ```c++
-//file: hello_world-unary-virt.cc
+
 ```
