@@ -11,22 +11,5 @@
 using std::tuple;
 using vane::_virtual;  //for _virtual <Hello>
 
-struct Base         { virtual ~Base(){} };  //required: polymorphic base
-struct Hello : Base { };
-struct World : Base { };
 
-
-////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi-function
-struct Fx
-{
-    //declares the type signature of the multi-function
-    using type = void (const char*, _virtual<Base>*);
-                     // _virtual<Base>* is the virtual parameters
-                     //    current only pointer types are supported; return type is supported
-
-    //argument type selectors:  eventually confines the specialized function set
-    using domains = tuple<
-        tuple <Base, Hello, World> //types for Hello& must be one of them or their subclasses
-        >;
 ```
