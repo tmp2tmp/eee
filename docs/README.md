@@ -18,7 +18,7 @@ dynamically dispatching mutiple arguments of
 //The 3rd way is not exactly of open multi-methods but of 'multi-functions'  
 , so being named 'vane::multi\_func'.  
 None of them requires the existing class code to be modified.  
-Vane is easy to use, requires no chaotic boiler plating devices.  
+Vane is easy to use, requires no chaotic boilerplate devices to be put on the classes.  
 vane::multi\_func itself is polymorphic  
 ; you can change the whole behavior of a 'mult\_func' at runtime  
 by replacing it with another instance of a different multi\_func class  
