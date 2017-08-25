@@ -19,7 +19,7 @@ dynamically dispatching mutiple arguments of
 , so being named 'vane::multi\_func'.  
 None of them requires the existing class code to be modified.  
 Vane is easy to use, requires no chaotic boiler plating devices.  
-vane::multi\_func is implemented as a class and itself is polymorphic  
+vane::multi\_func itself is polymorphic  
 ; you can change the whole behavior of a 'mult\_func' at runtime  
 by replacing it with another instance of a different multi\_func class  
 just as you can do with ordinary polymorphic classes.  
