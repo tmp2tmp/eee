@@ -14,9 +14,10 @@ open multi-methods in three ways
 dynamically dispatching mutiple arguments of  
 - intact ordinal polymorphic classes
 - wrapper classes of polymorphic classes that have the same base
-- wrapper classes of arbitrary (including non-polymorphic or primitive) types
-  //The 3rd way is not exactly of open multi-methods.  
-None of them requires the existing class code to be modified.
+- wrapper classes of arbitrary (including non-polymorphic or primitive) types  
+  //The 3rd way is not exactly of open multi-methods.
+
+None of them requires the existing class code to be modified.  
 Vane also includes meta-programming facilities that make meta-programming much easier.
 &nbsp;  
 &nbsp;  
