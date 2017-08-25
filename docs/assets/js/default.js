@@ -1,4 +1,3 @@
-alert('/js/default.js');
 function searchUp(el, predicate) {
 	while( el && ! predicate(el) ) {
 		el=el.parentElement;
