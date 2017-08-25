@@ -41,7 +41,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 [xxx](xxx.md)  
 [pre](pre.md)  
 
-### Resources & Referrences
+### [Resources & Referrences](resources.md)
 
 [Multiple_dispatch @wikipedia](https://en.wikipedia.org/wiki/Multiple_dispatch)  
 [yomm11 - Multi-methods library homepage](http://www.yorel.be/mm/)  
