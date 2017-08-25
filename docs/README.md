@@ -9,15 +9,20 @@
 &nbsp;  
 &nbsp;  
 ### Abstract
-Vane implements
-open multi-methods in three ways  
-dynamically dispatching mutiple arguments of  
+Vane implements open multi-methods in three ways  
+dynamically dispatching mutiple arguments of
 - intact ordinal polymorphic classes
 - wrapper classes of polymorphic classes that have the same base
 - wrapper classes of arbitrary (including non-polymorphic or primitive) types  
-  //The 3rd way is not exactly of open multi-methods; so 'multi-functions' actually.
 
+//The 3rd way is not exactly of open multi-methods but of 'multi-functions'  
+, so being named 'multi\_func'.  
 None of them requires the existing class code to be modified.  
+Vane is easy to use, requires no chaotic boiler plating devices.  
+vane::multi\_func is implemented as a class and itself is polymorphic  
+; you can change the whole behavior of a 'mult\_func' at runtime  
+by replacing it with another instance of a different multi\_func class  
+just as you can do with ordinary polymorphic classes.  
 Vane also includes meta-programming facilities that make meta-programming much easier.
 &nbsp;  
 &nbsp;  
