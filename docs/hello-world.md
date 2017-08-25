@@ -13,5 +13,8 @@ struct Hello : Base { };
 struct World : Base { };
 ;
 ;
+
+
+
 ```
 
