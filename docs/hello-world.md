@@ -1,4 +1,4 @@
-# hello world sssssssss
+# hello world sggggggggggggg
 
 - multi-func by polymorphic args
 ```c++
