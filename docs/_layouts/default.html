@@ -32,7 +32,7 @@
         <header class="inner">
           <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
 
-{% if page.url == "/" %}
+{% if page.url != "/" %}
           <h1 id="project_title"><a href="{{ site.github.url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 {% endif %}
           <h2 id="project_tagline">{{ page.description | default: site.github.project_tagline }}</h2>
