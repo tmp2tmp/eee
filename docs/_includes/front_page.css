@@ -10,8 +10,9 @@ BODY, BODY #main_content_wrap {background:white}
 	letter-spacing: -1px;
 }
 
-hr{border-width: 1px inset}
+hr{border: 1px inset}
 #abstract, #abstract + p { text-align:center}
+#vee-is {margin-bottom:0}
 #vee-is + p {margin-left:3ex; margin-top:0}
 
 
