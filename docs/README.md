@@ -7,6 +7,7 @@
      + including some meta-programming facilities**  
 &nbsp;  
 &nbsp;  
+&nbsp;  
 ### Abstract
 Vane implements open multi-methods in three ways  
 dynamically dispatching mutiple arguments of
