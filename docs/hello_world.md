@@ -3,8 +3,7 @@
 &nbsp;  
 &nbsp;
 
-- multi-function by polymorphic arguments
-- multi-function by wrapper class \_virtual<>
+- multi-function by wrapper class _virtual<>
 ```c++
 //file: hello_world-unary-virt.cc
 #include "vane.h"   //required
