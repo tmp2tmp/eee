@@ -27,6 +27,8 @@ Vane also includes meta-programming facilities that make meta-programming much e
 ****
 
 #### Introduction
+- open multi-methods
+- [hello_world](hello_world.md)
 &nbsp;  
 #### Features
 
