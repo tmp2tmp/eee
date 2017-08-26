@@ -1,12 +1,12 @@
 # Vane
 
-**---  A multiple dispatch library for C++14 ---  
+**---  A multiple-dispatch library for C++14 ---  
      + including some meta-programming facilities**  
 &nbsp;  
 &nbsp;  
 &nbsp;  
 ### Abstract
-Vane implements multiple dispatch in three ways  
+Vane implements multiple-dispatch in three ways  
 based on the runtime type of the mutiple arguments of
 - intact ordinary polymorphic classes
 - wrapper classes of polymorphic classes that have the same base
