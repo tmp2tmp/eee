@@ -43,6 +43,10 @@ Vane also includes meta-programming facilities that make meta-programming much e
 [xxx](xxx.md)  
 [pre](pre.md)  
 
-### [Resources & Referrences](resources.md)
+#### [more examples](examples.md)
+
+
+#### [Resources & Referrences](resources.md)
+
 
 
