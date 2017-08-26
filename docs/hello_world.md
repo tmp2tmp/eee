@@ -23,7 +23,7 @@ struct Fx
     //declares the type signature of the multi_func
     using type = void (const char*, Base&);
                      // polymorphic Base& is the virtual parameter
-                     //    *,&,&& are supported;   also return type is supported
+                     //    *,&,&& are supported;   also return types are supported
 
     //argument type selectors:  eventually confines the specialized function set
     using domains = tuple<
@@ -96,7 +96,7 @@ struct Fx
     //declares the type signature of the multi_func
     using type = void (const char*, _virtual<Base>*);
                      // _virtual<Base>* is the virtual parameter
-                     //    currently only pointer types are supported; return type is supported
+                     //    currently only pointer types are supported; return types are supported
 
     //argument type selectors:  eventually confines the specialized function set
     using domains = tuple<
