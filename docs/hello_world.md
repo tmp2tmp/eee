@@ -153,7 +153,7 @@ virtual_func --> World
 &nbsp;  
 
 
-- by wrapper class varne::varg&lg;&gt;
+- by wrapper class varg&lt;&gt;
 
 ```c++
 //file: hello_world-unary-varg.cc
