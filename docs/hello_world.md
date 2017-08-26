@@ -17,10 +17,10 @@ struct World : Base { };
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi-function
+//co-class that defines the traits & function set for a multi_func
 struct Fx
 {
-    //declares the type signature of the multi-function
+    //declares the type signature of the multi_func
     using type = void (const char*, Base&);
                      // polymorphic Base& is the virtual parameters
                      //    *,&,&& are supported;   also return type is supported
@@ -90,10 +90,10 @@ struct World : Base { };
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi-function
+//co-class that defines the traits & function set for a multi_func
 struct Fx
 {
-    //declares the type signature of the multi-function
+    //declares the type signature of the multi_func
     using type = void (const char*, _virtual<Base>*);
                      // _virtual<Base>* is the virtual parameters
                      //    current only pointer types are supported; return type is supported
