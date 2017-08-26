@@ -5,7 +5,7 @@
 - multi_func by just polymorphic arguments
 
 ```c++
-//file: hello_world-unary-poly.cc
+//file: hello_world-poly.cc
 #include "vane.h"   //required
 #include <stdio.h>
 using std::tuple;
@@ -78,7 +78,7 @@ virtual_func --> World
 - by wrapper class \_virtual&lt;&gt;
 
 ```c++
-//file: hello_world-unary-virt.cc
+//file: hello_world-virt.cc
 #include "vane.h"   //required
 #include <stdio.h>
 using std::tuple;
