@@ -31,9 +31,9 @@ struct Fx
         >;
 
 //specify argument-specialized functions:
-    void operator()(const char *p, Base  &) { printf("%12s --> Base??\n", p);  } //f0
-    void operator()(const char *p, Hello &) { printf("%12s --> Hello \n", p);  } //f0
-    void operator()(const char *p, World &) { printf("%12s --> World \n", p);  } //f1
+    void operator() (const char *p, Base  &) { printf("%12s --> Base??\n", p);  } //f0
+    void operator() (const char *p, Hello &) { printf("%12s --> Hello \n", p);  } //f0
+    void operator() (const char *p, World &) { printf("%12s --> World \n", p);  } //f1
 };
 
 
@@ -104,9 +104,9 @@ struct Fx
         >;
 
 //specify argument-specialized functions:
-    void operator()(const char *p, Base* ) { printf("%12s --> Base??\n", p);  } //f0
-    void operator()(const char *p, Hello*) { printf("%12s --> Hello \n", p);  } //f0
-    void operator()(const char *p, World*) { printf("%12s --> World \n", p);  } //f1
+    void operator() (const char *p, Base* ) { printf("%12s --> Base??\n", p);  } //f0
+    void operator() (const char *p, Hello*) { printf("%12s --> Hello \n", p);  } //f0
+    void operator() (const char *p, World*) { printf("%12s --> World \n", p);  } //f1
 };
 
 
