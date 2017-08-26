@@ -39,8 +39,8 @@ struct Fx
 
 ////////////////////////////////////////////////////////////////////////////////
 template<typename Func>
-void call_test_baseTyped(Func *func, const char *p, Base &h) {
-    (*func) (p, h);
+void call_test_baseTyped(Func *func, const char *p, Base &base) {
+    (*func) (p, base);
 }
 
 int main() try 
@@ -112,11 +112,11 @@ struct Fx
 
 ////////////////////////////////////////////////////////////////////////////////
 template<typename Func>
-void call_test_baseTyped(Func *func, const char *p, _virtual<Base> *b) {
-    (*func) (p, b);
+void call_test_baseTyped(Func *func, const char *p, _virtual<Base> *base) {
+    (*func) (p, base);
 }
 
-void call_test_baseTyped(Fx *func, const char *p, Base *b) {
+void call_test_baseTyped(Fx *func, const char *p, Base *base) {
     (*func) (p, b);
 }
 
