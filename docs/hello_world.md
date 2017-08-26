@@ -17,13 +17,13 @@ struct World : Base { };
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi_func
+//co-class that defines the traits & function set for the multi_func
 struct Fx
 {
     //declares the type signature of the multi_func
     using type = void (const char*, Base&);
-                     // polymorphic Base& is the virtual parameters
-                     //    *,&,&& are supported;   also return type is supported
+                     // polymorphic Base& is the virtual parameter
+                     //    *,&,&& are supported;   also return types are supported
 
     //argument type selectors:  eventually confines the specialized function set
     using domains = tuple<
@@ -32,15 +32,15 @@ struct Fx
 
 //specify argument-specialized functions:
     void operator() (const char *p, Base  &) { printf("%12s --> Base??\n", p);  } //f0
-    void operator() (const char *p, Hello &) { printf("%12s --> Hello \n", p);  } //f0
-    void operator() (const char *p, World &) { printf("%12s --> World \n", p);  } //f1
+    void operator() (const char *p, Hello &) { printf("%12s --> Hello \n", p);  } //f1
+    void operator() (const char *p, World &) { printf("%12s --> World \n", p);  } //f2
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////
 template<typename Func>
-void call_test_baseTyped(Func *func, const char *p, Base &h) {
-    (*func) (p, h);
+void call_test_baseTyped(Func *func, const char *p, Base &base) {
+    (*func) (p, base);
 }
 
 int main() try 
@@ -90,33 +90,33 @@ struct World : Base { };
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi_func
+//co-class that defines the traits & function set for the multi_func
 struct Fx
 {
     //declares the type signature of the multi_func
     using type = void (const char*, _virtual<Base>*);
-                     // _virtual<Base>* is the virtual parameters
-                     //    current only pointer types are supported; return type is supported
+                     // _virtual<Base>* is the virtual parameter
+                     //    currently only pointer types are supported; return types are supported
 
     //argument type selectors:  eventually confines the specialized function set
     using domains = tuple<
-        tuple <Base, Hello, World> //types for Hello& must be one of them or their subclasses
+        tuple <Base, Hello, World> //types for _virtual<Base>* must be one of them or their subclasses
         >;
 
 //specify argument-specialized functions:
     void operator() (const char *p, Base* ) { printf("%12s --> Base??\n", p);  } //f0
-    void operator() (const char *p, Hello*) { printf("%12s --> Hello \n", p);  } //f0
-    void operator() (const char *p, World*) { printf("%12s --> World \n", p);  } //f1
+    void operator() (const char *p, Hello*) { printf("%12s --> Hello \n", p);  } //f1
+    void operator() (const char *p, World*) { printf("%12s --> World \n", p);  } //f2
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////
 template<typename Func>
-void call_test_baseTyped(Func *func, const char *p, _virtual<Base> *b) {
-    (*func) (p, b);
+void call_test_baseTyped(Func *func, const char *p, _virtual<Base> *base) {
+    (*func) (p, base);
 }
 
-void call_test_baseTyped(Fx *func, const char *p, Base *b) {
+void call_test_baseTyped(Fx *func, const char *p, Base *base) {
     (*func) (p, b);
 }
 
