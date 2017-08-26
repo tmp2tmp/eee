@@ -165,7 +165,7 @@ using std::tuple;
 struct Hello { };
 struct World { };
 
-using varg = vane::varg <Hello, World, int, std::string>;
+using varg = vane::varg <Hello, World, int, std::string>;   //group arbitrarily
 
 ////////////////////////////////////////////////////////////////////////////////
 //co-class that defines the traits & function set for the multi_func
