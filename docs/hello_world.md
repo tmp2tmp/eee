@@ -17,7 +17,7 @@ struct World : Base { };
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi_func
+//co-class that defines the traits & function set for the multi_func
 struct Fx
 {
     //declares the type signature of the multi_func
@@ -90,7 +90,7 @@ struct World : Base { };
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for a multi_func
+//co-class that defines the traits & function set for the multi_func
 struct Fx
 {
     //declares the type signature of the multi_func
