@@ -1,20 +1,18 @@
 # Vane
 
-**---  A multi-methods library for C++14 ---  
+**---  A multi-dispatch library for C++14 ---  
      + including some meta-programming facilities**  
 &nbsp;  
 &nbsp;  
 &nbsp;  
 ### Abstract
-Vane implements multi-methods in three ways  
-dynamically dispatching mutiple arguments of
+Vane implements multi-dispatch in three ways  
+based on the runtime type of the mutiple arguments of
 - intact ordinary polymorphic classes
 - wrapper classes of polymorphic classes that have the same base
 - wrapper classes of arbitrary (including non-polymorphic or primitive) types  
 
-//The 3rd way is not exactly of multi-methods but of multi-functions  
-, so being named 'vane::multi\_func'.  
-None of them requires the existing class code to be modified.  
+None of them requires the existing class code to be modified.
 Vane is easy to use, requires no chaotic boilerplate devices to be put on the classes.  
 vane::multi\_func itself is polymorphic  
 ; &nbsp;  you can change the whole behavior of a 'multi\_func' at runtime  
@@ -27,7 +25,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 ****
 
 ### Introduction
-- multi-methods
+- multi-dispatch
 - [hello_world](hello_world.md)  &nbsp; //basic syntax
 &nbsp;  
 
