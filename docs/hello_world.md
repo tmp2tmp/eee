@@ -156,7 +156,7 @@ virtual_func --> World
 - by wrapper class varne::varg&lg;&gt;
 
 ```c++
-//file: hello_world-unary-varg.cc
+//file: hello_world-varg.cc
 #include "vane.h"   //required
 #include <stdio.h>
 using std::tuple;
