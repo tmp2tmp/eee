@@ -151,5 +151,86 @@ virtual_func --> World
 */
 ```
 
+- by wrapper class varne::varg&lg;&gt;
+
+```c++
+//file: hello_world-unary-varg.cc
+#include "vane.h"   //required
+#include <stdio.h>
+using std::tuple;
+
+
+struct Hello { };
+struct World { };
+
+using varg = vane::varg <Hello, World, int, std::string>;
+
+////////////////////////////////////////////////////////////////////////////////
+//co-class that defines the traits & function set for the multi_func
+struct Fx
+{
+    //declares the type signature of the multi_func
+    using type = void (const char*, varg*);
+                     // varg* is the virtual parameter
+                     //    currently only pointer types are supported; return types are supported
+
+    //argument type selectors:  eventually confines the specialized function set
+    using domains = tuple<
+        tuple <Hello, World, int, std::string> //types for varg* must be one of them or their subclasses
+        >;
+
+//specify argument-specialized functions:
+    void operator() (const char *p, Hello*)         { printf("%13s --> Hello \n", p);  } //f0
+    void operator() (const char *p, World*)         { printf("%13s --> World \n", p);  } //f1
+    void operator() (const char *p, int *i)         { printf("%13s --> %d\n", p, *i);  } //f2
+    void operator() (const char *p, std::string *s) { printf("%13s --> %s\n", p, s->c_str());  } //f3
+};
+
+
+////////////////////////////////////////////////////////////////////////////////
+template<typename Func>
+void call_test_uniformTyped(Func *func, const char *p, varg *varg) {
+    (*func) (p, varg);
+}
+
+int main() try 
+{
+    vane::multi_func <Fx>   multi_func;
+    vane::virtual_func <void (const char*, varg*)>
+         *virtual_func = &multi_func;
+
+    Fx  func;  //ordinary function object
+
+
+    varg::of<Hello>   hello; 
+    varg::of<World>   world;
+    varg::of<int>          number{3};
+    varg::of<std::string>  string{"ways of multi-functioning"};
+
+    call_test_uniformTyped ( &multi_func,   "multi_func", &hello);
+    call_test_uniformTyped ( &multi_func,   "multi_func", &world);
+    call_test_uniformTyped (virtual_func, "virtual_func", &hello);
+    call_test_uniformTyped (virtual_func, "virtual_func", &world);
+    call_test_uniformTyped ( &multi_func,   "multi_func", &number);
+    call_test_uniformTyped (virtual_func, "virtual_func", &string);
+
+    func("func(&hello )", &hello);        //varg<>'s of struct/class types are compatible with the existing code
+    func("func(&number)", &(int&)number); //varg<>'s of non-struct/class types are not compatible; need type-cast
+    func("func(&string)", &string);
+}
+catch(const std::exception &e) { printf("\nexception : %s", e.what()); }
+
+/* output **********************************************************************
+   multi_func --> Hello 
+   multi_func --> World 
+ virtual_func --> Hello 
+ virtual_func --> World 
+   multi_func --> 3
+ virtual_func --> ways of multi-functioning
+func(&hello ) --> Hello 
+func(&number) --> 3
+func(&string) --> ways of multi-functioning
+*/
+```
 
 
