@@ -100,7 +100,7 @@ struct Fx
 
     //argument type selectors:  eventually confines the specialized function set
     using domains = tuple<
-        tuple <Base, Hello, World> //types for Hello& must be one of them or their subclasses
+        tuple <Base, Hello, World> //types for _virtual<Base>* must be one of them or their subclasses
         >;
 
 //specify argument-specialized functions:
