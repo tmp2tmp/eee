@@ -62,7 +62,7 @@ int main() try
     call_test_baseTyped (virtual_func, "virtual_func", hello);
     call_test_baseTyped (virtual_func, "virtual_func", world);
 }
-catch(const std::exception &e) { fprintf(stderr,"\n\nexception : %s", e.what()); }
+catch(const std::exception &e) { fprintf(stderr,"\nexception : %s", e.what()); }
 
 /* output **********************************************************************
         func --> Base??
@@ -139,7 +139,7 @@ int main() try
     call_test_baseTyped (virtual_func, "virtual_func", &hello);
     call_test_baseTyped (virtual_func, "virtual_func", &world);
 }
-catch(const std::exception &e) { fprintf(stderr,"\n\nexception : %s", e.what()); }
+catch(const std::exception &e) { fprintf(stderr,"\nexception : %s", e.what()); }
 
 /* output **********************************************************************
         func --> Base??
