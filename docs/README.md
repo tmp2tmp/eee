@@ -14,7 +14,7 @@ based on the runtime type of the mutiple arguments of
 
 None of them requires the existing class code to be modified.  
 Vane is easy to use, requires no chaotic boilerplate devices to be put on the classes.  
-vane::multi\_func itself is polymorphic  
+**vane::multi\_func** itself is polymorphic  
 ; &nbsp;  you can change the whole behavior of a 'multi\_func' at runtime  
 &nbsp; &nbsp; by simply replacing it with another instance of a different multi\_func class  
 &nbsp; &nbsp; just as you can do with ordinary polymorphic class instances.  
