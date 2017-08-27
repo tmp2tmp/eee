@@ -19,7 +19,7 @@ Specifying this is through a co-class defining three parts:
 <li>defining what type each virtual artument can be of, like:   
 <pre style='margin:0;padding:0'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;
 //where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
-//      domain2....                                </code></pre>
+//      domain2....</pre>
 </li>
 <li>
 - specifing the function set as member operators of the co-class like: 
