@@ -3,6 +3,41 @@
 &nbsp;  
 &nbsp;  
 
+Given a set of functions,
+determining at runtime which one in the set to call - based on the types of the multiple arguments -
+is multiple dispatch.
+It corresponds to mapping from the possible lists of the argument types to the functions to be called.
+Each argument can be assigned the set of the possible types that it can be of.
+In Vane we call it the **type domain of the virtual argument**.
+
+Vane searches the argument type list space confined by the user-given argument type domains,
+for the possible functions in the user-given function set, and makes the mapping table at compile time.  
+Specifying this is through a co-class defining three parts:
+- declaring the type signature of the virtual function as in:  
+   ```c++
+   using type = int(char*, Base1*, Base2&, Base3&&)
+- defining what type each virtual artument can be of, like:  
+   ```c++
+   using domains = tuple< domain1, domain2, domain3 >  
+   //where domain1 = tuple<Base1,Drived1,Drived2...>  
+   //      domain2....   
+- specifing the function set as member operators of the co-class like:  
+   ```c++
+   int(char*,Base1*,Deived1*,Deive2*){...}
+Vane has three ways of multi-dispathcing according to the types of the virtual arguments.
+- multi-dispaching by polymorphic class arguments (by-poly in short)  
+  Any argument type of intact ordinary classes is OK if only it's polymorphic.  
+  slowest
+- by _virtual<>-wrapped typed arguments (by-virt)  
+  Any argument type of intact ordinary classes that is wrapped with _virtual<> is OK if only it's polymorphic.  
+  much faster than by-poly.
+- by varg<>-wrapped typed arguments (by-varg)  
+  Any arbitrary (including non-polymorphic or primitive) type of arguments is OK.  
+  fastest;  
+  slightly (about 8~15%) faster in general, or much faster when with virtual bases than by-virt  
+  But the type domains of the arguments cannot be altered/replaced.
+
+#### hello_world's
 ```c++
 //file: hello_world-poly.cc
 #include "vane.h"   //required
