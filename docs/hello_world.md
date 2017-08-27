@@ -29,6 +29,7 @@ Specifying this is through a co-class defining three parts:
 </ul>
 
 &nbsp;  
+&nbsp;  
 Vane has three ways of multi-dispathcing according to the types of the virtual arguments.
 - multi-dispaching by polymorphic class arguments (by-poly in short)  
   Any argument type of intact ordinary classes is OK if only it's polymorphic.  
@@ -41,6 +42,7 @@ Vane has three ways of multi-dispathcing according to the types of the virtual a
   fastest;  
   slightly (about 8~15%) faster in general, or much faster when with virtual bases than by-virt  
   But the type domains of the arguments cannot be altered/replaced.
+&nbsp;  
 
 #### hello_world's
 ```c++
