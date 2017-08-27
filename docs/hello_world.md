@@ -16,16 +16,16 @@ Specifying this is through a co-class defining three parts:
 </p>
 <ul>
 <li>declaring the type signature of the virtual function as in:   
-   <pre class='_code' style='margin:0;padding:0 10px'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&)</pre>
+   <pre class='_code'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&)</pre>
 </li>
 <li>defining what type each virtual artument can be of, like:   
-<pre class='_code' style='margin:0;padding:0 10px'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;
+<pre class='_code'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;
 //where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
 //      domain2....</pre>
 </li>
 <li>
 - specifing the function set as member operators of the co-class like: 
-<pre class='_code' style='margin:0;padding:0 10px'>int <strong>operator()</strong> (char*,Base1*,Deived1*,Deive2*){...} 
+<pre class='_code'>int <strong>operator()</strong> (char*,Base1*,Deived1*,Deive2*){...} 
 //and more....</pre>
 </li>
 </ul>
