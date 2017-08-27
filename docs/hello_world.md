@@ -18,12 +18,13 @@ Specifying this is through a co-class defining three parts:
    using type = int(char*, Base1*, Base2&, Base3&&)
 - defining what type each virtual artument can be of, like:  
    ```c++
-   using domains = tuple< domain1, domain2, domain3 >  
-   //where domain1 = tuple<Base1,Drived1,Drived2...>  
-   //      domain2....   
+   using domains = tuple <domain1, domain2, domain3>
+   //where domain1 = tuple<Base1,Drived1,Drived2...>
+   //      domain2....
 - specifing the function set as member operators of the co-class like:  
    ```c++
    int(char*,Base1*,Deived1*,Deive2*){...}
+   //and more....
 Vane has three ways of multi-dispathcing according to the types of the virtual arguments.
 - multi-dispaching by polymorphic class arguments (by-poly in short)  
   Any argument type of intact ordinary classes is OK if only it's polymorphic.  
