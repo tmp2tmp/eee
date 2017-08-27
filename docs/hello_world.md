@@ -208,7 +208,7 @@ using std::tuple;
 struct Hello { };
 struct World { };
 
-using varg = vane::varg <Hello, World, int, std::string>;   //group arbitrarily
+using varg = vane::varg <Hello, World, int, std::string>;  //group arbitrarily
 
 ////////////////////////////////////////////////////////////////////////////////
 //co-class that defines the traits & function set for the multi_func
@@ -225,10 +225,10 @@ struct Fx
         >;
 
 //specify argument-specialized functions:
-    void operator() (const char *p, Hello*)         { printf("%13s --> Hello \n", p);  } //f0
-    void operator() (const char *p, World*)         { printf("%13s --> World \n", p);  } //f1
-    void operator() (const char *p, int *i)         { printf("%13s --> %d\n", p, *i);  } //f2
-    void operator() (const char *p, std::string *s) { printf("%13s --> %s\n", p, s->c_str());  } //f3
+    void operator() (const char *p, Hello*)         { printf("%14s --> Hello \n", p);  } //f0
+    void operator() (const char *p, World*)         { printf("%14s --> World \n", p);  } //f1
+    void operator() (const char *p, int *i)         { printf("%14s --> %d\n", p, *i);  } //f2
+    void operator() (const char *p, std::string *s) { printf("%14s --> %s\n", p, s->c_str());  } //f3
 };
 
 
@@ -259,22 +259,22 @@ int main() try
     call_test_uniformTyped ( &multi_func,   "multi_func", &number);
     call_test_uniformTyped (virtual_func, "virtual_func", &string);
 
-    func("func(&hello )", &hello);        //varg<>'s of struct/class types are compatible with the existing code
-    func("func(&number)", &(int&)number); //varg<>'s of non-struct/class types are not compatible; need type-cast
-    func("func(&string)", &string);
+    func ("func (&hello )", &hello);        //varg<>'s of struct/class types are compatible with the existing code
+    func ("func (&number)", &(int&)number); //varg<>'s of non-struct/class types are not compatible; need type-cast
+    func ("func (&string)", &string);
 }
 catch(const std::exception &e) { printf("\nexception : %s", e.what()); }
 
 /* output **********************************************************************
-   multi_func --> Hello 
-   multi_func --> World 
- virtual_func --> Hello 
- virtual_func --> World 
-   multi_func --> 3
- virtual_func --> ways of multi-functioning
-func(&hello ) --> Hello 
-func(&number) --> 3
-func(&string) --> ways of multi-functioning
+    multi_func --> Hello 
+    multi_func --> World 
+  virtual_func --> Hello 
+  virtual_func --> World 
+    multi_func --> 3
+  virtual_func --> ways of multi-functioning
+func (&hello ) --> Hello 
+func (&number) --> 3
+func (&string) --> ways of multi-functioning
 */
 ```
 
