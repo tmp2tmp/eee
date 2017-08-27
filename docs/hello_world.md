@@ -35,6 +35,7 @@ Specifying this is through a co-class defining three parts:
 <p class='_on_ul'>
 Vane has three ways of multi-dispathcing based on the types of the virtual arguments.
 </p>
+
 - multi-dispaching by polymorphic class arguments (by-poly in short)  
   Any argument type of intact ordinary classes is OK if only it's polymorphic.  
   slowest
