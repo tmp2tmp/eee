@@ -13,16 +13,21 @@ In Vane we call it the **type domain of the virtual argument**.
 Vane searches the argument type list space confined by the user-given argument type domains,
 for the possible functions in the user-given function set, and makes the mapping table at compile time.  
 Specifying this is through a co-class defining three parts:
-- declaring the type signature of the virtual function as in:   
-   ```using type = int(char*, Base1*, Base2&, Base3&&)```
-- defining what type each virtual artument can be of, like:   
-   ```using domains = tuple <domain1, domain2, domain3>  ```   
-   ```//where domain1 = tuple<Base1,Drived1,Drived2...>  ```   
-   ```//      domain2....                                ```
-- specifing the function set as member operators of the co-class like:   
-   ```int(char*,Base1*,Deived1*,Deive2*){...}  ```  
-   ```//and more....                           ```
-
+<ul>
+<li>declaring the type signature of the virtual function as in:   
+   <code>using type = int(char*, Base1*, Base2&, Base3&&)</code>
+</li>
+<li>defining what type each virtual artument can be of, like:   
+   <div><code>using domains = tuple <domain1, domain2, domain3>     <br>
+   //where domain1 = tuple<Base1,Drived1,Drived2...>     <br>
+      //      domain2....                                </code></div>
+</li>
+<li>
+- specifing the function set as member operators of the co-class like:   <br>
+   int(char*,Base1*,Deived1*,Deive2*){...}    <br>
+   //and more....                           
+</li>
+</ul>
 Vane has three ways of multi-dispathcing according to the types of the virtual arguments.
 - multi-dispaching by polymorphic class arguments (by-poly in short)  
   Any argument type of intact ordinary classes is OK if only it's polymorphic.  
