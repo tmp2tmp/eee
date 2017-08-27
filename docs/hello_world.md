@@ -2,7 +2,7 @@
 &nbsp;  
 &nbsp;  
 &nbsp;  
-- multi_func by just polymorphic arguments
+#### multi_func by polymorphic arguments
 
 ```c++
 //file: hello_world-poly.cc
@@ -75,7 +75,7 @@ virtual_func --> World
 ```
 &nbsp;  
 
-- by wrapper class \_virtual&lt;&gt;
+#### by wrapper class \_virtual&lt;&gt;
 
 ```c++
 //file: hello_world-virt.cc
@@ -153,7 +153,7 @@ virtual_func --> World
 &nbsp;  
 
 
-- by wrapper class varg&lt;&gt;
+#### by wrapper class varg&lt;&gt;
 
 ```c++
 //file: hello_world-varg.cc
