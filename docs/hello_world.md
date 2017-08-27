@@ -16,7 +16,7 @@ Specifying this is through a co-class defining three parts:
 </p>
 <ul>
 <li>declaring the type signature of the virtual function as in:   
-   <pre class='_code'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&)</pre>
+   <pre class='_code'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&);</pre>
 </li>
 <li>defining what type each virtual artument can be of, like:   
 <pre class='_code'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;
