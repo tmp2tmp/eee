@@ -18,13 +18,13 @@ Specifying this is through a co-class defining three parts:
    <pre><code>using type = int(char*, Base1*, Base2&, Base3&&)</code></pre>
 </li>
 <li>defining what type each virtual artument can be of, like:   
-   <div><code>using domains = tuple <domain1, domain2, domain3>     <br>
-   //where domain1 = tuple<Base1,Drived1,Drived2...>     <br>
-   //      domain2....                                </code></div>
+<pre><code>using domains = tuple <domain1, domain2, domain3>
+//where domain1 = tuple<Base1,Drived1,Drived2...>
+//      domain2....                                </code></pre>
 </li>
 <li>
-- specifing the function set as member operators of the co-class like:   <br>
-<pre><code>int(char*,Base1*,Deived1*,Deive2*){...}    <br>
+- specifing the function set as member operators of the co-class like: 
+<pre><code>int(char*,Base1*,Deived1*,Deive2*){...} 
 //and more....                           </code></pre>
 </li>
 </ul>
