@@ -50,6 +50,7 @@ Vane has three ways of multi-dispathcing based on the <strong>types of the virtu
   But the established type domains of the arguments cannot be altered/replaced.
 &nbsp;  
 &nbsp;  
+&nbsp;  
 
 
 #### hello_world's
