@@ -37,11 +37,11 @@ Vane has three ways of multi-dispathcing based on the types of the virtual argum
 </p>
 
 - multi-dispaching by **polymorphic** class arguments (by-poly in short)  
-  Any argument type of intact ordinary classes is considered virtual if only it's polymorphic.  
+  Any argument type of ordinary classes is considered virtual if only it's polymorphic.  
   (to treat it as a non-virtual, wrap it with **\_static<>**)  
   slowest
 - by **\_virtual<>**-wrapped typed arguments (by-virt)  
-  Any argument type of intact ordinary classes that is wrapped with \_virtual<> is considered virtual if only it's polymorphic.  
+  Any argument type of ordinary classes that is wrapped with \_virtual<> is considered virtual if only it's polymorphic.  
   much faster than by-poly.
 - by **varg<>**-wrapped typed arguments (by-varg)  
   Any arbitrary (including non-polymorphic or primitive) type of arguments is considered virtual.  
