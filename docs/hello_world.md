@@ -51,6 +51,7 @@ Vane has three ways of multi-dispathcing based on the <strong>types of the virtu
 &nbsp;  
 &nbsp;  
 
+
 #### hello_world's
 ```c++
 //file: hello_world-poly.cc
