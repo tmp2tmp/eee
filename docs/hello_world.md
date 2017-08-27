@@ -23,8 +23,7 @@ Specifying this is through a co-class defining three parts:
 //where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
 //      domain2....</pre>
 </li>
-<li>
-- specifing the function set as member operators of the co-class like: 
+<li>specifing the function set as member operators of the co-class like: 
 <pre class='_code'>int <strong>operator()</strong> (char*,Base1*,Deived1*,Deive2*){...} 
 //and more....</pre>
 </li>
