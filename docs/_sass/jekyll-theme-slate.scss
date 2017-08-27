@@ -523,12 +523,6 @@ body { background: #f2f2f2}
 .--highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border: 10px solid gray; width: 530px ! important; }
 .--highlight.collapse:hover {font-weight: bold}
 */
-/*first line of PRE*/
-.highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border:0; width: 530px ! important; }
-/*.highlight.collapse * {color:black; font-weight:bold}*/
-.highlight.collapse code:first-line {color:black; font-weight:bold}
-.highlight:not(.collapse) code:first-line {color:black; font-weight:bold; background: #f1f1f1}
-
 .highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.25s; }
 /*
 .highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.2s; }
@@ -537,6 +531,12 @@ body { background: #f2f2f2}
 .--highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s; }
 .--highlight { cursor: pointer; overflow-y:hidden; transition: height,0.06s; }
 */
+
+/*first line of .highlight*/
+.highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border:0; width: 530px ! important; }
+/*.highlight.collapse * {color:black; font-weight:bold}*/
+.highlight.collapse code > :first-child {color:black; font-weight:bold}
+.highlight:not(.collapse) code > :first-child {background: #f1f1f1}
 
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
