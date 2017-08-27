@@ -19,7 +19,7 @@ Specifying this is through a co-class defining three parts:
    <pre class='_code'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&);</pre>
 </li>
 <li>defining what type each virtual artument can be of, like:   
-<pre class='_code'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;
+<pre class='_code'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;;
 //where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
 //      domain2....</pre>
 </li>
