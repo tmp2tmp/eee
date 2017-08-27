@@ -9,22 +9,21 @@ is multiple dispatch.
 It corresponds to mapping from the possible lists of the argument types to the functions to be called.
 Each argument can be assigned the set of the possible types that it can be of.
 In Vane we call it the **type domain of the virtual argument**.
-
 Vane searches the argument type list space confined by the user-given argument type domains,
 for the possible functions in the user-given function set, and makes the mapping table at compile time.  
 Specifying this is through a co-class defining three parts:
 <ul>
 <li>declaring the type signature of the virtual function as in:   
-   <pre style='margin:0;padding:0'>using <b>type</b> = int(char*, Base1*, Base2&, Base3&&)</pre>
+   <pre style='margin:0;padding:0'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&)</pre>
 </li>
 <li>defining what type each virtual artument can be of, like:   
-<pre style='margin:0;padding:0'><code>using <b>domains</b> = tuple &lt;domain1, domain2, domain3&gt;
+<pre style='margin:0;padding:0'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;
 //where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
 //      domain2....                                </code></pre>
 </li>
 <li>
 - specifing the function set as member operators of the co-class like: 
-<pre style='margin:0;padding:0'>int <b>operator()</b> (char*,Base1*,Deived1*,Deive2*){...} 
+<pre style='margin:0;padding:0'>int <strong>operator()</strong> (char*,Base1*,Deived1*,Deive2*){...} 
 //and more....</pre>
 </li>
 </ul>
