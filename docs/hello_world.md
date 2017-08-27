@@ -33,23 +33,25 @@ Specifying this is through a co-class defining three parts:
 
 
 <p class='_on_ul'>
-Vane has three ways of multi-dispathcing based on the types of the virtual arguments.
+Vane has three ways of multi-dispathcing based on the <strong>types of the virtual arguments</strong>.
 </p>
 
 - multi-dispaching by **polymorphic** class arguments (by-poly in short)  
-  Any argument type of intact ordinary classes is considered virtual if only it's polymorphic.  
+  Any argument type of ordinary classes is considered virtual if only it's polymorphic.  
   (to treat it as a non-virtual, wrap it with **\_static<>**)  
   slowest
 - by **\_virtual<>**-wrapped typed arguments (by-virt)  
-  Any argument type of intact ordinary classes that is wrapped with \_virtual<> is considered virtual if only it's polymorphic.  
+  Any argument type of ordinary classes that is wrapped with \_virtual<> is considered virtual if only it's polymorphic.  
   much faster than by-poly.
 - by **varg<>**-wrapped typed arguments (by-varg)  
   Any arbitrary (including non-polymorphic or primitive) type of arguments is considered virtual.  
   fastest;  
-  slightly (about 8~15%) faster in general, or much faster when with virtual bases than by-virt  
+  slightly (about 15~60%: varies according to the number of arguments) faster in general, or much faster when with virtual bases than by-virt.  
   But the established type domains of the arguments cannot be altered/replaced.
 &nbsp;  
 &nbsp;  
+&nbsp;  
+
 
 #### hello_world's
 ```c++
@@ -110,7 +112,7 @@ int main() try
     call_test_baseTyped (virtual_func, "virtual_func", hello);
     call_test_baseTyped (virtual_func, "virtual_func", world);
 }
-catch(const std::exception &e) { fprintf(stderr,"\nexception : %s", e.what()); }
+catch(const std::exception &e) { printf("\nexception : %s", e.what()); }
 
 /* output **********************************************************************
         func --> Base??
@@ -184,7 +186,7 @@ int main() try
     call_test_baseTyped (virtual_func, "virtual_func", &hello);
     call_test_baseTyped (virtual_func, "virtual_func", &world);
 }
-catch(const std::exception &e) { fprintf(stderr,"\nexception : %s", e.what()); }
+catch(const std::exception &e) { printf("\nexception : %s", e.what()); }
 
 /* output **********************************************************************
         func --> Base??
