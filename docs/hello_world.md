@@ -15,7 +15,7 @@ for the possible functions in the user-given function set, and makes the mapping
 Specifying this is through a co-class defining three parts:
 <ul>
 <li>declaring the type signature of the virtual function as in:   
-   <div><code>using type = int(char*, Base1*, Base2&, Base3&&)</code></div>
+   <pre><code>using type = int(char*, Base1*, Base2&, Base3&&)</code></pre>
 </li>
 <li>defining what type each virtual artument can be of, like:   
    <div><code>using domains = tuple <domain1, domain2, domain3>     <br>
@@ -24,10 +24,11 @@ Specifying this is through a co-class defining three parts:
 </li>
 <li>
 - specifing the function set as member operators of the co-class like:   <br>
-   int(char*,Base1*,Deived1*,Deive2*){...}    <br>
-   //and more....                           
+<pre><code>int(char*,Base1*,Deived1*,Deive2*){...}    <br>
+//and more....                           </code></pre>
 </li>
 </ul>
+
 Vane has three ways of multi-dispathcing according to the types of the virtual arguments.
 - multi-dispaching by polymorphic class arguments (by-poly in short)  
   Any argument type of intact ordinary classes is OK if only it's polymorphic.  
