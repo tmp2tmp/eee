@@ -16,7 +16,7 @@ window.onclick=function(ev) {
 			pre.classList.remove('collapse')
 		}
 		else {
-			(ev.target==pre || ev.target==pre.firstElementChild) && pre.classList.add('collapse');
+			(ev.target==pre || pre.firstElementChild && ev.target==pre.firstElementChild.firstElementChild) && pre.classList.add('collapse');
 		}
 	}
 }
