@@ -32,7 +32,9 @@ Specifying this is through a co-class defining three parts:
 &nbsp;  
 
 
+<p class='_on_ul'>
 Vane has three ways of multi-dispathcing according to the types of the virtual arguments.
+</p>
 
 
 
