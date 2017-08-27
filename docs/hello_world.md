@@ -3,7 +3,7 @@
 &nbsp;  
 &nbsp;  
 
-<p style='margin-bottom:0'>
+<p class='_on_ul'>
 Given a set of functions,
 determining at runtime which one in the set to call - based on the types of the multiple arguments -
 is multiple dispatch.
