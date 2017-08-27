@@ -2,7 +2,7 @@
 &nbsp;  
 &nbsp;  
 &nbsp;  
-##### multi_func by polymorphic arguments
+
 ```c++
 //file: hello_world-poly.cc
 #include "vane.h"   //required
@@ -72,7 +72,7 @@ virtual_func --> Hello
 virtual_func --> World 
 */
 ```
-##### by wrapper class \_virtual&lt;&gt;
+
 ```c++
 //file: hello_world-virt.cc
 #include "vane.h"   //required
@@ -146,7 +146,7 @@ virtual_func --> Hello
 virtual_func --> World 
 */
 ```
-##### by wrapper class varg&lt;&gt;
+
 ```c++
 //file: hello_world-varg.cc
 #include "vane.h"   //required
