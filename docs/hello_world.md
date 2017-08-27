@@ -176,7 +176,7 @@ int main() try
     _virtual<Base>::of<Hello>  hello; 
     _virtual<Base>::of<World>  world;
 
-    call_test_baseTyped (       &func,         "func", &hello);
+    call_test_baseTyped (       &func,         "func", &hello);   //hello is compatible
     call_test_baseTyped (       &func,         "func", &world);
     call_test_baseTyped ( &multi_func,   "multi_func", &hello);
     call_test_baseTyped ( &multi_func,   "multi_func", &world);
