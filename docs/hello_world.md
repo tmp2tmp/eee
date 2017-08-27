@@ -43,6 +43,7 @@ Vane has three ways of multi-dispathcing according to the types of the virtual a
   slightly (about 8~15%) faster in general, or much faster when with virtual bases than by-virt  
   But the type domains of the arguments cannot be altered/replaced.
 &nbsp;  
+&nbsp;  
 
 #### hello_world's
 ```c++
