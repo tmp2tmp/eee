@@ -557,4 +557,6 @@ body.front_page #abstract, body.front_page #abstract + p { text-align:center}
 
 body:not(.front_page) #main_content > h1:first-of-type { margin-bottom: 2em }
 */
+/**/
+li > pre._code {box-shadow:none; margin: 4px 10px 10px 0px; padding: 3px 10px}
 
