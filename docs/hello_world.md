@@ -46,7 +46,7 @@ Vane has three ways of multi-dispathcing based on the <strong>types of the virtu
 - by **varg<>**-wrapped typed arguments (by-varg)  
   Any arbitrary (including non-polymorphic or primitive) type of arguments is considered virtual.  
   fastest;  
-  slightly (about 15~60%: varies according to the number of arguments) faster in general, or much faster when with virtual bases than by-virt  
+  slightly (about 15~60%: varies according to the number of arguments) faster in general, or much faster when with virtual bases than by-virt.  
   But the established type domains of the arguments cannot be altered/replaced.
 &nbsp;  
 &nbsp;  
