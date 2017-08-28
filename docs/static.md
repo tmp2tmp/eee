@@ -1,4 +1,4 @@
-# \_static<>  ssssssssss
+# \_static<>
 &nbsp;  
 &nbsp;  
 &nbsp;  
@@ -12,9 +12,11 @@ only 'Base*' is considered virtual.
 &nbsp;
 
 **Consecutive \_static<>**'s can be combined into one:
+<div>
 <pre style=''>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
-<span>is equivalent to</span>
+is equivalent to
 <pre>void (<strong>_static&lt;Base&, Base*, Base2&&&gt;</strong>, Base*);</pre>
+</div>
 &nbsp;  
 
 For non-polymorphic or primitive types that are considered non-virtual, **\_static<>** has no effect.  
