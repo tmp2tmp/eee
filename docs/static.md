@@ -11,7 +11,7 @@ only 'Base*' is considered virtual.
 &nbsp;  
 &nbsp;
 
-**Consecutive \_static<>**'s can be combined into one:
+**Consecutive &nbsp; \_static<>**'s can be combined into one:
 <div>
 <pre style=''>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
 is equivalent to
