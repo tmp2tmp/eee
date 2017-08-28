@@ -8,6 +8,7 @@ To treat a polymorphic type as a non-virtual, wrap it with **```_static<>```** i
 <pre>using type = void (<strong>_static&lt;Base&&gt;</strong>, Base*);</pre>
 only the Base* is considered virtual.
 &nbsp;  
+&nbsp;
 
 Consecutive ```_static<>'s``` can be combined into one:
 <pre>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
