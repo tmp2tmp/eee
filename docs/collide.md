@@ -21,17 +21,17 @@ struct Polygon   : Shape { Polygon  (const char *c = "polygon"  ) : Shape(c) {} 
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//Fx: defines Rect set of functions
 namespace detail {
+    //co-class that defines the traits & function set for the multi_func
     struct Fx
     {
-        using type    = void (Shape*, Shape*);  //signature of the multi-function
+        using type    = void (Shape*, Shape*);   //signature of the multi_func
 
         using domains = tuple<  //function selector
                             tuple <Rectangle, Ellipse, Polygon>,
                             tuple <Rectangle, Ellipse, Polygon>
                         >;
-    //specializations
+        //specializations
         void operator() (Rectangle *p, Rectangle *q) { printf("(%-9s %9s) --> fRR\n", p->n, q->n);   }
         void operator() (Rectangle *p, Ellipse   *q) { printf("(%-9s %9s) --> fRE !!\n", p->n, q->n);}
         void operator() (Rectangle *p, Polygon   *q) { printf("(%-9s %9s) --> fRP\n", p->n, q->n);   }
@@ -89,6 +89,9 @@ ____
 */
 ```
 
+
+
+
 ```c++
 //file: collide-virt.cc
 #include "vane.h"   //required
@@ -108,17 +111,17 @@ using VShape = vane::_virtual<Shape>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//Fx: defines Rect set of functions
 namespace detail {
+    //co-class that defines the traits & function set for the multi_func
     struct Fx
     {
-        using type    = void (VShape*, VShape*);  //signature of the multi-function
+        using type    = void (VShape*, VShape*);   //signature of the multi_func
 
-        using domains = tuple <  //function selector
+        using domains = tuple<  //function selector
                             tuple <Rectangle, Ellipse, Polygon>,
                             tuple <Rectangle, Ellipse, Polygon>
                         >;
-    //specializations
+        //specializations
         void operator() (Rectangle *p, Rectangle *q) { printf("(%-9s %9s) --> fRR\n", p->n, q->n);   }
         void operator() (Rectangle *p, Ellipse   *q) { printf("(%-9s %9s) --> fRE !!\n", p->n, q->n);}
         void operator() (Rectangle *p, Polygon   *q) { printf("(%-9s %9s) --> fRP\n", p->n, q->n);   }
@@ -177,6 +180,7 @@ ____
 */
 ```
 
+
 ```c++
 //file: collide-varg.cc
 #include "vane.h"   //required
@@ -195,17 +199,17 @@ using VShape = vane::varg <Rectangle, Ellipse, Polygon>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//Fx: defines Rect set of functions
 namespace detail {
+    //co-class that defines the traits & function set for the multi_func
     struct Fx
     {
-        using type    = void (VShape*, VShape*);    //signature of the multi-function
+        using type    = void (VShape*, VShape*);   //signature of the multi_func
 
         using domains = tuple<  //function selector
                             tuple <Rectangle, Ellipse, Polygon>,
                             tuple <Rectangle, Ellipse, Polygon>
                         >;
-    //specialized functions
+        //specialized functions
         void operator() (Rectangle *p, Rectangle *q) { printf("(%-9s %9s) --> fRR\n", p->n, q->n);   }
         void operator() (Rectangle *p, Ellipse   *q) { printf("(%-9s %9s) --> fRE !!\n", p->n, q->n);}
         void operator() (Rectangle *p, Polygon   *q) { printf("(%-9s %9s) --> fRP\n", p->n, q->n);   }
