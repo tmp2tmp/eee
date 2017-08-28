@@ -10,13 +10,13 @@ only the Base* is considered virtual.
 &nbsp;  
 &nbsp;
 
-Consecutive ```_static<>'s``` can be combined into one:
+Consecutive **\_static<>**'s can be combined into one:
 <pre>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
 is equivalent to
 <pre>void (<strong>_static&lt;Base&, Base*, Base2&&&gt;</strong>, Base*);</pre>
 &nbsp;  
 
-For non-polymorphic or primitive types that are considered non-virtual, ```_static<>``` has no effect.  
+For non-polymorphic or primitive types that are considered non-virtual, **\_static<>** has no effect.  
 <code>void (<strong>_static&lt;int&gt;</strong>)</code> &nbsp; is equivalent to &nbsp; ```void (int)```   
 and also
 <pre>void (<strong>_static&lt;Base&&gt;</strong>, int, <strong>_static&lt;Base&&gt;</strong>, Base*);
