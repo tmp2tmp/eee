@@ -4,7 +4,8 @@
 &nbsp;  
 When declaring the **type signature of a virtual_func**,
 any polymorphic classe/struct type is considered virtual.
-To treat a polymorphic type as a non-virtual, wrap it with **```_static<>```** in the declaration as in:
+To treat a polymorphic type as a non-virtual,  
+wrap it with **```_static<>```** in the declaration as in:
 <pre>using type = void (<strong>_static&lt;Base&&gt;</strong>, Base*);</pre>
 only 'Base*' is considered virtual.
 &nbsp;  
