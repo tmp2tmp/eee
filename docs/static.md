@@ -20,7 +20,7 @@ is equivalent to
 &nbsp;  
 
 <div>
-For non-polymorphic or primitive types that are considered non-virtual, <strong>_static&lt;&gt;</strong> has no effect.  
+For non-polymorphic or primitive types that are considered non-virtual, <strong>_static&lt;&gt;</strong> has no effect.<br>
 <code>void (<strong>_static&lt;int&gt;</strong>)</code> &nbsp; is equivalent to &nbsp; <code>void (int)</code><br>
 and also
 <pre>void (<strong>_static&lt;Base&&gt;</strong>, int, <strong>_static&lt;Base&&&gt;</strong>, Base*);
