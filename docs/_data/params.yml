@@ -2,7 +2,8 @@
   code-width: 122ex
 /hello_world.html:
   code-width: 124ex
-  -code-width: 136ex
+/collide.html:
+  code-width: 123ex
 /vt-make_shared.html:
   code-width: 118ex
 /vt-vars.html:
