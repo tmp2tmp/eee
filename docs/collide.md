@@ -128,7 +128,7 @@ struct Rectangle : Shape { Rectangle(const char *c = "rectangle") : Shape(c) {} 
 struct Ellipse   : Shape { Ellipse  (const char *c = "ellipse"  ) : Shape(c) {} };
 struct Polygon   : Shape { Polygon  (const char *c = "polygon"  ) : Shape(c) {} };
 
-using VShape = vane::_virtual<Shape>;   //Virtual Shape
+using VShape = vane::_virtual <Shape>;   //Virtual Shape
 
 
 ////////////////////////////////////////////////////////////////////////////////
