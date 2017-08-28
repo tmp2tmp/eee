@@ -128,7 +128,7 @@ struct Rectangle : Shape { Rectangle(const char *c = "rectangle") : Shape(c) {} 
 struct Ellipse   : Shape { Ellipse  (const char *c = "ellipse"  ) : Shape(c) {} };
 struct Polygon   : Shape { Polygon  (const char *c = "polygon"  ) : Shape(c) {} };
 
-using VShape = vane::_virtual<Shape>;   //Virtual Shape
+using VShape = vane::_virtual <Shape>;   //Virtual Shape
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -166,7 +166,7 @@ catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
 
 int main()
 {
-    collide_multi_func  collide;    //multi_func object
+    collide_multi_func  collide;
 
     VShape::of<Rectangle>  r;
     VShape::of<Ellipse>    e;
@@ -273,7 +273,7 @@ catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
 
 int main()
 {
-    collide_multi_func  collide;    //multi_func object
+    collide_multi_func  collide;
 
     VShape::of<Rectangle>  r;
     VShape::of<Ellipse>    e;
