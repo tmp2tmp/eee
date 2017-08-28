@@ -72,7 +72,7 @@ ____
     struct Square : Rectangle { Square() : Rectangle("~SQUARE~") {}; };
     Square  square;
 
-    test_call_uniformTyped (&collide, &square, &e);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Elipse
 }
 
 
@@ -92,6 +92,27 @@ ____
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```c++
 //file: collide-virt.cc
 #include "vane.h"   //required
@@ -107,7 +128,7 @@ struct Rectangle : Shape { Rectangle(const char *c = "rectangle") : Shape(c) {} 
 struct Ellipse   : Shape { Ellipse  (const char *c = "ellipse"  ) : Shape(c) {} };
 struct Polygon   : Shape { Polygon  (const char *c = "polygon"  ) : Shape(c) {} };
 
-using VShape = vane::_virtual<Shape>;
+using VShape = vane::_virtual<Shape>;   //Virtual Shape
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -163,7 +184,7 @@ ____
     struct Square : Rectangle { Square() : Rectangle("~SQUARE~") {}; };
     VShape::of<Square>  square;
 
-    test_call_uniformTyped (&collide, &square, &e);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Elipse
 }
 
 
@@ -181,6 +202,25 @@ ____
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```c++
 //file: collide-varg.cc
 #include "vane.h"   //required
@@ -195,7 +235,7 @@ struct Ellipse   { const char *n = "ellipse";   };
 struct Polygon   { const char *n = "polygon";   };
 
 
-using VShape = vane::varg <Rectangle, Ellipse, Polygon>;
+using VShape = vane::varg <Rectangle, Ellipse, Polygon>;   //Virtual Shape
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -251,7 +291,7 @@ ____
     struct Square : Rectangle { Square() { n = "~SQUARE~"; } };
     VShape::of<Square>  square;
 
-    test_call_uniformTyped (&collide, &square, &e);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Elipse
 }
 
 
