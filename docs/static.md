@@ -23,7 +23,7 @@ is equivalent to
 For non-polymorphic or primitive types that are considered non-virtual, <strong>_static&lt;&gt;</strong> has no effect.  
 <code>void (<strong>_static&lt;int&gt;</strong>)</code> &nbsp; is equivalent to &nbsp; <code>void (int)</code><br>
 and also
-<pre>void (<strong>_static&lt;Base&&gt;</strong>, int, <strong>_static&lt;Base&&gt;</strong>, Base*);
+<pre>void (<strong>_static&lt;Base&&gt;</strong>, int, <strong>_static&lt;Base&&&gt;</strong>, Base*);
 <i>//is equivalent to</i>
 void (<strong>_static&lt;Base&, int, Base2&&&gt;</strong>, Base*);</pre>
 </div>
