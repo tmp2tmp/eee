@@ -1,4 +1,4 @@
-# \_static<> sssssssss
+# \_static<>
 &nbsp;  
 &nbsp;  
 &nbsp;  
