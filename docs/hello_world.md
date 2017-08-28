@@ -20,12 +20,12 @@ Specifying this is through a co-class defining three parts:
 </li>
 <li>defining what types each <b>virtual argument</b> can be of, like:   
 <pre class='_code'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;;
-//where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
-//      domain2....</pre>
+<i>//where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;</i>
+<i>//      domain2....</i></pre>
 </li>
 <li>specifing the <b>function set</b> as member operators of the co-class like: &nbsp; &nbsp; &nbsp; <i>//<b>specializations</b></i>
 <pre class='_code'>int <strong>operator()</strong> (char*,Base1*,Deived1*,Deive2*){...} 
-//and more....</pre>
+<i>//and more....</i></pre>
 </li>
 </ul>
 &nbsp;  
