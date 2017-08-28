@@ -2,8 +2,8 @@
 &nbsp;  
 &nbsp;  
 &nbsp;  
-When declaring the **type signature of a virtual_func**,
-any polymorphic classe/struct type is considered virtual.
+When declaring the **type signature of a virtual_func**, &nbsp; 
+any polymorphic classe/struct type is considered virtual. &nbsp; 
 To treat a polymorphic type as a non-virtual,  
 wrap it with **```_static<>```** in the declaration as in:
 <pre>using type = void (<strong>_static&lt;Base&&gt;</strong>, Base*);</pre>
@@ -12,8 +12,8 @@ only 'Base*' is considered virtual.
 &nbsp;
 
 **Consecutive \_static<>**'s can be combined into one:
-<pre>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
-is equivalent to
+<pre style=''>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
+<span>is equivalent to</span>
 <pre>void (<strong>_static&lt;Base&, Base*, Base2&&&gt;</strong>, Base*);</pre>
 &nbsp;  
 
