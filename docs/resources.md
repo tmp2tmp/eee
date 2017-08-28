@@ -6,9 +6,9 @@
 ACM 6th International Conference on Generative Programming and Component Engineering.  
 - [yomm11 - An open multi-methods library (boost, C++)](http://www.yorel.be/mm/)  
 &nbsp;
-- [Multiple dispatch @wikipedia](https://en.wikipedia.org/wiki/Multiple_dispatch)
-- [Double dispatch @wikipedia](https://www.wikipedia.org/en/Double_dispatch)
-- [Visitor pattern @wikipedia](https://www.wikipedia.org/en/Visitor_pattern)
+- [Multiple dispatch @wikipedia](http://en.wikipedia.org/wiki/Multiple_dispatch)
+- [Double dispatch @wikipedia](http://en.wikipedia.org/wiki/Double_dispatch)
+- [Visitor pattern @wikipedia](http://en.wikipedia.org/wiki/Visitor_pattern)
 
 
 <!--
