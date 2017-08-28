@@ -33,7 +33,7 @@ Specifying this is through a co-class defining three parts:
 
 
 <p class='_on_ul'>
-Vane has three ways of multi-dispathcing based on the <strong>types of the virtual arguments</strong>.
+   Vane has <b>three ways</b> of multi-dispathcing based on the <strong>types of the virtual arguments</strong>.
 </p>
 
 - multi-dispaching by **polymorphic** class arguments (by-poly in short)  
