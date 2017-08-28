@@ -13,9 +13,9 @@ only 'Base*' is considered virtual.
 
 **Consecutive &nbsp; \_static<>**'s can be combined into one:
 <div>
-<pre style=''>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
+<pre style=''>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base&&&gt;</strong>, Base*);</pre>
 is equivalent to
-<pre>void (<strong>_static&lt;Base&, Base*, Base2&&&gt;</strong>, Base*);</pre>
+<pre>void (<strong>_static&lt;Base&, Base*, Base&&&gt;</strong>, Base*);</pre>
 </div>
 &nbsp;  
 
@@ -25,5 +25,5 @@ For non-polymorphic or primitive types that are considered non-virtual, <strong>
 and also
 <pre>void (<strong>_static&lt;Base&&gt;</strong>, int, <strong>_static&lt;Base&&&gt;</strong>, Base*);
 <i>//is equivalent to</i>
-void (<strong>_static&lt;Base&, int, Base2&&&gt;</strong>, Base*);</pre>
+void (<strong>_static&lt;Base&, int, Base&&&gt;</strong>, Base*);</pre>
 </div>
