@@ -1,4 +1,4 @@
-# \_static<>
+# \_static<> sssssssss
 &nbsp;  
 &nbsp;  
 &nbsp;  
@@ -19,9 +19,11 @@ is equivalent to
 </div>
 &nbsp;  
 
-For non-polymorphic or primitive types that are considered non-virtual, **\_static<>** has no effect.  
+<div>
+For non-polymorphic or primitive types that are considered non-virtual, <strong>_static&lt;&gt;</strong> has no effect.  
 <code>void (<strong>_static&lt;int&gt;</strong>)</code> &nbsp; is equivalent to &nbsp; ```void (int)```   
 and also
 <pre>void (<strong>_static&lt;Base&&gt;</strong>, int, <strong>_static&lt;Base&&gt;</strong>, Base*);
 <i>//is equivalent to</i>
 void (<strong>_static&lt;Base&, int, Base2&&&gt;</strong>, Base*);</pre>
+</div>
