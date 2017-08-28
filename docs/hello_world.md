@@ -15,15 +15,15 @@ for the possible functions in the user-given function set, and makes the mapping
 Specifying this is through a co-class defining three parts:
 </p>
 <ul>
-<li>declaring the type signature of the virtual function as in:   
+<li>declaring the type signature of the <b>virtual function</b> as in:   
    <pre class='_code'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&);</pre>
 </li>
-<li>defining what types each virtual artument can be of, like:   
+<li>defining what types each <b>virtual argument</b> can be of, like:   
 <pre class='_code'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;;
 //where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
 //      domain2....</pre>
 </li>
-<li>specifing the function set as member operators of the co-class like: 
+<li>specifing the <b>function set</b> as member operators of the co-class like: <i>//<b>specialization</b></i>
 <pre class='_code'>int <strong>operator()</strong> (char*,Base1*,Deived1*,Deive2*){...} 
 //and more....</pre>
 </li>
