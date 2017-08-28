@@ -30,7 +30,7 @@ window.__onload=function(ev) {
 }
 */
 window.onload=function(ev) {
-//	Array.forEach(document.getElementsByClassName('highlight'),x=>{	//firefox
+//	Array.forEach(document.getElementsByClassName('highlight'),x=>{	//for firefox
 //	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), x=>{	//for M$ Edge
 	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){	//for M$ IE-11
 		console.log( x.style.height,  getComputedStyle(x).height);
