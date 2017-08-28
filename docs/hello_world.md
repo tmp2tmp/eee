@@ -8,24 +8,24 @@ Given a set of functions,
 determining at runtime which one in the set to call - based on the types of the multiple arguments -
 is multiple dispatch.
 It corresponds to mapping from the possible lists of the argument types to the functions to be called.
-Each argument can be assigned the set of the possible types that it can be of.
+Each argument can be assigned the set of the possible types that it can be of. &nbsp; 
 In Vane it is named as the <strong>type domain of the virtual argument</strong>.
 Vane searches the argument type list space confined by the user-given argument type domains,
 for the possible functions in the user-given function set, and makes the mapping table at compile time.<br>
 Specifying this is through a co-class defining three parts:
 </p>
 <ul>
-<li>declaring the type signature of the virtual function as in:   
+<li>declaring the type signature of the <b>virtual function</b> as in:   
    <pre class='_code'>using <strong>type</strong> = int(char*, Base1*, Base2&, Base3&&);</pre>
 </li>
-<li>defining what types each virtual artument can be of, like:   
+<li>defining what types each <b>virtual argument</b> can be of, like:   
 <pre class='_code'>using <strong>domains</strong> = tuple &lt;domain1, domain2, domain3&gt;;
-//where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;
-//      domain2....</pre>
+<i>//where domain1 = tuple &lt;Base1,Drived1,Drived2...&gt;</i>
+<i>//      domain2....</i></pre>
 </li>
-<li>specifing the function set as member operators of the co-class like: 
+<li>specifing the <b>function set</b> as member operators of the co-class like: &nbsp; &nbsp; &nbsp; <i>//<b>specializations</b></i>
 <pre class='_code'>int <strong>operator()</strong> (char*,Base1*,Deived1*,Deive2*){...} 
-//and more....</pre>
+<i>//and more....</i></pre>
 </li>
 </ul>
 &nbsp;  
@@ -33,7 +33,7 @@ Specifying this is through a co-class defining three parts:
 
 
 <p class='_on_ul'>
-Vane has three ways of multi-dispathcing based on the <strong>types of the virtual arguments</strong>.
+   Vane has <b>three ways</b> of multi-dispathcing based on the <strong>types of the virtual arguments</strong>.
 </p>
 
 - multi-dispaching by **polymorphic** class arguments (by-poly in short)  
