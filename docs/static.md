@@ -19,7 +19,7 @@ Consecutive ```_static<>'s``` can be combined into one:
 
 <pre class='_code'>void (<strong>_static&lt;Base&&gt;</strong>, <strong>_static&lt;Base*&gt;</strong>, <strong>_static&lt;Base2&&&gt;</strong>, Base*);</pre>
 is equivalent to
-<pre class=_code>void (<strong>_static&lt;Base&, Base*, Base2&&&gt;</strong>, Base*);</pre>
+<pre class='_code'>void (<strong>_static&lt;Base&, Base*, Base2&&&gt;</strong>, Base*);</pre>
 
 &nbsp;  
 &nbsp;  
