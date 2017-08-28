@@ -72,7 +72,7 @@ ____
     struct Square : Rectangle { Square() : Rectangle("~SQUARE~") {}; };
     Square  square;
 
-    test_call_uniformTyped (&collide, &square, &e);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Elipse
 }
 
 
@@ -163,7 +163,7 @@ ____
     struct Square : Rectangle { Square() : Rectangle("~SQUARE~") {}; };
     VShape::of<Square>  square;
 
-    test_call_uniformTyped (&collide, &square, &e);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Elipse
 }
 
 
@@ -251,7 +251,7 @@ ____
     struct Square : Rectangle { Square() { n = "~SQUARE~"; } };
     VShape::of<Square>  square;
 
-    test_call_uniformTyped (&collide, &square, &e);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Elipse
 }
 
 
