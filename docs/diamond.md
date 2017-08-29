@@ -3,8 +3,11 @@
 &nbsp;  
 &nbsp;
 
-
-
+Virtual and multiple inheritance are supported  
+but at the cost of ```dynamic_cast``` when multi-dispatching by-poly or by-virt.  
+Dispatching by-varg has no such disadvantage of slowdown and is much faster than the other two.
+&nbsp;  
+&nbsp;  
 
 ```c++
 //file: diamond-poly.cc
