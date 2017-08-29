@@ -85,7 +85,7 @@ int main() try
     i=40;   call_uniformed (&mfunc, i, D, &D);
                                 fx( i, D, &D);
 ____
-    struct E : B, Y { E(char c='E') : O(c) {} };   //Note: diamond   //D-{B,Y}-O
+    struct E : B, Y { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O
     E E;
 
     i=100;  call_uniformed (&mfunc, i, E, &E);
@@ -238,7 +238,7 @@ int main() try
     i=40;   call_uniformed (&mfunc, i, &D, &D);
                                 fx( i, &D, &D);
 ____
-    struct E : B, Y { E(char c='E') : O(c) {} };   //Note: diamond   //D-{B,Y}-O 
+    struct E : B, Y { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O
     VO_of<E>  E{'E'};
 
     i=100;  call_uniformed (&mfunc, i, &E, &E);
@@ -395,8 +395,8 @@ int main() try
     i=40;   call_uniformed (&mfunc, i, &D, &D);
                                 fx( i, &D, &D);
 ____
-    struct E : B, Y  { E(char c='E') : O(c) {} };   //D-{B,Y}-O  //Note: diamond
-    Varg_of<E> E{'E'};  //Note: D is a subclass of B and Y
+    struct E : B, Y  { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O
+    Varg_of<E> E{'E'};
 
     i=100;  call_uniformed (&mfunc, i, &E, &E);
                                 fx( i, &E, &E);
