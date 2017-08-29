@@ -319,7 +319,7 @@ struct Y : X         { Y(char c='y') : O(c) {}  };  //Y-X-O
 struct D : A, X      { D(char c='d') : O(c) {}  };  //D-{A,X}-O   //Note: diamond
 
 
-using Varg = vane::varg<A,B,X,Y, D, int, std::string>;
+using Varg = vane::varg <A,B,X,Y, D, int, std::string>;
 
 #if 0
 template<typename T>
