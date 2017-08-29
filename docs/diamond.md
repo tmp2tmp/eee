@@ -1,4 +1,4 @@
-# diamond - virtual base, multiple inheritance
+# diamond - virtual/multiple inheritance
 &nbsp;  
 &nbsp;  
 &nbsp;
