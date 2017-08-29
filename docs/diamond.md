@@ -45,8 +45,8 @@ struct Fx
     using type = void (int&, O&, O*);   //type of the virtual function
 
     using domains = std::tuple<    //type domains of the virtual arguments
-            std::tuple<A,B, D>,
-            std::tuple<X,Y, D>
+            std::tuple <A,B, D>,
+            std::tuple <X,Y, D>
         >;
     //specializations:
     void operator() (int& i, A& a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a.n, b->n); }
@@ -198,8 +198,8 @@ struct Fx
     using type = void (int&, VO*, VO*);   //type of the virtual function
 
     using domains = std::tuple<    //type domains of the virtual arguments
-            std::tuple<A,B, D>,
-            std::tuple<X,Y, D>
+            std::tuple <A,B, D>,
+            std::tuple <X,Y, D>
         >;
     //specializations:
     void operator() (int& i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n); }
@@ -352,15 +352,15 @@ struct Fx
             std::tuple <A,B,X,Y,D, int, std::string>
         >;
     //specializations:
-    void operator() (int&i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n);  }
-    void operator() (int&i, A* a, Y* b) { printf("\n%3d| %c %c --> fAY", i++, a->n, b->n);  }
-    void operator() (int&i, B* a, X* b) { printf("\n%3d| %c %c --> fBX", i++, a->n, b->n);  }
-    void operator() (int&i, B* a, Y* b) { printf("\n%3d| %c %c --> fBY", i++, a->n, b->n);  }
-    void operator() (int&i, D* a, D* b) { printf("\n%3d| %c %c --> fDD", i++, a->n, b->n);  }
-    void operator() (int&i, B* a, D* b) { printf("\n%3d| %c %c --> fBD", i++, a->n, b->n);  }
+    void operator() (int& i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n);  }
+    void operator() (int& i, A* a, Y* b) { printf("\n%3d| %c %c --> fAY", i++, a->n, b->n);  }
+    void operator() (int& i, B* a, X* b) { printf("\n%3d| %c %c --> fBX", i++, a->n, b->n);  }
+    void operator() (int& i, B* a, Y* b) { printf("\n%3d| %c %c --> fBY", i++, a->n, b->n);  }
+    void operator() (int& i, D* a, D* b) { printf("\n%3d| %c %c --> fDD", i++, a->n, b->n);  }
+    void operator() (int& i, B* a, D* b) { printf("\n%3d| %c %c --> fBD", i++, a->n, b->n);  }
 
-    void operator() (int&i, A* a, int* b) { printf("\n%3d| %c %d --> fA.int",i++, a->n, *b);  }
-    void operator() (int&i, X* a, std::string* b) { printf("\n%3d| %c %s --> fX.std::string", i++,a->n,b->c_str()); }
+    void operator() (int& i, A* a, int* b) { printf("\n%3d| %c %d --> fA.int",i++, a->n, *b);  }
+    void operator() (int& i, X* a, std::string* b) { printf("\n%3d| %c %s --> fX.std::string", i++,a->n,b->c_str()); }
 };
 
 
