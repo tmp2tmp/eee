@@ -25,7 +25,9 @@
          E
 */
 
-struct O             { O(char c='o') : n(c) {}  char n; virtual ~O(){}  }; //polymorphic base is required
+struct O             { virtual ~O(){}  //polymorphic base is required
+                       char n;
+                       O(char c='o') : n(c) {}  };
 
 struct A : virtual O { A(char c='a') : O(c) {}  };  //A-O
 struct B : A         { B(char c='b') : O(c) {}  };  //B-A-O
@@ -161,7 +163,9 @@ real args    Fx called
          E
 */
 
-struct O             { O(char c='o') : n(c) {}  char n; virtual ~O(){}  }; //polymorphic base is required
+struct O             { virtual ~O(){}  //polymorphic base is required
+                       char n;
+                       O(char c='o') : n(c) {}  };
 
 struct A : virtual O { A(char c='a') : O(c) {}  };  //A-O
 struct B : A         { B(char c='b') : O(c) {}  };  //B-A-O
@@ -308,7 +312,9 @@ real args    Fx called
          E
 */
 
-struct O             { O(char c='o') : n(c) {}  char n;  };
+struct O             { virtual ~O(){}  //being polymorphic or not doesn't matter
+                       char n;
+                       O(char c='o') : n(c) {}  };
 
 struct A : virtual O { A(char c='a') : O(c) {}  };  //A-O
 struct B : A         { B(char c='b') : O(c) {}  };  //B-A-O
