@@ -348,8 +348,8 @@ struct Fx
     using type = void (int&, Varg*, Varg*);   //type of the virtual function
 
     using domains = std::tuple<    //type domains of the virtual arguments
-            vane::_domain<A,B,X,Y,D>,
-            vane::_domain<A,B,X,Y,D, int, std::string>
+            std::tuple <A,B,X,Y,D>,
+            std::tuple <A,B,X,Y,D, int, std::string>
         >;
     //specializations:
     void operator() (int&i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n);  }
