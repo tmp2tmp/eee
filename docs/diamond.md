@@ -275,7 +275,6 @@ real args    Fx called
 120| E D --> fBD
 121| E D --> fBD
 */
-
 ```
 
 
@@ -443,6 +442,5 @@ real args    Fx called
  80| E vane --> fX.std::string
  81| E vane --> fX.std::string
 */
-
 ```
 
