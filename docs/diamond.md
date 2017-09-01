@@ -242,11 +242,7 @@ int main() try
     i=40;   call_uniformed (&mfunc, i, &D, &D);
                                 fx( i, &D, &D);
 ____
-<<<<<<< HEAD
     struct E : B, Y { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O 
-=======
-    struct E : B, Y { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O
->>>>>>> f98ba86e48c8eca860f2bf81cacd20a6e980b3c9
     VO_of<E>  E{'E'};
 
     i=100;  call_uniformed (&mfunc, i, &E, &E);
@@ -357,13 +353,8 @@ struct Fx
     using type = void (int&, Varg*, Varg*);   //type of the virtual function
 
     using domains = std::tuple<    //type domains of the virtual arguments
-<<<<<<< HEAD
             std::tuple <A,B,X,D>,
             std::tuple <X,Y,D, int, std::string>
-=======
-            std::tuple <A,B,X,Y,D>,
-            std::tuple <A,B,X,Y,D, int, std::string>
->>>>>>> f98ba86e48c8eca860f2bf81cacd20a6e980b3c9
         >;
     //specializations:
     void operator() (int& i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n);  }
@@ -409,11 +400,7 @@ int main() try
     i=40;   call_uniformed (&mfunc, i, &D, &D);
                                 fx( i, &D, &D);
 ____
-<<<<<<< HEAD
     struct E : B, Y { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O
-=======
-    struct E : B, Y  { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O
->>>>>>> f98ba86e48c8eca860f2bf81cacd20a6e980b3c9
     Varg_of<E> E{'E'};
 
     i=100;  call_uniformed (&mfunc, i, &E, &E);
