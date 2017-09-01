@@ -161,13 +161,15 @@ real args    Fx called
          E
 */
 
-struct O             { O(char c='o') : n(c) {}  char n; virtual ~O(){}  }; //polymorphic base is required
+struct O             { virtual ~O(){}  //polymorphic base is required
+                       char n;
+                       O(char c='o') : n(c) {}  };
 
 struct A : virtual O { A(char c='a') : O(c) {}  };  //A-O
 struct B : A         { B(char c='b') : O(c) {}  };  //B-A-O
 
-struct X : virtual O { X(char c='x') : O(c) {}  };  //A-O
-struct Y : X         { Y(char c='y') : O(c) {}  };  //B-A-O
+struct X : virtual O { X(char c='x') : O(c) {}  };  //X-O
+struct Y : X         { Y(char c='y') : O(c) {}  };  //Y-X-O
 
 struct D : A, X      { D(char c='D') : O(c) {}  };  //D-{A,X}-O   //Note: diamond
 
@@ -187,6 +189,7 @@ struct VO_of : VO::of<T> {
 };
 #endif
 
+
 ////////////////////////////////////////////////////////////////////////////////
 //co-class that defines the traits & function set for the multi_func
 struct Fx
@@ -194,8 +197,8 @@ struct Fx
     using type = void (int&, VO*, VO*);   //type of the virtual function
 
     using domains = std::tuple<    //type domains of the virtual arguments
-            std::tuple<A,B, D>,
-            std::tuple<X,Y, D>
+            std::tuple <A,B, D>,
+            std::tuple <X,Y, D>
         >;
     //specializations:
     void operator() (int& i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n); }
@@ -234,7 +237,7 @@ int main() try
     i=40;   call_uniformed (&mfunc, i, &D, &D);
                                 fx( i, &D, &D);
 ____
-    struct E : B, Y { E(char c='E') : O(c) {} };   //Note: diamond   //D-{B,Y}-O 
+    struct E : B, Y { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O 
     VO_of<E>  E{'E'};
 
     i=100;  call_uniformed (&mfunc, i, &E, &E);
@@ -267,6 +270,7 @@ real args    Fx called
 120| E D --> fBD
 121| E D --> fBD
 */
+
 ```
 
 
@@ -308,7 +312,9 @@ real args    Fx called
          E
 */
 
-struct O             { O(char c='o') : n(c) {}  char n;  };
+struct O             { virtual ~O(){}  //being polymorphic or not doesn't matter
+                       char n;
+                       O(char c='o') : n(c) {}  };
 
 struct A : virtual O { A(char c='a') : O(c) {}  };  //A-O
 struct B : A         { B(char c='b') : O(c) {}  };  //B-A-O
@@ -316,10 +322,10 @@ struct B : A         { B(char c='b') : O(c) {}  };  //B-A-O
 struct X : virtual O { X(char c='x') : O(c) {}  };  //X-O
 struct Y : X         { Y(char c='y') : O(c) {}  };  //Y-X-O
 
-struct D : A, X      { D(char c='d') : O(c) {}  };  //D-{A,X}-O   //Note: diamond
+struct D : A, X      { D(char c='D') : O(c) {}  };  //D-{A,X}-O   //Note: diamond
 
 
-using Varg = vane::varg<A,B,X,Y, D, int, std::string>;
+using Varg = vane::varg <A,B,X,Y, D, int, std::string>;
 
 #if 0
 template<typename T>
@@ -342,19 +348,19 @@ struct Fx
     using type = void (int&, Varg*, Varg*);   //type of the virtual function
 
     using domains = std::tuple<    //type domains of the virtual arguments
-            vane::_domain<A,B,X,Y,D>,
-            vane::_domain<A,B,X,Y,D, int, std::string>
+            std::tuple <A,B,X,D>,
+            std::tuple <X,Y,D, int, std::string>
         >;
     //specializations:
-    void operator() (int&i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n);  }
-    void operator() (int&i, A* a, Y* b) { printf("\n%3d| %c %c --> fAY", i++, a->n, b->n);  }
-    void operator() (int&i, B* a, X* b) { printf("\n%3d| %c %c --> fBX", i++, a->n, b->n);  }
-    void operator() (int&i, B* a, Y* b) { printf("\n%3d| %c %c --> fBY", i++, a->n, b->n);  }
-    void operator() (int&i, D* a, D* b) { printf("\n%3d| %c %c --> fDD", i++, a->n, b->n);  }
-    void operator() (int&i, B* a, D* b) { printf("\n%3d| %c %c --> fBD", i++, a->n, b->n);  }
+    void operator() (int& i, A* a, X* b) { printf("\n%3d| %c %c --> fAX", i++, a->n, b->n);  }
+    void operator() (int& i, A* a, Y* b) { printf("\n%3d| %c %c --> fAY", i++, a->n, b->n);  }
+    void operator() (int& i, B* a, X* b) { printf("\n%3d| %c %c --> fBX", i++, a->n, b->n);  }
+    void operator() (int& i, B* a, Y* b) { printf("\n%3d| %c %c --> fBY", i++, a->n, b->n);  }
+    void operator() (int& i, D* a, D* b) { printf("\n%3d| %c %c --> fDD", i++, a->n, b->n);  }
+    void operator() (int& i, B* a, D* b) { printf("\n%3d| %c %c --> fBD", i++, a->n, b->n);  }
 
-    void operator() (int&i, D* a, int* b) { printf("\n%3d| %c %d --> fD.int",i++, a->n, *b);  }
-    void operator() (int&i, D* a, std::string* b) { printf("\n%3d| %c %s --> fD.std::string", i++,a->n,b->c_str()); }
+    void operator() (int& i, A* a, int* b) { printf("\n%3d| %c %d --> fA.int",i++, a->n, *b);  }
+    void operator() (int& i, X* a, std::string* b) { printf("\n%3d| %c %s --> fX.std::string", i++,a->n,b->c_str()); }
 };
 
 
@@ -389,8 +395,8 @@ int main() try
     i=40;   call_uniformed (&mfunc, i, &D, &D);
                                 fx( i, &D, &D);
 ____
-    struct E : B, Y  { E(char c='E') : O(c) {} };   //D-{B,Y}-O  //Note: diamond
-    Varg_of<E> E{'E'};  //Note: D is a subclass of B and Y
+    struct E : B, Y { E(char c='E') : O(c) {} };    //diamond;   E-{B,Y}-O
+    Varg_of<E> E{'E'};
 
     i=100;  call_uniformed (&mfunc, i, &E, &E);
                                 fx( i, &E, &E);
@@ -401,8 +407,8 @@ ____
 ____
     i=70;   call_uniformed (&mfunc, i, &D, &number);
                                 fx( i, &D, &(int&)number);  //needs to be cast; 'int' is not a class/struct
-    i=80;   call_uniformed (&mfunc, i, &D, &string);
-                                fx( i, &D, &string);
+    i=80;   call_uniformed (&mfunc, i, &E, &string);
+                                fx( i, &E, &string);
 }
 catch(const std::exception &ex) { printf("\nexception : %s", ex.what()); }
 
@@ -427,10 +433,11 @@ real args    Fx called
 120| E D --> fBD
 121| E D --> fBD
 ---------------------------------
- 70| D 7 --> fD.int
- 71| D 7 --> fD.int
- 80| D vane --> fD.std::string
- 81| D vane --> fD.std::string
+ 70| D 7 --> fA.int
+ 71| D 7 --> fA.int
+ 80| E vane --> fX.std::string
+ 81| E vane --> fX.std::string
 */
+
 ```
 
