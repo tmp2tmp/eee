@@ -4,10 +4,16 @@
 &nbsp;
 
 Virtual and multiple inheritance are supported  
-but at the cost of ```dynamic_cast``` when multi-dispatching by-poly or by-virt.  
+but at the cost of ```dynamic_cast``` when multi-dispatching by-poly ()
 Dispatching by-varg has no such disadvantage of slowdown and is much faster than the other two.
 &nbsp;  
 &nbsp;  
+
+Virtual and multiple inheritance are supported  
+In case of multi-dispatching by-poly, 
+
+
+
 
 ```c++
 //file: diamond-poly.cc
@@ -74,6 +80,7 @@ int main() try
 
     A a;    X x;    D D;   
     B b;    Y y;
+
 
     printf("%-13s%s","real args","Fx called");
     int i;
@@ -228,6 +235,7 @@ int main() try
 
     VO_of<A> a{'a'};    VO_of<X> x{'x'};    VO_of<D> D{'D'};   
     VO_of<B> b{'b'};    VO_of<Y> y{'y'};
+
     
     printf("%-13s%s","real args","Fx called");
     int i;
@@ -382,9 +390,6 @@ int main() try
     Varg_of<A> a{'a'};    Varg_of<X> x{'x'};     Varg_of<D> D('D');
     Varg_of<B> b{'b'};    Varg_of<Y> y{'y'};
 
-    Varg::of<int>         number{7};
-    Varg::of<std::string> string{"vane"};
-
 
     printf("%-13s%s","real args","Fx called");
     int i;
@@ -409,6 +414,9 @@ ____
     i=120;  call_uniformed (&mfunc, i, &E, &D);
                                 fx( i, &E, &D);
 ____
+    Varg::of<int>         number{7};
+    Varg::of<std::string> string{"vane"};
+
     i=70;   call_uniformed (&mfunc, i, &D, &number);
                                 fx( i, &D, &(int&)number);  //needs to be cast; 'int' is not a class/struct
     i=80;   call_uniformed (&mfunc, i, &E, &string);
