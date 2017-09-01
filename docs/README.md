@@ -1,7 +1,7 @@
 # Vane
 
 **---  A multiple-dispatch library for C++14 ---  
-     + including some meta-programming facilities**  
+     + including a bunch of meta-programming facilities**  
 &nbsp;  
 &nbsp;  
 &nbsp;  
