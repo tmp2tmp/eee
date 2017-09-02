@@ -24,9 +24,9 @@ namespace detail {
 
         using domains = tuple< tuple<A,B,C> >;
 
-        A *operator()(A *v) { printf("\n%8c --> fA", v->n); return v; }
-        B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
-        C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
+        A *operator() (A *v) { printf("\n%8c --> fA", v->n); return v; }
+        B *operator() (B *v) { printf("\n%8c --> fB", v->n); return v; }
+        C *operator() (C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
     //That's it!
 }
@@ -128,9 +128,9 @@ namespace detail {
 
         using domains = tuple< tuple<A,B,C> >;
 
-        A *operator()(A *v) { printf("\n%8c --> fA", v->n); return v; }
-        B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
-        C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
+        A *operator() (A *v) { printf("\n%8c --> fA", v->n); return v; }
+        B *operator() (B *v) { printf("\n%8c --> fB", v->n); return v; }
+        C *operator() (C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
     //That's it!
 }
@@ -232,9 +232,9 @@ namespace detail {
 
         using domains = tuple< tuple<A,B,C> >;
 
-        A *operator()(A *v) { printf("\n%8c --> fA", v->n); return v; }
-        B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
-        C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
+        A *operator() (A *v) { printf("\n%8c --> fA", v->n); return v; }
+        B *operator() (B *v) { printf("\n%8c --> fB", v->n); return v; }
+        C *operator() (C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
     //That's it!
 }
