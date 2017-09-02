@@ -182,7 +182,7 @@ int main() try
     later_module (third_collide);
     early_module (third_collide);
 }
-catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
+catch(const std::exception &e) { printf("\nexception: %s", e.what());  }
 
 
 /* output **********************************************************************
@@ -437,7 +437,7 @@ int main() try
     later_module (third_collide);
     early_module (third_collide);
 }
-catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
+catch(const std::exception &e) { printf("\nexception: %s", e.what());  }
 
 
 /* output **********************************************************************
@@ -683,7 +683,7 @@ int main() try
     later_module (third_collide);
     early_module (third_collide);
 }
-catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
+catch(const std::exception &e) { printf("\nexception: %s", e.what());  }
 
 
 /* output **********************************************************************
