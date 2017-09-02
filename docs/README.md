@@ -25,9 +25,9 @@ Vane also includes meta-programming facilities that make meta-programming much e
 ****
 
 ### Introduction
-- multple dispatch
-- [hello_world](hello_world.md)  &nbsp; //basic syntax
-- [shape collision](collide.md)
+multple dispatch  
+[hello_world](hello_world.md)  &nbsp; //basic syntax  
+[shape collision](collide.md)  
 &nbsp;  
 
 ### Features
@@ -38,9 +38,9 @@ mathcing functions
 [replacing virtual functions at runtime](replacing-virtual-functions.md)  
 
 ### More Usages
-varg<>  
-[vt-make_shared](vt-make_shared.md)  
-[vt-vars](vt-vars.md)  
+- varg<>  
+  - [vt-make_shared](vt-make_shared.md)  
+  - [vt-vars](vt-vars.md)  
 
 
 #### [more examples](examples.md)
