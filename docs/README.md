@@ -31,11 +31,11 @@ multple dispatch
 &nbsp;  
 
 ### Features
-simple & easy syntax  
-nargs  
-mathcing functions  
-[supports virtual & mutiple inheritance](diamond.md)  
-[replacing virtual functions at runtime](replacing-virtual-functions.md)  
+- simple & easy syntax  
+- nargs  
+- mathcing functions  
+- [supports virtual & mutiple inheritance](diamond.md)  
+- [replacing virtual functions at runtime](replacing-virtual-functions.md)  
 
 ### More Usages
 - varg<>  
