@@ -38,6 +38,7 @@ using multi_func = vane::multi_func <detail::Fx>;
 int main() try 
 {
     multi_func   mfunc;
+    vane::virtual_func <A*(A*)>   &vfunc = mfunc;
 
     A a;
     B b;
@@ -48,13 +49,13 @@ int main() try
     A *ret;
     ret = mfunc (&a);     printf("%10c", ret->n);
     ret = mfunc (&b);     printf("%10c", ret->n);
-    ret = mfunc (&c);     printf("%10c", ret->n);
+    ret = vfunc (&c);     printf("%10c", ret->n);
 
 
     struct D : C  { D(char c='d') : C(c) {}  };
 
     D d;
-    ret = mfunc (&d);     printf("%10c", ret->n);
+    ret = vfunc (&d);     printf("%10c", ret->n);
 }
 catch( const std::exception &ex ) { printf("\nexception: %s", ex.what() ); }
 
@@ -138,6 +139,7 @@ using multi_func = vane::multi_func <detail::Fx>;
 int main() try 
 {
     multi_func   mfunc;
+    vane::virtual_func <A*(Virtual*)>   &vfunc = mfunc;
 
     Virtual::of<A> a;
     Virtual::of<B> b;
@@ -148,13 +150,13 @@ int main() try
     A *ret;
     ret = mfunc (&a);     printf("%10c", ret->n);
     ret = mfunc (&b);     printf("%10c", ret->n);
-    ret = mfunc (&c);     printf("%10c", ret->n);
+    ret = vfunc (&c);     printf("%10c", ret->n);
 
 
     struct D : C  { D(char c='d') : C(c) {}  };
 
     Virtual::of<D> d;
-    ret = mfunc (&d);     printf("%10c", ret->n);
+    ret = vfunc (&d);     printf("%10c", ret->n);
 }
 catch( const std::exception &ex ) { printf("\nexception: %s", ex.what() ); }
 
@@ -238,6 +240,7 @@ using multi_func = vane::multi_func <detail::Fx>;
 int main() try 
 {
     multi_func   mfunc;
+    vane::virtual_func <A*(Virtual*)>   &vfunc = mfunc;
 
     Virtual::of<A> a;
     Virtual::of<B> b;
@@ -248,13 +251,13 @@ int main() try
     A *ret;
     ret = mfunc (&a);     printf("%10c", ret->n);
     ret = mfunc (&b);     printf("%10c", ret->n);
-    ret = mfunc (&c);     printf("%10c", ret->n);
+    ret = vfunc (&c);     printf("%10c", ret->n);
 
 
     struct D : C  { D(char c='d') : C(c) {}  };
 
     Virtual::of<D> d;
-    ret = mfunc (&d);     printf("%10c", ret->n);
+    ret = vfunc (&d);     printf("%10c", ret->n);
 }
 catch( const std::exception &ex ) { printf("\nexception: %s", ex.what() ); }
 
