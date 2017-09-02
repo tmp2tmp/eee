@@ -139,10 +139,6 @@ using multi_func = vane::multi_func <detail::Fx>;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-A *call_baseTyped (multi_func *vfunc,  Virtual *a) {
-    return (*vfunc)(a);
-}
-
 int main() try 
 {
     multi_func   mfunc;
@@ -154,15 +150,15 @@ int main() try
 
     printf("%s%13s  %s","real args","Fx-called","return");
     A *ret;
-    ret = call_baseTyped (&mfunc, &a);     printf("%10c [%d]", ret->n, ret==&a);
-    ret = call_baseTyped (&mfunc, &b);     printf("%10c [%d]", ret->n, ret==&b);
-    ret = call_baseTyped (&mfunc, &c);     printf("%10c [%d]", ret->n, ret==&c);
+    ret = mfunc (&a);     printf("%10c [%d]", ret->n, ret==&a);
+    ret = mfunc (&b);     printf("%10c [%d]", ret->n, ret==&b);
+    ret = mfunc (&c);     printf("%10c [%d]", ret->n, ret==&c);
 
 
     struct D : C  { D(char c='d') : C(c) {}  };
 
     Virtual::of<D> d;
-    ret = call_baseTyped (&mfunc, &d);     printf("%10c [%d]", ret->n, ret==&d);
+    ret = mfunc (&d);     printf("%10c [%d]", ret->n, ret==&d);
 }
 catch( const std::exception &ex ) { printf("\nexception: %s", ex.what() ); }
 
