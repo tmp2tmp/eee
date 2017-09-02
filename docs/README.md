@@ -32,19 +32,20 @@ Vane also includes meta-programming facilities that make meta-programming much e
 
 ### Features
 
-111111111111111111111111111111
-
 [supports virtual & mutiple inheritance](diamond.md)  
 [replacing virtual functions at runtime](replacing-virtual-functions.md)  
-[zzz](zzz.md)  
-[hello_world](hello_world.md)  
-[hello_world-poly](hello_world-poly.md)  
+
+### More Usages
 [vt-make_shared](vt-make_shared.md)  
 [vt-vars](vt-vars.md)  
-[xxx](xxx.md)  
-[pre](pre.md)  
+
 
 #### [more examples](examples.md)
+[hello_world](hello_world.md)  
+[hello_world-poly](hello_world-poly.md)  
+[zzz](zzz.md)  
+[xxx](xxx.md)  
+[pre](pre.md)  
 
 
 #### [Resources & Referrences](resources.md)
