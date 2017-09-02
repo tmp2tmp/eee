@@ -6,6 +6,8 @@
   code-width: 123ex
 /diamond.html:
   code-width: 113ex
+/replacing-virtual-functions.html:
+  code-width: 114ex
 /vt-make_shared.html:
   code-width: 118ex
 /vt-vars.html:
