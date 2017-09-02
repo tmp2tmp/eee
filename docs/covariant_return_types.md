@@ -213,7 +213,6 @@ real args    Fx-called  return
 
 
 ```c++
-//////////////////////////////////////////////////////////////////////
 //file: covariant_return-varg.cc
 #include "vane.h"
 #include <stdio.h>
