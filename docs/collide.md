@@ -235,7 +235,7 @@ struct Ellipse   { const char *n = "ellipse";   };
 struct Polygon   { const char *n = "polygon";   };
 
 
-using VirtualShape = vane::varg <Rectangle, Ellipse, Polygon>;   //Virtual Shape
+using VirtualShape = vane::varg <Rectangle, Ellipse, Polygon>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
