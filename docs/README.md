@@ -35,6 +35,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 111111111111111111111111111111
 
 [supports virtual & mutiple inheritance](diamond.md)  
+[replacing virtual functions at runtime](replacing-virtual-functions.md)  
 [zzz](zzz.md)  
 [hello_world](hello_world.md)  
 [hello_world-poly](hello_world-poly.md)  
