@@ -35,7 +35,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [Virtual & mutiple inheritance are supported](diamond.md)  
 - Function call resolutoin is supported  
 	runtime function call resolutoin based on the inheritance state of the arguments is supported
-- Covariant return types are supported
+- [Covariant return types are supported](covariant_return_types.md)
 - [Replacing virtual functions at runtime is supported](replacing-virtual-functions.md)  
 &nbsp;  
 
