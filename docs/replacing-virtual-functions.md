@@ -2,6 +2,11 @@
 &nbsp;  
 &nbsp;  
 &nbsp;
+### open methods as member functions
+&nbsp;  
+&nbsp;  
+&nbsp;
+
 
 
 ```c++
