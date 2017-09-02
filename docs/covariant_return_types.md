@@ -28,7 +28,7 @@ namespace detail {
         B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
         C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
-	//That's it!
+    //That's it!
 }
 using multi_func = vane::multi_func <detail::Fx>;
 
@@ -132,7 +132,7 @@ namespace detail {
         B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
         C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
-	//That's it!
+    //That's it!
 }
 using multi_func = vane::multi_func <detail::Fx>;
 
@@ -236,7 +236,7 @@ namespace detail {
         B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
         C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
-	//That's it!
+    //That's it!
 }
 using multi_func = vane::multi_func <detail::Fx>;
 
