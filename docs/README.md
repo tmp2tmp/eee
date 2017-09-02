@@ -33,6 +33,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 ### Features
 simple & easy syntax  
 nargs  
+mathcing functions  
 [supports virtual & mutiple inheritance](diamond.md)  
 [replacing virtual functions at runtime](replacing-virtual-functions.md)  
 
