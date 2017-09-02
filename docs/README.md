@@ -25,8 +25,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 ****
 
 ### Introduction
-multple dispatch  
-[hello_world](hello_world.md)  &nbsp; //basic syntax  
+[multiple dispatch (hello_world)](hello_world.md)  &nbsp; //basic syntax  
 [shape collision](collide.md)  
 &nbsp;  
 
