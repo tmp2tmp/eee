@@ -52,7 +52,7 @@ Specifying this is through a co-class defining three parts:
   - compared to by-poly:
 	  &nbsp; much faster (in general about 5~7 times; &nbsp; and when virtual bases are involved, 10~20 times, mostly more than 15 times).
 
-  But the established type domains of the arguments cannot be altered/replaced.
+  But the established type domains of the parameters cannot be altered/replaced.
 &nbsp;  
 &nbsp;  
 &nbsp;  
