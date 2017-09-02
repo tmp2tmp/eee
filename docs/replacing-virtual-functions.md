@@ -42,7 +42,7 @@ struct ShapeCollision
     ShapeCollision(const char *version) : api_version(version) {}
 };
 
-using collide_vfunc = vane::virtual_func <ShapeCollision::type>;
+using virtual_collide_func = vane::virtual_func <ShapeCollision::type>;
 
 
 
@@ -126,7 +126,7 @@ using third_collide_func = vane::multi_func <detail::_CollisionFx_third>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-void early_module (collide_vfunc  &collide) {
+void early_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------early_module\n");
     Rectangle  r;
     Ellipse    e;
@@ -136,7 +136,7 @@ void early_module (collide_vfunc  &collide) {
     collide (&r, &e);
 }
  
-void later_module (collide_vfunc  &collide) {
+void later_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------later_module\n");
     Rectangle  r;
     Ellipse    e;
@@ -148,7 +148,7 @@ void later_module (collide_vfunc  &collide) {
     collide (&e, &r);
 }
 
-void third_module (collide_vfunc  &collide) {
+void third_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------3rd_module\n");
     Rectangle  r;
     Ellipse    e;
@@ -297,7 +297,7 @@ struct ShapeCollision
     ShapeCollision(const char *version) : api_version(version) {}
 };
 
-using collide_vfunc = vane::virtual_func <ShapeCollision::type>;
+using virtual_collide_func = vane::virtual_func <ShapeCollision::type>;
 
 
 
@@ -381,7 +381,7 @@ using third_collide_func = vane::multi_func <detail::_CollisionFx_third>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-void early_module (collide_vfunc  &collide) {
+void early_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------early_module\n");
     VirtualShape::of<Rectangle>  r;
     VirtualShape::of<Ellipse>    e;
@@ -391,7 +391,7 @@ void early_module (collide_vfunc  &collide) {
     collide (&r, &e);
 }
  
-void later_module (collide_vfunc  &collide) {
+void later_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------later_module\n");
     VirtualShape::of<Rectangle>  r;
     VirtualShape::of<Ellipse>    e;
@@ -403,7 +403,7 @@ void later_module (collide_vfunc  &collide) {
     collide (&e, &r);
 }
 
-void third_module (collide_vfunc  &collide) {
+void third_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------3rd_module\n");
     VirtualShape::of<Rectangle>  r;
     VirtualShape::of<Ellipse>      e;
@@ -546,7 +546,7 @@ struct ShapeCollision
     ShapeCollision(const char *version) : api_version(version) {}
 };
 
-using collide_vfunc = vane::virtual_func <ShapeCollision::type>;
+using virtual_collide_func = vane::virtual_func <ShapeCollision::type>;
 
 
 
@@ -627,7 +627,7 @@ using third_collide_func = vane::multi_func <detail::_CollisionFx_third>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-void early_module (collide_vfunc  &collide) {
+void early_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------early_module\n");
     VirtualShape::of<Rectangle>  r;
     VirtualShape::of<Ellipse>    e;
@@ -637,7 +637,7 @@ void early_module (collide_vfunc  &collide) {
     collide (&r, &e);
 }
  
-void later_module (collide_vfunc  &collide) {
+void later_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------later_module\n");
     VirtualShape::of<Rectangle>  r;
     VirtualShape::of<Ellipse>    e;
@@ -649,7 +649,7 @@ void later_module (collide_vfunc  &collide) {
     collide (&e, &r);
 }
 
-void third_module (collide_vfunc  &collide) {
+void third_module (virtual_collide_func  &collide) {
     printf("--------------------------------------------------3rd_module\n");
     VirtualShape::of<Rectangle>  r;
     VirtualShape::of<Ellipse>      e;
