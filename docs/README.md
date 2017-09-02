@@ -29,6 +29,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 [shape collision](collide.md)  
 &nbsp;  
 &nbsp;
+
 ### Features
 - simple & easy syntax  
 - nargs  
@@ -37,12 +38,14 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [replacing virtual functions at runtime](replacing-virtual-functions.md)  
 &nbsp;  
 &nbsp;
+
 ### More Usages
 - varg<>  
   - [vt-make_shared](vt-make_shared.md)  
   - [vt-vars](vt-vars.md)  
 &nbsp;  
 &nbsp;
+
 #### [more examples](examples.md)
 [hello_world](hello_world.md)  
 [hello_world-poly](hello_world-poly.md)  
@@ -51,6 +54,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 [pre](pre.md)  
 &nbsp;  
 &nbsp;
+
 #### [Resources & Referrences](resources.md)
 
 
