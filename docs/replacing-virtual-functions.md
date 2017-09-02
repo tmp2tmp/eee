@@ -8,7 +8,6 @@
 //file: switch-collide-poly.cc
 #include "vane.h"   //required
 #include <stdio.h>
-#define ____    printf("\n");
 using std::tuple;
 
 
@@ -264,7 +263,6 @@ catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
 //file: switch-collide-virt.cc
 #include "vane.h"   //required
 #include <stdio.h>
-#define ____    printf("\n");
 using std::tuple;
 
 
@@ -521,7 +519,6 @@ catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
 //file: switch-collide-varg.cc
 #include "vane.h"   //required
 #include <stdio.h>
-#define ____    printf("\n");
 using std::tuple;
 
 
