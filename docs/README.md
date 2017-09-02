@@ -31,11 +31,13 @@ Vane also includes meta-programming facilities that make meta-programming much e
 &nbsp;  
 
 ### Features
-
+simple & easy syntax  
+nargs  
 [supports virtual & mutiple inheritance](diamond.md)  
 [replacing virtual functions at runtime](replacing-virtual-functions.md)  
 
 ### More Usages
+varg<>  
 [vt-make_shared](vt-make_shared.md)  
 [vt-vars](vt-vars.md)  
 
