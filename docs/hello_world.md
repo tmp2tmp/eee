@@ -48,9 +48,9 @@ Specifying this is through a co-class defining three parts:
   fastest:  
   - compared to by-virt:
   &nbsp; slightly faster in general (about 15~30%: varies according to the number of virtual arguments),
-  	or quite faster when virtual bases are involved (about 40% ~ in most cases - two times).  
+  	or quite faster when <b>virtual bases</b> are involved (about 40% ~ in most cases - two times).  
   - compared to by-poly:
-	  &nbsp; much faster (in general about 5~7 times; &nbsp; and when virtual bases are involved, 10~20 times, mostly more than 15 times).
+	  &nbsp; much faster (in general about 5~7 times; &nbsp; and when <b>virtual bases</b> are involved, 10~20 times, mostly more than 15 times).
 
   But the established type domains of the parameters cannot be altered/replaced.
 &nbsp;  
