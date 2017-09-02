@@ -28,7 +28,6 @@ Vane also includes meta-programming facilities that make meta-programming much e
 [multiple dispatch (hello_world)](hello_world.md)  &nbsp; //basic syntax  
 [shape collision](collide.md)  
 &nbsp;  
-&nbsp;
 
 ### Features
 - simple & easy syntax  
@@ -37,14 +36,12 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [supports virtual & mutiple inheritance](diamond.md)  
 - [replacing virtual functions at runtime](replacing-virtual-functions.md)  
 &nbsp;  
-&nbsp;
 
 ### More Usages
 - varg<>  
   - [vt-make_shared](vt-make_shared.md)  
   - [vt-vars](vt-vars.md)  
 &nbsp;  
-&nbsp;
 
 #### [more examples](examples.md)
 [hello_world](hello_world.md)  
@@ -53,7 +50,6 @@ Vane also includes meta-programming facilities that make meta-programming much e
 [xxx](xxx.md)  
 [pre](pre.md)  
 &nbsp;  
-&nbsp;
 
 #### [Resources & Referrences](resources.md)
 
