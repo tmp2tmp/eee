@@ -116,8 +116,8 @@ namespace detail {
         void operator() (Rectangle *p, Ellipse   *q) { print(p,q, "fRE -modified behavior"); }
         void operator() (Ellipse   *p, Rectangle *q) { print(p,q, "fER -modified behavior"); }
 
-        void operator() (Rectangle *p, Polygon   *q) { print(p,q, "fRP -added");   }
-        void operator() (Ellipse   *p, Polygon   *q) { print(p,q, "fEP -added");   }
+        void operator() (Rectangle *p, Polygon   *q) { print(p,q, "fRP -new");   }
+        void operator() (Ellipse   *p, Polygon   *q) { print(p,q, "fEP -new");   }
     };
 }
 using third_collide_func = vane::multi_func <detail::_CollisionFx_third>;
@@ -207,8 +207,8 @@ catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
 (ellipse     ellipse) --> THIRD API-fEE -compatible
 (rectangle   ellipse) --> THIRD API-fRE -modified behavior
 (ellipse   rectangle) --> THIRD API-fER -modified behavior
-(rectangle   polygon) --> THIRD API-fRP -added
-(ellipse     polygon) --> THIRD API-fEP -added
+(rectangle   polygon) --> THIRD API-fRP -new
+(ellipse     polygon) --> THIRD API-fEP -new
 --------------------------------------------------later_module
 (rectangle rectangle) --> THIRD API-fRR -compatible
 (ellipse     ellipse) --> THIRD API-fEE -compatible
@@ -371,8 +371,8 @@ namespace detail {
         void operator() (Rectangle *p, Ellipse   *q) { print(p,q, "fRE -modified behavior"); }
         void operator() (Ellipse   *p, Rectangle *q) { print(p,q, "fER -modified behavior"); }
 
-        void operator() (Rectangle *p, Polygon   *q) { print(p,q, "fRP -added");   }
-        void operator() (Ellipse   *p, Polygon   *q) { print(p,q, "fEP -added");   }
+        void operator() (Rectangle *p, Polygon   *q) { print(p,q, "fRP -new");   }
+        void operator() (Ellipse   *p, Polygon   *q) { print(p,q, "fEP -new");   }
     };
 }
 using third_collide_func = vane::multi_func <detail::_CollisionFx_third>;
@@ -462,8 +462,8 @@ catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
 (ellipse     ellipse) --> THIRD API-fEE -compatible
 (rectangle   ellipse) --> THIRD API-fRE -modified behavior
 (ellipse   rectangle) --> THIRD API-fER -modified behavior
-(rectangle   polygon) --> THIRD API-fRP -added
-(ellipse     polygon) --> THIRD API-fEP -added
+(rectangle   polygon) --> THIRD API-fRP -new
+(ellipse     polygon) --> THIRD API-fEP -new
 --------------------------------------------------later_module
 (rectangle rectangle) --> THIRD API-fRR -compatible
 (ellipse     ellipse) --> THIRD API-fEE -compatible
@@ -617,8 +617,8 @@ namespace detail {
         void operator() (Rectangle *p, Ellipse   *q) { print(p,q, "fRE -modified behavior"); }
         void operator() (Ellipse   *p, Rectangle *q) { print(p,q, "fER -modified behavior"); }
 
-        void operator() (Rectangle *p, Polygon   *q) { print(p,q, "fRP -added");   }
-        void operator() (Ellipse   *p, Polygon   *q) { print(p,q, "fEP -added");   }
+        void operator() (Rectangle *p, Polygon   *q) { print(p,q, "fRP -new");   }
+        void operator() (Ellipse   *p, Polygon   *q) { print(p,q, "fEP -new");   }
     };
 }
 using third_collide_func = vane::multi_func <detail::_CollisionFx_third>;
@@ -708,8 +708,8 @@ catch(const std::exception &e) { printf("exception: %s\n", e.what());  }
 (ellipse     ellipse) --> THIRD API-fEE -compatible
 (rectangle   ellipse) --> THIRD API-fRE -modified behavior
 (ellipse   rectangle) --> THIRD API-fER -modified behavior
-(rectangle   polygon) --> THIRD API-fRP -added
-(ellipse     polygon) --> THIRD API-fEP -added
+(rectangle   polygon) --> THIRD API-fRP -new
+(ellipse     polygon) --> THIRD API-fEP -new
 --------------------------------------------------later_module
 (rectangle rectangle) --> THIRD API-fRR -compatible
 (ellipse     ellipse) --> THIRD API-fEE -compatible
