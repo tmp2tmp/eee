@@ -128,7 +128,7 @@ struct Rectangle : Shape { Rectangle(const char *c = "rectangle") : Shape(c) {} 
 struct Ellipse   : Shape { Ellipse  (const char *c = "ellipse"  ) : Shape(c) {} };
 struct Polygon   : Shape { Polygon  (const char *c = "polygon"  ) : Shape(c) {} };
 
-using VirtualShape = vane::_virtual <Shape>;
+using VShape = vane::_virtual <Shape>;   //Virtual Shape
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -136,7 +136,7 @@ namespace detail {
     //co-class that defines the traits & function set for the multi_func
     struct Fx
     {
-        using type    = void (VirtualShape*, VirtualShape*);   //signature of the multi_func
+        using type    = void (VShape*, VShape*);   //signature of the multi_func
 
         using domains = tuple<  //function selector
                             tuple <Rectangle, Ellipse, Polygon>,
@@ -157,7 +157,7 @@ using collide_multi_func = vane::multi_func <detail::Fx>;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void test_call_uniformTyped (collide_multi_func *vfunc,  VirtualShape *p, VirtualShape *q)
+void test_call_uniformTyped (collide_multi_func *vfunc,  VShape *p, VShape *q)
 try {
     (*vfunc)( p, q );
 }
@@ -168,9 +168,9 @@ int main()
 {
     collide_multi_func  collide;
 
-    VirtualShape::of<Rectangle>  r;
-    VirtualShape::of<Ellipse>    e;
-    VirtualShape::of<Polygon>    p;
+    VShape::of<Rectangle>  r;
+    VShape::of<Ellipse>    e;
+    VShape::of<Polygon>    p;
 
     printf("%15s%20s\n","real args","fx called");
     test_call_uniformTyped (&collide, &r, &r);
@@ -182,7 +182,7 @@ int main()
 
 ____
     struct Square : Rectangle { Square() : Rectangle("~SQUARE~") {}; };
-    VirtualShape::of<Square>  square;
+    VShape::of<Square>  square;
 
     test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Ellipse
 }
@@ -235,7 +235,7 @@ struct Ellipse   { const char *n = "ellipse";   };
 struct Polygon   { const char *n = "polygon";   };
 
 
-using VirtualShape = vane::varg <Rectangle, Ellipse, Polygon>;   //Virtual Shape
+using VShape = vane::varg <Rectangle, Ellipse, Polygon>;   //Virtual Shape
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -243,7 +243,7 @@ namespace detail {
     //co-class that defines the traits & function set for the multi_func
     struct Fx
     {
-        using type    = void (VirtualShape*, VirtualShape*);   //signature of the multi_func
+        using type    = void (VShape*, VShape*);   //signature of the multi_func
 
         using domains = tuple<  //function selector
                             tuple <Rectangle, Ellipse, Polygon>,
@@ -264,7 +264,7 @@ using collide_multi_func = vane::multi_func <detail::Fx>;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void test_call_uniformTyped (collide_multi_func *vfunc,  VirtualShape *p, VirtualShape *q)
+void test_call_uniformTyped (collide_multi_func *vfunc,  VShape *p, VShape *q)
 try {
     (*vfunc)( p, q );
 }
@@ -275,9 +275,9 @@ int main()
 {
     collide_multi_func  collide;
 
-    VirtualShape::of<Rectangle>  r;
-    VirtualShape::of<Ellipse>    e;
-    VirtualShape::of<Polygon>    p;
+    VShape::of<Rectangle>  r;
+    VShape::of<Ellipse>    e;
+    VShape::of<Polygon>    p;
 
     printf("%15s%20s\n","real args","fx called");
     test_call_uniformTyped (&collide, &r, &r);
@@ -289,7 +289,7 @@ int main()
 
 ____
     struct Square : Rectangle { Square() { n = "~SQUARE~"; } };
-    VirtualShape::of<Square>  square;
+    VShape::of<Square>  square;
 
     test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Ellipse
 }
