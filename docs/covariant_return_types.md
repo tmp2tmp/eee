@@ -24,11 +24,11 @@ namespace detail {
 
         using domains = tuple< tuple<A,B,C> >;
 
-        //easy!
         A *operator()(A *v) { printf("\n%8c --> fA", v->n); return v; }
         B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
         C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
+	//That's it!
 }
 using multi_func = vane::multi_func <detail::Fx>;
 
@@ -128,11 +128,11 @@ namespace detail {
 
         using domains = tuple< tuple<A,B,C> >;
 
-        //easy!
         A *operator()(A *v) { printf("\n%8c --> fA", v->n); return v; }
         B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
         C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
+	//That's it!
 }
 using multi_func = vane::multi_func <detail::Fx>;
 
@@ -232,11 +232,11 @@ namespace detail {
 
         using domains = tuple< tuple<A,B,C> >;
 
-        //easy!
         A *operator()(A *v) { printf("\n%8c --> fA", v->n); return v; }
         B *operator()(B *v) { printf("\n%8c --> fB", v->n); return v; }
         C *operator()(C *v) { printf("\n%8c --> fC", v->n); return v; }
     };
+	//That's it!
 }
 using multi_func = vane::multi_func <detail::Fx>;
 
