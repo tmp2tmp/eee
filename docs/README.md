@@ -32,11 +32,11 @@ Vane also includes meta-programming facilities that make meta-programming much e
 ### Features
 - Simple & easy syntax  
 - nargs  
-- [Virtual & mutiple inheritance are supported](diamond.md)  
 - Function call resolutoin is supported  
 	runtime function call resolutoin based on the inheritance state of the arguments is supported
-- [Covariant return types are supported](covariant_return_types.md)
+- [Virtual & mutiple inheritance are supported](diamond.md)  
 - [Replacing virtual functions at runtime is supported](replacing-virtual-functions.md)  
+- [Covariant return types are supported](covariant_return_types.md)
 &nbsp;  
 
 ### More Usages
