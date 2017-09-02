@@ -35,6 +35,8 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - mathcing functions  
 - [supports virtual & mutiple inheritance](diamond.md)  
 - [replacing virtual functions at runtime](replacing-virtual-functions.md)  
+- speed: fast;  
+  esp. when virtual bases are involved.
 &nbsp;  
 
 ### More Usages
