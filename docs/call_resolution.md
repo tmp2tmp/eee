@@ -3,7 +3,8 @@
 &nbsp;  
 &nbsp;
 
-Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported.
+Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported.  
+//not 100% consistent with C++ language call-resolution semantics.
 &nbsp;  
 &nbsp;
 
