@@ -135,10 +135,6 @@ real args     Fx called
 
 
 ```c++
-#include "__tmp.h"  //cols 81
-#include "../varg-0.h"   //required
-#undef  ____
-//////////////////////////////////////////////////////////////////////
 //file: covariant_return-virt.cc
 #include "vane.h"
 #include <stdio.h>
