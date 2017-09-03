@@ -2,6 +2,9 @@
 &nbsp;  
 &nbsp;  
 &nbsp;
+Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported.
+&nbsp;  
+&nbsp;
 
 
 ```c++
