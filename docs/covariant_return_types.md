@@ -1,6 +1,5 @@
 # Covariant return types
 &nbsp;  
-&nbsp;  
 &nbsp;
 
 Specializations having covariant return types are supported.
