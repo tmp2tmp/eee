@@ -3,6 +3,10 @@
 &nbsp;  
 &nbsp;
 
+Specializations having covariant return types are supported.
+&nbsp;  
+&nbsp;  
+&nbsp;
 
 
 ```c++
