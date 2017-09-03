@@ -1,11 +1,11 @@
-# runtime function call resoultion
+# Runtime function call resoultion
 &nbsp;  
 &nbsp;  
 &nbsp;
 
 
 ```c++
-//file: covariant_return-poly.cc
+//file: call_resolution-poly.cc
 #include "vane.h"
 #include <stdio.h>
 #define ____    printf("\n----------------------------------------");
@@ -135,7 +135,7 @@ real args     Fx called
 
 
 ```c++
-//file: covariant_return-virt.cc
+//file: call_resolution-virt.cc
 #include "vane.h"
 #include <stdio.h>
 #define ____    printf("\n----------------------------------------");
@@ -268,7 +268,7 @@ real args     Fx called
 
 
 ```c++
-//file: covariant_return-varg.cc
+//file: call_resolution-varg.cc
 #include "vane.h"
 #include <stdio.h>
 #define ____    printf("\n----------------------------------------");
