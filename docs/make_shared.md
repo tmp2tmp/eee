@@ -4,8 +4,8 @@
 &nbsp;
 
 <div style='font: 12pt consolas; -white-space:pre'>
-when&nbsp;&nbsp;using VirtualShape = varg&lt;Rectangle,...&gt;;<br>
-or&nbsp;&nbsp;&nbsp;&nbsp;using VirtualShape = _virtual&lt;Shape&gt;;<br>
+when&nbsp;&nbsp;using VirtualShape = vane::varg&lt;Rectangle,...&gt;;<br>
+or&nbsp;&nbsp;&nbsp;&nbsp;using VirtualShape = vane::_virtual&lt;Shape&gt;;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>//where struct Rectangle : Shape {...};</i><br>
 <br>
 </div>
