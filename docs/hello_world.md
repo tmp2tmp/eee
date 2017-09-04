@@ -46,10 +46,10 @@ Specifying this is through a co-class defining three parts:
 - by **varg<>**-wrapped typed arguments (by-varg)  
   Any arbitrary (including non-polymorphic or primitive) type of arguments is considered virtual.  
   fastest:  
-  - compared to by-virt:
+  - compared with by-virt:
   &nbsp; slightly faster in general (about 15~30%: varies according to the number of virtual arguments),
   	or quite faster when <b>virtual bases</b> are involved (about 40% ~ in most cases - two times).  
-  - compared to by-poly:
+  - compared with by-poly:
 	  &nbsp; much faster (in general about 5~7 times; &nbsp; and when <b>virtual bases</b> are involved, 10~20 times, mostly more than 15 times).
 
   But the established type domains of the parameters cannot be altered/replaced.
