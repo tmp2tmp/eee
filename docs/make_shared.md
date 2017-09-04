@@ -6,10 +6,11 @@
 <div style='font: 12pt consolas; -white-space:pre'>
 when&nbsp;&nbsp;using VirtualShape = varg&lt;Rectangle,...&gt;;<br>
 or&nbsp;&nbsp;&nbsp;&nbsp;using VirtualShape = _virtual&lt;Shape&gt;;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>//where struct Rectangle : Shape {...};</i>
-</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>//where struct Rectangle : Shape {...};</i><br>
 <br>
-&nbsp;
+</div>
+
+
 <pre><code>std::<b>make_shared</b> &lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
 <i>//is equivalent to:</i>
 vane::make_shared&lt;Rectangle, VirtualShape&gt;{...};
