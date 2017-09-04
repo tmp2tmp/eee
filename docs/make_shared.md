@@ -12,8 +12,14 @@ where struct Rectangle : Shape {...};
 
 <pre><code>std::make_shared&lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
 <i>//is equivalent to:</i>
-vane::make_shared<Rectangle, Shape>{...};
+vane::make_shared&lt;Rectangle, Shape&gt;{...};
 </code></pre>
+
+<pre><code>std::make_unique&lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
+<i>//is equivalent to:</i>
+vane::make_unique&lt;Rectangle, Shape&gt;{...};
+</code></pre>
+
 
 
 &nbsp;  
