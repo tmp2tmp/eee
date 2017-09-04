@@ -3,8 +3,10 @@
 &nbsp;  
 &nbsp;
 
-when VirtualShape = _virtual<Shape>; 
-or   VirtualShape = varg<Rectangle,...>;
+when VirtualShape = _virtual<Shape>;  
+or   VirtualShape = varg<Rectangle,...>;  
+;	where struct Rectangle : Shape {...};
+
 ```
 std::make_shared<VirtualShape::of<Rectangle>>{...};
 //is equiv to:
