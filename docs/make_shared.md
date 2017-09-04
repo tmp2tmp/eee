@@ -5,7 +5,7 @@
 
 <div style='font: 12pt consolas; white-space:pre'>
 when  using VirtualShape = _virtual&lt;Shape&gt;;  
-or    using VirtualShape = varg&lt;Rectangle,...&gt;  
+  or  using VirtualShape = varg&lt;Rectangle,...&gt;  
 where struct Rectangle : Shape {...};
 </div>
 
