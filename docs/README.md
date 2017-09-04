@@ -36,7 +36,7 @@ There are no messy macro things, no need to attach complicated unwieldy gears to
 	Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
 - nargs
 - [Virtual & mutiple inheritance are supported](diamond.md)
-- [Replacing virtual functions at runtime is supported](replacing-virtual-functions.md)
+- [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported
 - [Covariant return types are supported](covariant_return_types.md)
 
 &nbsp;  
@@ -46,9 +46,9 @@ There are no messy macro things, no need to attach complicated unwieldy gears to
 - [utility &nbsp; for std::shared_ptr](make_shared.md)  
 - [std::shared_ptr &nbsp; utility](make_shared.md)  
 - [```make_shared utility```](make_shared.md)  
+- [using with &nbsp; std::shared_ptr](make_shared.md)  
 -->
 - [make_shared utility](make_shared.md)  
-- [using with &nbsp; std::shared_ptr](make_shared.md)  
 - [vt-vars](vt-vars.md)  
 &nbsp;  
 
