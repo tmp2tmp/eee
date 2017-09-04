@@ -3,15 +3,15 @@
 &nbsp;  
 &nbsp;
 
-when VirtualShape = _virtual<Shape>;  
-or   VirtualShape = varg<Rectangle,...>;  
+when VirtualShape = \_virtual&lt;Shape&gt;;  
+or   VirtualShape = varg&lt;Rectangle,...&gt;  
 ;	where struct Rectangle : Shape {...};
 
-```
+<pre><code>
 std::make_shared<VirtualShape::of<Rectangle>>{...};
 //is equiv to:
 vane::make_shared<Rectangle, Shape>{...};
-```
+</code></pre>
 
 &nbsp;  
 &nbsp;  
