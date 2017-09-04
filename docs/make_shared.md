@@ -4,18 +4,19 @@
 &nbsp;
 
 <div style='font: 12pt consolas; white-space:pre'>
-when  using VirtualShape = _virtual&lt;Shape&gt;;  
-  or  using VirtualShape = varg&lt;Rectangle,...&gt;  
-where struct Rectangle : Shape {...};
+when  using VirtualShape = varg&lt;Rectangle,...&gt;;
+
+or    using VirtualShape = _virtual&lt;Shape&gt;;
+      <i>//where struct Rectangle : Shape {...};</i>
 
 </div>
 
-<pre><code>std::make_shared&lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
+<pre><code>std::<b>make_shared</b> &lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
 <i>//is equivalent to:</i>
 vane::make_shared&lt;Rectangle, Shape&gt;{...};
 </code></pre>
 
-<pre><code>std::make_unique&lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
+<pre><code>std::make_unique &lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
 <i>//is equivalent to:</i>
 vane::make_unique&lt;Rectangle, Shape&gt;{...};
 </code></pre>
