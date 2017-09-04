@@ -3,7 +3,17 @@
 &nbsp;  
 &nbsp;
 
+when VirtualShape = _virtual<Shape>; 
+or   VirtualShape = varg<Rectangle,...>;
+```
+std::make_shared<VirtualShape::of<Rectangle>>{...};
+//is equiv to:
+vane::make_shared<Rectangle, Shape>{...};
+```
 
+&nbsp;  
+&nbsp;  
+&nbsp;
 
 ```c++
 //file: make_shared-virt.cc
