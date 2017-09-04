@@ -4,10 +4,9 @@
 &nbsp;
 
 <div style='font: 12pt consolas; white-space:pre'>
-when  using VirtualShape = varg&lt;Rectangle,...&gt;;
+when  using VirtualShape = _virtual&lt;Shape&gt;;  //where struct Rectangle : Shape {...};
+  or  using VirtualShape = varg&lt;Rectangle,...&gt;;
 
-or    using VirtualShape = _virtual&lt;Shape&gt;;
-      <i>//where struct Rectangle : Shape {...};</i>
 
 </div>
 
