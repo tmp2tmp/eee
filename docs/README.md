@@ -42,6 +42,8 @@ There are no messy macro things, no need to attach complicated unwieldy gears to
 &nbsp;  
 
 ### More Usages
+- [std::shared_ptr utility](vt-make_shared.md)  
+- [using with std::shared_ptr](vt-make_shared.md)  
 - varg<>  
   - [vt-make_shared](vt-make_shared.md)  
   - [vt-vars](vt-vars.md)  
