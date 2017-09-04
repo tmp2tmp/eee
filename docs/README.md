@@ -50,15 +50,12 @@ No need to attach complicated distracting unwieldy gears to existing class code.
 -->
 - [make_shared &nbsp; utility](make_shared.md)  
 - [vt-vars](vt-vars.md)  
-- runtime errors
+- [runtime errors](runtime_errors.md)
 &nbsp;  
 
 #### [more examples](examples.md)
-[hello_world](hello_world.md)  
-[hello_world-poly](hello_world-poly.md)  
 [zzz](zzz.md)  
 [xxx](xxx.md)  
-[pre](pre.md)  
 &nbsp;  
 
 ### [Resources & Referrences](resources.md)

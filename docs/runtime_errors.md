@@ -1,6 +1,12 @@
 # runtime errors
+&nbsp;  
+&nbsp;  
+&nbsp;
 
 sample code
+&nbsp;  
+&nbsp;
+
 ```c++
 #include "vane.h"   //required
 #include <stdio.h>
