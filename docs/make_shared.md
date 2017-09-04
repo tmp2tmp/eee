@@ -3,14 +3,15 @@
 &nbsp;  
 &nbsp;
 
-<pre style='font-family: monospace'>
-when  using VirtualShape = \_virtual&lt;Shape&gt;;  
+<div style='font: 12pt consolas; white-space:pre'>
+when  using VirtualShape = _virtual&lt;Shape&gt;;  
 or    using VirtualShape = varg&lt;Rectangle,...&gt;  
-; where struct Rectangle : Shape {...};
-</pre>
+where struct Rectangle : Shape {...};
+</div>
+&nbsp;  
 
 <pre><code>std::make_shared&lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
-<i>//is equiv to:</i>
+<i>//is equivalent to:</i>
 vane::make_shared<Rectangle, Shape>{...};
 </code></pre>
 
