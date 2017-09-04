@@ -42,10 +42,9 @@ There are no messy macro things, no need to attach complicated unwieldy gears to
 &nbsp;  
 
 ### More Usages
-- [utility &nbsp; for std::shared_ptr](vt-make_shared.md)  
-- [std::shared_ptr &nbsp; utility](vt-make_shared.md)  
-- [using with &nbsp; std::shared_ptr](vt-make_shared.md)  
-- [vt-make_shared](vt-make_shared.md)  
+- [utility &nbsp; for std::shared_ptr](make_shared.md)  
+- [std::shared_ptr &nbsp; utility](make_shared.md)  
+- [using with &nbsp; std::shared_ptr](make_shared.md)  
 - [vt-vars](vt-vars.md)  
 &nbsp;  
 
