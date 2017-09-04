@@ -4,11 +4,11 @@
 &nbsp;
 
 <div style='font: 12pt consolas; white-space:pre'>
-when  using VirtualShape = _virtual&lt;Shape&gt;;  <i>//where struct Rectangle : Shape {...};</i>
-  or  using VirtualShape = varg&lt;Rectangle,...&gt;;
-
-
+when  using VirtualShape = varg&lt;Rectangle,...&gt;;
+or    using VirtualShape = _virtual&lt;Shape&gt;;
+      <i>//where struct Rectangle : Shape {...};</i>
 </div>
+<br>
 
 <pre><code>std::<b>make_shared</b> &lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
 <i>//is equivalent to:</i>
