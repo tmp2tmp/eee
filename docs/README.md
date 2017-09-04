@@ -31,7 +31,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 
 ### Features
 - Simple & easy syntax  
-There are no messy macro things, no need to attach complicated unwieldy gears to existing class code.
+There are no messy macro things, no need to attach complicated distracting unwieldy gears to existing class code.
 - [Function call resolutoin is supported](call_resolution.md)  
 	Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
 - nargs
