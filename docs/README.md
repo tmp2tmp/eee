@@ -50,6 +50,7 @@ No need to attach complicated distracting unwieldy gears to existing class code.
 -->
 - [make_shared &nbsp; utility](make_shared.md)  
 - [vt-vars](vt-vars.md)  
+- runtime errors
 &nbsp;  
 
 #### [more examples](examples.md)
@@ -60,7 +61,7 @@ No need to attach complicated distracting unwieldy gears to existing class code.
 [pre](pre.md)  
 &nbsp;  
 
-#### [Resources & Referrences](resources.md)
+### [Resources & Referrences](resources.md)
 
 
 
