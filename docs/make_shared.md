@@ -15,7 +15,7 @@ or&nbsp;&nbsp;&nbsp;&nbsp;using VirtualShape = _virtual&lt;Shape&gt;;<br>
 vane::<b>make_shared</b> &lt;Rectangle, VirtualShape&gt; {...};
 </code></pre>
 
-<pre><code>std::<b>>make_unique</b> &lt;VirtualShape::of&lt;Rectangle&gt;&gt; {...};
+<pre><code>std::<b>make_unique</b> &lt;VirtualShape::of&lt;Rectangle&gt;&gt; {...};
 <i>//is equivalent to:</i>
 vane::<b>make_unique</b> &lt;Rectangle, VirtualShape&gt; {...};
 </code></pre>
