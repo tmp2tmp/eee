@@ -48,9 +48,9 @@ No need to attach complicated distracting unwieldy gears to existing class code.
 - [```make_shared utility```](make_shared.md)  
 - [using with &nbsp; std::shared_ptr](make_shared.md)  
 -->
+- [runtime errors](runtime_errors.md)
 - [make_shared &nbsp; utility](make_shared.md)  
 - [vt-vars](vt-vars.md)  
-- [runtime errors](runtime_errors.md)
 &nbsp;  
 
 #### [more examples](examples.md)
