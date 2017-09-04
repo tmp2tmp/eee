@@ -6,7 +6,7 @@
 <pre style='font-family: monospace'>
 when  using VirtualShape = \_virtual&lt;Shape&gt;;  
 or    using VirtualShape = varg&lt;Rectangle,...&gt;  
-where struct Rectangle : Shape {...};
+; where struct Rectangle : Shape {...};
 </pre>
 
 <pre><code>std::make_shared&lt;VirtualShape::of&lt;Rectangle&gt;&gt;{...};
