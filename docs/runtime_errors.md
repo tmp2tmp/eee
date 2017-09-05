@@ -10,7 +10,7 @@ But not 100% compatible with the C++ language call-resolution behaviors.
 &nbsp;
 
 For debugging:  
-Though not 100% compatible, calling the function call operator of the co-class(FX) of a mult\_func
+Though not 100% compatible, calling the function call operators of the co-class(FX) of a mult\_func
 can be useful for debugging to test at compile time 
 whether calls on some possible combinations of argument types
 will generate runtime errors of call-resolution.  
@@ -111,9 +111,6 @@ void call (vane::multi_func<Fx> *mfunc, int &i, A &&a, O &&x) try
         */
         (*(Fx*)mfunc) ( i, A(), Y());   //compile OK
         (*(Fx*)mfunc) ( i, B(), X());   //compile OK
-    //  (*(Fx*)mfunc) ( i, B(), Y());   //compile error: call is ambiguous
-    //  (*(Fx*)mfunc) ( i, A(), X());   //compile error: no matching function
-    //  (*(Fx*)mfunc) ( i, A(), O());   //compile error: no matching function
     }
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
@@ -256,9 +253,6 @@ void call (vane::multi_func<Fx> *mfunc, int &i, VA *a, VO *x) try
         */
         (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);   //compile OK
         (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);   //compile OK
-    //  (*(Fx*)mfunc) ( i, (B*)nullptr, (Y*)nullptr);   //compile error: call is ambiguous
-    //  (*(Fx*)mfunc) ( i, (A*)nullptr, (X*)nullptr);   //compile error: no matching function
-    //  (*(Fx*)mfunc) ( i, (A*)nullptr, (O*)nullptr);   //compile error: no matching function
     }
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
@@ -394,9 +388,6 @@ void call (vane::multi_func<Fx> *mfunc, int &i, varg *a, varg *x) try
         */
         (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);   //compile OK
         (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);   //compile OK
-    //  (*(Fx*)mfunc) ( i, (B*)nullptr, (Y*)nullptr);   //compile error: call is ambiguous
-    //  (*(Fx*)mfunc) ( i, (A*)nullptr, (X*)nullptr);   //compile error: no matching function
-    //  (*(Fx*)mfunc) ( i, (A*)nullptr, (O*)nullptr);   //compile error: no matching function
     }
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
