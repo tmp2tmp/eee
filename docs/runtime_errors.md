@@ -104,7 +104,7 @@ void call (vane::multi_func<Fx> *mfunc, int &i, A &&a, O &&x) try
            - ensures at compile-time  //not 100% actually; but 100% in the above cases in main()
                                       //so may be useful practically in general,
                                       //   esp. Fx is a template paratmeter typename
-                that mfunc calls for its argument types in (A*,Y*), (B*,X*)
+                that mfunc calls for its argument types in (A&&,Y&&), (B&&,X&&)
                           of which types the arguments are expected to be passed at exectution
                      will generate no call-resolution errors at runtime.
         */
