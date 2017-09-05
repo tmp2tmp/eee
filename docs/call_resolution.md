@@ -11,7 +11,7 @@ Runtime function call resolutoin based on the inheritance hierarchies of the arg
 -->
 
 Invalid function calls generate [errors at runtime](runtime_errors.md):  
-	e.g. ambiguous calls, unmatched calls
+&nbsp; &nbsp; &nbsp; &nbsp;	e.g. ambiguous calls, unmatched calls
 
 &nbsp;  
 &nbsp;
