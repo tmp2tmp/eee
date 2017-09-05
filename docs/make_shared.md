@@ -47,15 +47,15 @@ struct PrintFx {
     using type = void (_virtual<Shape>*);
     using domains = tuple <tuple <Rectangle, Ellipse, Polygon> >;
 
-    void operator()(Rectangle *s) { printf("\n%s  @fR", s->name); }
-    void operator()(Ellipse   *s) { printf("\n%s  @fE", s->name); }
-    void operator()(Polygon   *s) { printf("\n%s  @fP", s->name); }
+    void operator() (Rectangle *s) { printf("\n%s  @fR", s->name); }
+    void operator() (Ellipse   *s) { printf("\n%s  @fE", s->name); }
+    void operator() (Polygon   *s) { printf("\n%s  @fP", s->name); }
 };
 
 
 int main() try
 {
-    vane::multi_func <PrintFx>                    mprint;
+    vane::multi_func <PrintFx>                   mprint;
     vane::virtual_func <void(_virtual<Shape>*)>  &vprint= mprint;
 
     PrintFx  print;   //ordinary function object
@@ -152,9 +152,9 @@ struct PrintFx {
     using type = void (Shape*);
     using domains = tuple <tuple <Rectangle, Ellipse, Polygon> >;
 
-    void operator()(Rectangle *s) { printf("\n%s  @fR", s->name); }
-    void operator()(Ellipse   *s) { printf("\n%s  @fE", s->name); }
-    void operator()(Polygon   *s) { printf("\n%s  @fP", s->name); }
+    void operator() (Rectangle *s) { printf("\n%s  @fR", s->name); }
+    void operator() (Ellipse   *s) { printf("\n%s  @fE", s->name); }
+    void operator() (Polygon   *s) { printf("\n%s  @fP", s->name); }
 };
 
 
