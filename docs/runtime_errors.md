@@ -5,7 +5,7 @@
 
 Invalid function calls (ambiguous calls or calls that have no matching functions)
 generate runtime errors as exceptions:  
-&nbsp; &nbsp; ```vane::multifunction_error:: invalid_call``` &nbsp; derived from ```std::runtime_error```.  
+&nbsp; &nbsp; ```vane::multifunction_error::invalid_call``` &nbsp; derived from ```std::runtime_error```.  
 But not 100% compatible with the C++ language call-resolution behaviors.
 
 For debugging:  
@@ -96,7 +96,7 @@ int main()
 
 void call (vane::multi_func<Fx> *mfunc, int &i, A &&a, O &&x) try
 {
-    (*mfunc)(i, std::move(a), std::move(x));
+    (*mfunc) (i, std::move(a), std::move(x));
 
     if(0) {
         /* this block
@@ -241,7 +241,7 @@ int main()
 
 void call (vane::multi_func<Fx> *mfunc, int &i, VA *a, VO *x) try
 {
-    (*mfunc)(i, a, x);
+    (*mfunc) (i, a, x);
 
     if(0) {
         /* this block
@@ -379,7 +379,7 @@ int main()
 
 void call (vane::multi_func<Fx> *mfunc, int &i, varg *a, varg *x) try
 {
-    (*mfunc)(i, a, x);
+    (*mfunc) (i, a, x);
 
     if(0) {
         /* this block
