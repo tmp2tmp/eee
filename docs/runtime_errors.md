@@ -6,7 +6,8 @@
 Invalid function calls (ambiguous calls or calls that have no matching functions)
 generate runtime errors as exceptions:  
 &nbsp; &nbsp; ```vane::multifunction_error::invalid_call``` &nbsp; derived from ```std::runtime_error```.  
-But not 100% compatible with the C++ language call-resolution behaviors.
+But not 100% compatible with the C++ language call-resolution behaviors.  
+&nbsp;
 
 For debugging:  
 Though not 100% compatible, calling the function call operator of the co-class(FX) of a mult\_func
