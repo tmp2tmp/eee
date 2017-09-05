@@ -109,8 +109,8 @@ void call (vane::multi_func<Fx> *mfunc, int &i, A &&a, O &&x) try
                           of which types the arguments are expected to be passed at exectution
                      will generate no call-resolution errors at runtime.
         */
-        (*(Fx*)mfunc) ( i, A(), Y());   //compile OK
-        (*(Fx*)mfunc) ( i, B(), X());   //compile OK
+        (*(Fx*)mfunc) ( i, A(), Y());
+        (*(Fx*)mfunc) ( i, B(), X());
     }
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
@@ -251,8 +251,8 @@ void call (vane::multi_func<Fx> *mfunc, int &i, VA *a, VO *x) try
                           of which types the arguments are expected to be passed at exectution
                      will generate no call-resolution errors at runtime.
         */
-        (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);   //compile OK
-        (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);   //compile OK
+        (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);
+        (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);
     }
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
@@ -386,8 +386,8 @@ void call (vane::multi_func<Fx> *mfunc, int &i, varg *a, varg *x) try
                           of which types the arguments are expected to be passed at exectution
                      will generate no call-resolution errors at runtime.
         */
-        (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);   //compile OK
-        (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);   //compile OK
+        (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);
+        (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);
     }
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
