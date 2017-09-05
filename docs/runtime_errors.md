@@ -4,11 +4,11 @@
 &nbsp;
 
 Invalid function calls (ambiguous calls or calls that have no matching functions)
-generate runtime errors as exceptions:
+generate runtime errors as exceptions:  
 &nbsp; &nbsp; vane::multifunction\_error:: invalid\_call &nbsp; derived from std::runtime\_error.  
 But not 100% compatible with the C++ language call-resolution behaviors.  
 Though not 100% compatible, calling the function call operator of the co-class(FX) of a mult\_func can be
-useful for debugging to test at compile time whether some possible combinations of argument types will generate
+useful for debugging to test at compile time whether calls on some possible combinations of argument types will generate
 runtime errors.
 
 calling the function call operator of the co-class(FX) of a mult\_func is 100% of C++ language call-resolution semantics.
@@ -16,7 +16,7 @@ calling the function call operator of the co-class(FX) of a mult\_func is 100% o
 
 Runtime errors occurr at runtime only. This makes debugging inconvenient.  
 Whether a vane::multi\_func call generates a runtime error or not can be tested
-  by getting the code-path acquire execution at runtime.
+  by getting the code-path acquire execution at runtime.  
 But it can be test at compile time if we know the possible combinations of the argument types at the call.  
 For the combinations of the arguments
 
