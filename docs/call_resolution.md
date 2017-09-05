@@ -4,7 +4,7 @@
 &nbsp;
 
 Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported.  
-//not 100% compatible with C++ language call-resolution semantics.
+//not 100% compatible with the C++ language call-resolution behaviors.
 <!--
 *** ambiguity checking rules ***; different behavior than g++/clang++
 	simpler than of C++ language
