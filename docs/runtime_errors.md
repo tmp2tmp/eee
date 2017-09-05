@@ -79,9 +79,9 @@ real args    Fx called
   1| a y --> fAY
  10| b x --> fBX
  11| b x --> fBX
-100| exception : multi-function error: no matching function or ambiguous call
-200| exception : multi-function error: no matching function or ambiguous call
-300| exception : multi-function error: argument type out of domain
+100| exception : virtual-function error: no matching function or ambiguous call
+200| exception : virtual-function error: no matching function or ambiguous call
+300| exception : virtual-function error: argument type out of domain
 */
 ```
 
@@ -203,9 +203,9 @@ real args    Fx called
   1| a y --> fAY
  10| b x --> fBX
  11| b x --> fBX
-100| exception : multi-function error: no matching function or ambiguous call
-200| exception : multi-function error: no matching function or ambiguous call
-300| exception : multi-function error: argument type out of domain
+100| exception : virtual-function error: no matching function or ambiguous call
+200| exception : virtual-function error: no matching function or ambiguous call
+300| exception : virtual-function error: argument type out of domain
 */
 ```
 
@@ -320,8 +320,8 @@ real args    Fx called
   1| a y --> fAY
  10| b x --> fBX
  11| b x --> fBX
-100| exception : multi-function error: no matching function or ambiguous call
-200| exception : multi-function error: no matching function or ambiguous call
-300| exception : multi-function error: argument type out of domain
+100| exception : virtual-function error: no matching function or ambiguous call
+200| exception : virtual-function error: no matching function or ambiguous call
+300| exception : virtual-function error: argument type out of domain
 */
 ```
