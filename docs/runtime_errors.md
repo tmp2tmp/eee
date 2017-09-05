@@ -8,13 +8,14 @@ generate runtime errors as exceptions:
 &nbsp; &nbsp; ```vane::multifunction_error:: invalid_call``` &nbsp; derived from ```std::runtime_error```.  
 But not 100% compatible with the C++ language call-resolution behaviors.
 
+For debugging:  
 Though not 100% compatible, calling the function call operator of the co-class(FX) of a mult\_func
 can be useful for debugging to test at compile time 
 whether calls on some possible combinations of argument types
 will generate runtime errors of call-resolution.  
 Examples are below.
 
-
+<!--
 calling the function call operator of the co-class(FX) of a mult\_func is 100% of C++ language call-resolution semantics.
 
 
@@ -25,6 +26,7 @@ But it can be test at compile time if we know the possible combinations of the a
 For the combinations of the arguments
 
 The co-class of a multi\_func
+-->
 
 &nbsp;  
 &nbsp;
