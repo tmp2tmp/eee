@@ -4,11 +4,15 @@
 &nbsp;
 
 Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported.  
-//not 100% consistent with C++ language call-resolution semantics.
+//not 100% compatible with C++ language call-resolution semantics.
 <!--
 *** ambiguity checking rules ***; different behavior than g++/clang++
 	simpler than of C++ language
 -->
+
+Invalid function calls generate [errors at runtime](runtime_errors.md):  
+	e.g. ambiguous calls, unmatched calls
+
 &nbsp;  
 &nbsp;
 
