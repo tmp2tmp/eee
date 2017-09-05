@@ -95,7 +95,7 @@ void call (vane::multi_func<Fx> *mfunc, int &i, A &&a, O &&x) try
     if(0) {
         /* this block
            - will be optimized out when compiled optimized.
-           - ensures at compile-time  //not 100% in general actually; but 100% in the above cases in main()
+           - ensures at compile-time  //not 100% actually; but 100% in the above cases in main()
                                       //so may be useful practically in general,
                                       //   esp. Fx is a template paratmeter typename
                 that mfunc calls for its argument types in (A*,Y*), (B*,X*)
@@ -240,7 +240,7 @@ void call (vane::multi_func<Fx> *mfunc, int &i, VA *a, VO *x) try
     if(0) {
         /* this block
            - will be optimized out when compiled optimized.
-           - ensures at compile-time  //not 100% in general actually; but 100% in the above cases in main()
+           - ensures at compile-time  //not 100% actually; but 100% in the above cases in main()
                                       //so may be useful practically in general,
                                       //   esp. Fx is a template paratmeter typename
                 that mfunc calls for its argument types in (A*,Y*), (B*,X*)
@@ -378,7 +378,7 @@ void call (vane::multi_func<Fx> *mfunc, int &i, varg *a, varg *x) try
     if(0) {
         /* this block
            - will be optimized out when compiled optimized.
-           - ensures at compile-time  //not 100% in general actually; but 100% in the above cases in main()
+           - ensures at compile-time  //not 100% actually; but 100% in the above cases in main()
                                       //so may be useful practically in general,
                                       //   esp. Fx is a template paratmeter typename
                 that mfunc calls for its argument types in (A*,Y*), (B*,X*)
