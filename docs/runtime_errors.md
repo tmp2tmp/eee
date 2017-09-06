@@ -71,6 +71,7 @@ struct Fx
 
 
 ////////////////////////////////////////////////////////////////////////////////
+template <typename Fx>
 void call (vane::multi_func<Fx> *mfunc, int &i, A &&a, O &&x);
 
 
@@ -95,23 +96,20 @@ int main()
 }
 
 
+template <typename Fx>
 void call (vane::multi_func<Fx> *mfunc, int &i, A &&a, O &&x) try
 {
     (*mfunc) (i, std::move(a), std::move(x));
 
     if(0) {
-        /* this block
-           - will be optimized out when compiled optimized.
-           - ensures at compile-time  //not 100% actually; but 100% in the above cases in main()
-                                      //so may be useful practically in general,
-                                      //   esp. Fx is a template paratmeter typename
-                that mfunc calls for its argument types in (A&&,Y&&), (B&&,X&&)
-                          of which types the arguments are expected to be passed at exectution
-                     will generate no call-resolution errors at runtime.
-        */
-        (*(Fx*)mfunc) ( i, A(), Y());
-        (*(Fx*)mfunc) ( i, B(), X());
+        (*(Fx*)mfunc) (i, A(), Y());
+        (*(Fx*)mfunc) (i, B(), X());
     }
+    /*This way will be useful a little sometimes for compile time checking
+        esp. when Fx is a template parameter typename
+        though multi_func is not 100% consistent with C++ language call-resolution.
+     This block will be optimized out when compiled optimized.
+    */
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
 
@@ -210,6 +208,7 @@ struct Fx
 
 
 ////////////////////////////////////////////////////////////////////////////////
+template <typename Fx>
 void call (vane::multi_func<Fx> *mfunc, int &i, VA *a, VO *x);
 
 
@@ -237,23 +236,20 @@ int main()
 }
 
 
+template <typename Fx>
 void call (vane::multi_func<Fx> *mfunc, int &i, VA *a, VO *x) try
 {
     (*mfunc) (i, a, x);
 
     if(0) {
-        /* this block
-           - will be optimized out when compiled optimized.
-           - ensures at compile-time  //not 100% actually; but 100% in the above cases in main()
-                                      //so may be useful practically in general,
-                                      //   esp. Fx is a template paratmeter typename
-                that mfunc calls for its argument types in (A*,Y*), (B*,X*)
-                          of which types the arguments are expected to be passed at exectution
-                     will generate no call-resolution errors at runtime.
-        */
-        (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);
-        (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);
+        (*(Fx*)mfunc) (i, (A*)nullptr, (Y*)nullptr);
+        (*(Fx*)mfunc) (i, (B*)nullptr, (X*)nullptr);
     }
+    /*This way will be useful a little sometimes for compile time checking
+        esp. when Fx is a template parameter typename
+        though multi_func is not 100% consistent with C++ language call-resolution.
+     This block will be optimized out when compiled optimized.
+    */
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
 
@@ -345,6 +341,7 @@ struct Fx
 
 
 ////////////////////////////////////////////////////////////////////////////////
+template <typename Fx>
 void call (vane::multi_func<Fx> *mfunc, int &i, varg *a, varg *x);
 
 
@@ -372,23 +369,20 @@ int main()
 }
 
 
+template <typename Fx>
 void call (vane::multi_func<Fx> *mfunc, int &i, varg *a, varg *x) try
 {
     (*mfunc) (i, a, x);
 
     if(0) {
-        /* this block
-           - will be optimized out when compiled optimized.
-           - ensures at compile-time  //not 100% actually; but 100% in the above cases in main()
-                                      //so may be useful practically in general,
-                                      //   esp. Fx is a template paratmeter typename
-                that mfunc calls for its argument types in (A*,Y*), (B*,X*)
-                          of which types the arguments are expected to be passed at exectution
-                     will generate no call-resolution errors at runtime.
-        */
-        (*(Fx*)mfunc) ( i, (A*)nullptr, (Y*)nullptr);
-        (*(Fx*)mfunc) ( i, (B*)nullptr, (X*)nullptr);
+        (*(Fx*)mfunc) (i, (A*)nullptr, (Y*)nullptr);
+        (*(Fx*)mfunc) (i, (B*)nullptr, (X*)nullptr);
     }
+    /*This way will be useful a little sometimes for compile time checking
+        esp. when Fx is a template parameter typename
+        though multi_func is not 100% consistent with C++ language call-resolution.
+     This block will be optimized out when compiled optimized.
+    */
 }
 catch(const std::exception &e) { printf("\n%3d| exception : %s", i, e.what()); }
 
