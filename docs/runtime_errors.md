@@ -13,7 +13,7 @@ For debugging:
 Though not 100% consistent, calling the function call operators of the co-class(FX) of a mult\_func
 can be useful a little sometimes &nbsp; to test at compile time 
 whether calls on some possible combinations of argument types
-will generate runtime errors of call-resolution or not  
+will generate runtime errors of call-resolution or not 
 &nbsp; when calls on those argument types require no call-resolution errors at runtime,  
 again though not 100% guaranteed.  
 Examples are below.
