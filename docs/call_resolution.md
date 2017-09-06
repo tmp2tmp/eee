@@ -69,8 +69,8 @@ int main() try
     int i;
     i=0;    mfunc (i, &b, &x);    fx (i, &b, &x);
     i=10;   mfunc (i, &b, &z);    fx (i, &b, &z);
-    i=20;   vfunc (i, &d, &x);    fx (i, &d, &x);
-    i=30;   vfunc (i, &d, &z);    fx (i, &d, &z);
+    i=20;   mfunc (i, &d, &x);    fx (i, &d, &x);
+    i=30;   mfunc (i, &d, &z);    fx (i, &d, &z);
 
 ____
     struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> A,Y
@@ -79,8 +79,8 @@ ____
     M m;
     P p;
 
-    i=100;  mfunc (i, &m, &m);    fx (i, &m, &m);   // (AY,AY) --> f(A,Y)
-    i=110;  mfunc (i, &m, &p);    fx (i, &m, &p);   // (AY,CW) --> f(A,W)
+    i=100;  vfunc (i, &m, &m);    fx (i, &m, &m);   // (AY,AY) --> f(A,Y)
+    i=110;  vfunc (i, &m, &p);    fx (i, &m, &p);   // (AY,CW) --> f(A,W)
     i=120;  vfunc (i, &p, &m);    fx (i, &p, &m);   // (CW,AY) --> f(C,Y)
     i=130;  vfunc (i, &p, &p);    fx (i, &p, &p);   // (CW,CW) --> f(C,W)
 }
@@ -201,8 +201,8 @@ int main() try
     int i;
     i=0;    mfunc (i, &b, &x);    fx (i, &b, &x);
     i=10;   mfunc (i, &b, &z);    fx (i, &b, &z);
-    i=20;   vfunc (i, &d, &x);    fx (i, &d, &x);
-    i=30;   vfunc (i, &d, &z);    fx (i, &d, &z);
+    i=20;   mfunc (i, &d, &x);    fx (i, &d, &x);
+    i=30;   mfunc (i, &d, &z);    fx (i, &d, &z);
 
 ____
     struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> A,Y
@@ -213,8 +213,8 @@ ____
     VA::of<P> pa;
     VW::of<P> pw;
 
-    i=100;  mfunc (i, &ma, &mw);    fx (i, &ma, &mw);   // (AY,AY) --> f(A,Y)
-    i=110;  mfunc (i, &ma, &pw);    fx (i, &ma, &pw);   // (AY,CW) --> f(A,W)
+    i=100;  vfunc (i, &ma, &mw);    fx (i, &ma, &mw);   // (AY,AY) --> f(A,Y)
+    i=110;  vfunc (i, &ma, &pw);    fx (i, &ma, &pw);   // (AY,CW) --> f(A,W)
     i=120;  vfunc (i, &pa, &mw);    fx (i, &pa, &mw);   // (CW,AY) --> f(C,Y)
     i=130;  vfunc (i, &pa, &pw);    fx (i, &pa, &pw);   // (CW,CW) --> f(C,W)
 }
@@ -334,8 +334,8 @@ int main() try
     int i;
     i=0;    mfunc (i, &b, &x);    fx (i, &b, &x);
     i=10;   mfunc (i, &b, &z);    fx (i, &b, &z);
-    i=20;   vfunc (i, &d, &x);    fx (i, &d, &x);
-    i=30;   vfunc (i, &d, &z);    fx (i, &d, &z);
+    i=20;   mfunc (i, &d, &x);    fx (i, &d, &x);
+    i=30;   mfunc (i, &d, &z);    fx (i, &d, &z);
 
 ____
     struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> A,Y
@@ -346,8 +346,8 @@ ____
     VA::of<P> pa;
     VW::of<P> pw;
 
-    i=100;  mfunc (i, &ma, &mw);    fx (i, &ma, &mw);   // (AY,AY) --> f(A,Y)
-    i=110;  mfunc (i, &ma, &pw);    fx (i, &ma, &pw);   // (AY,CW) --> f(A,W)
+    i=100;  vfunc (i, &ma, &mw);    fx (i, &ma, &mw);   // (AY,AY) --> f(A,Y)
+    i=110;  vfunc (i, &ma, &pw);    fx (i, &ma, &pw);   // (AY,CW) --> f(A,W)
     i=120;  vfunc (i, &pa, &mw);    fx (i, &pa, &mw);   // (CW,AY) --> f(C,Y)
     i=130;  vfunc (i, &pa, &pw);    fx (i, &pa, &pw);   // (CW,CW) --> f(C,W)
 }
