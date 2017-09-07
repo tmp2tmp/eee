@@ -31,13 +31,18 @@ Vane also includes meta-programming facilities that make meta-programming much e
 
 ### Features
 - Simple & easy syntax  
-No need to attach complicated distracting unwieldy gears to existing class code. There are no messy macro things.
+  No need to attach complicated distracting unwieldy gears to existing class code. There are no messy macro things.
 - [Function call resolutoin is supported](call_resolution.md)  
 	Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
-- nargs
+- [Arbitrary arity of virtual arguments is supported](nargs.md)  
+  Arbitrary number of virtual/non-virtual arguments can be arbitrarily mised.
+- Multiple Arity  
+  Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.
+  &nbsp; Three types of virtual arguments of Vane can also be freely mixed.
 - [Virtual & mutiple inheritance are supported](diamond.md)
 - [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported
 - [Covariant return types are supported](covariant_return_types.md)
+
 
 &nbsp;  
 
@@ -53,10 +58,6 @@ No need to attach complicated distracting unwieldy gears to existing class code.
 - [vt-vars](vt-vars.md)  
 &nbsp;  
 
-#### [more examples](examples.md)
-[zzz](zzz.md)  
-[xxx](xxx.md)  
-&nbsp;  
 
 ### [Resources & Referrences](resources.md)
 
