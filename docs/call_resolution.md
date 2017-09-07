@@ -7,8 +7,10 @@ Runtime function call resolutoin based on the inheritance hierarchies of the arg
 //not 100% consistent with the C++ language call-resolution behaviors.
 
 
-Invalid function calls generate [errors at runtime](runtime_errors.md):  
+Invalid function calls generate [errors at runtime](runtime_errors.md).
+<!-- 
 &nbsp; &nbsp; &nbsp; &nbsp;	e.g. ambiguous calls, unmatched calls
+-->
 
 &nbsp;  
 &nbsp;
