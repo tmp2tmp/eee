@@ -542,7 +542,7 @@ struct ShapeCollision
     using type = void (VirtualShape*, VirtualShape*);  //signature of the virtual function
 
 
-    template <typename Shape1, typename Shape2>    //just an example; could use a base class
+    template <typename Shape1, typename Shape2>    //just an example
     void print(Shape1 *p, Shape2 *q, const char *tag) {
         printf("(%-9s %9s) --> %s-%s\n", p->name, q->name, api_version, tag);
     }
