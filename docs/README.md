@@ -39,7 +39,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [Virtual & mutiple inheritance of virtual parameter types](diamond.md) are supported
 - Virtual functions are implemented as function objects:
   - function pointers are easily implemented as function object pointers.
-  - specialized functions can be scoped and controlled more conveniently than of global/module function symbols which have only namespace as a scoping measure.
+  - specialized functions can be confined and controlled more conveniently than of global/module function symbols which have only namespace as a confining measure.
   - you can take advantage of OOP features : &nbsp; polymorphism, inheritance  
   - OOP features can be taken advantage of: &nbsp; polymorphism, inheritance  
     [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.  
