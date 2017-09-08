@@ -35,7 +35,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [Function call resolutoin is supported](call_resolution.md)  
 	Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
 - Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.  
-  &nbsp; Three types of virtual arguments of Vane can also be freely mixed.
+  &nbsp; Three types of virtual parameters of Vane can also be freely mixed.
 - [Virtual & mutiple inheritance of virtual argument types are supported](diamond.md)
 - Open methods are implemented as function objects:
   - function pointers are easily implemented as functiion object pointers.
