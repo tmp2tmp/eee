@@ -40,7 +40,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - Open methods are implemented as function objects:
   - function pointers are easily implemented as functiion object pointers.
   - specialized functions can be scoped and controlled more conveniently than of global/module function symbols which have only namespace as a scoping measure.
-  - enables taking advantage of OOP features : polymorphism, inheritance  
+  - you can take advantage of OOP features : polymorphism, inheritance  
     [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported
 - [Covariant return types are supported](covariant_return_types.md)
 
