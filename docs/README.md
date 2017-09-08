@@ -33,7 +33,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - Simple & easy syntax  
   No need to attach complicated distracting unwieldy gears to existing class code. There are no messy macro things.
 - [Function call resolutoin is supported](call_resolution.md)  
-	Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
+  Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
 - Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.  
   &nbsp; Three types of virtual parameters of Vane can also be freely mixed.
 - [Virtual & mutiple inheritance of virtual parameter types are supported](diamond.md)
@@ -42,7 +42,9 @@ Vane also includes meta-programming facilities that make meta-programming much e
   - specialized functions can be scoped and controlled more conveniently than of global/module function symbols which have only namespace as a scoping measure.
   - you can take advantage of OOP features : &nbsp; polymorphism, inheritance  
   - OOP features can be taken advantage of: &nbsp; polymorphism, inheritance  
-    [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported
+    - [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.
+    - gives easy means to force static dispatch <!-- accessing individual implementatins -->
+    - or to call base implementations of a virtual function
 - [Covariant return types are supported](covariant_return_types.md)
 
 
