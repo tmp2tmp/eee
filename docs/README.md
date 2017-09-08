@@ -38,7 +38,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
   &nbsp; Three types of virtual parameters of Vane can also be freely mixed.
 - [Virtual & mutiple inheritance of virtual parameter types are supported](diamond.md)
 - Open methods are implemented as function objects:
-  - function pointers are easily implemented as functiion object pointers.
+  - function pointers are easily implemented as function object pointers.
   - specialized functions can be scoped and controlled more conveniently than of global/module function symbols which have only namespace as a scoping measure.
   - you can take advantage of OOP features : &nbsp; polymorphism, inheritance  
   - OOP features can be taken advantage of: &nbsp; polymorphism, inheritance  
