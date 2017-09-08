@@ -56,7 +56,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [using with &nbsp; std::shared_ptr](make_shared.md)  
 -->
 - [runtime errors](runtime_errors.md)
-- forcing static dispatch / calling a base implementation
+- forcing static dispatch / calling base implementations
 - [make_shared &nbsp; utility](make_shared.md)  
 - [vt-vars](vt-vars.md)  
 &nbsp;  
