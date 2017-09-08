@@ -36,7 +36,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
   Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
 - Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.  
   &nbsp; Three types of virtual parameters of Vane can also be freely mixed.
-- [Virtual & mutiple inheritance of virtual parameter types are supported](diamond.md)
+- [Virtual & mutiple inheritance of virtual parameter types](diamond.md) are supported
 - Open methods are implemented as function objects:
   - function pointers are easily implemented as function object pointers.
   - specialized functions can be scoped and controlled more conveniently than of global/module function symbols which have only namespace as a scoping measure.
