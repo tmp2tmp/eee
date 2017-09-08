@@ -43,7 +43,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
   - specialized functions can be confined and controlled more conveniently than of global/module function symbols which have only namespace as a confining measure.
   - OOP features can be taken advantage of: &nbsp; polymorphism, inheritance  
     [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.  
-    gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
+    it gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
     or for [calling the base implementations](calling_base_implementations) of a virtual function.
 
 
