@@ -41,6 +41,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
   - function pointers are easily implemented as functiion object pointers.
   - specialized functions can be scoped and controlled more conveniently than of global/module function symbols which have only namespace as a scoping measure.
   - you can take advantage of OOP features : polymorphism, inheritance  
+  - OOP features can be taken advantage of: polymorphism, inheritance  
     [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported
 - [Covariant return types are supported](covariant_return_types.md)
 
