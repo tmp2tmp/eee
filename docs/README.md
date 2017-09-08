@@ -45,7 +45,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
   - OOP features can be taken advantage of: &nbsp; polymorphism, inheritance  
     [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.  
     gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
-    or for [calling base implementations](calling_base_implementations) of a virtual function.
+    or for [calling the base implementations](calling_base_implementations) of a virtual function.
 
 
 &nbsp;  
