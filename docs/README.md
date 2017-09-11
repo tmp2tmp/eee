@@ -39,9 +39,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [Virtual & mutiple inheritance of virtual parameter types](diamond.md) are supported
 - [Covariant return types are supported](covariant_return_types.md)
 - Virtual functions are implemented as function objects:
-<!--
-  - function pointers are easily implemented as function object pointers.      
--->
+<!-- - function pointers are easily implemented as function object pointers.      -->
   - specialized functions can be confined and controlled more conveniently
     than of global/module functions which have only namespace as a confining measure.
   - instance specific data can be associated to the function instances while global/module functions can have only static/global data.
@@ -49,9 +47,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
     [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.  
     Function sets can be defined reusing existing code by inheritance  
     Inheritance gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
-<!--
-    or for [calling the base implementations](calling_base_implementations) of a virtual function.
--->
+<!-- or for [calling the base implementations](calling_base_implementations) of a virtual function.  -->
 
 
 &nbsp;  
