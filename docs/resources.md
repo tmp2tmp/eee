@@ -8,7 +8,9 @@ ACM 6th International Conference on Generative Programming and Component Enginee
 &nbsp;
 - [Multiple dispatch @wikipedia](http://en.wikipedia.org/wiki/Multiple_dispatch)
 - [Double dispatch @wikipedia](http://en.wikipedia.org/wiki/Double_dispatch)
+- [Dynamic dispatch](https://en.wikipedia.org/wiki/Dynamic_dispatch)
 - [Visitor pattern @wikipedia](http://en.wikipedia.org/wiki/Visitor_pattern)
+- [Virtual function](https://en.wikipedia.org/wiki/Virtual_function)
 
 
 <!--
