@@ -14,7 +14,7 @@ based on the runtime types of the mutiple arguments of
 
 None of them requires the existing class code to be modified.  
 Vane is easy to use, requires no chaotic boilerplate devices to be put on the classes.  
-**vane::multi\_func** itself is polymorphic  
+**vane::multi\_func** itself is polymorphic &nbsp; //double virtual  
 ; &nbsp;  you can change the whole behavior of a 'multi\_func' at runtime  
 &nbsp; &nbsp; by simply replacing it with another instance of a different multi\_func class  
 &nbsp; &nbsp; just as you can do with ordinary polymorphic class instances.  
@@ -39,7 +39,9 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [Virtual & mutiple inheritance of virtual parameter types](diamond.md) are supported
 - [Covariant return types are supported](covariant_return_types.md)
 - Virtual functions are implemented as function objects:
+<!--
   - function pointers are easily implemented as function object pointers.      
+-->
   - specialized functions can be confined and controlled more conveniently
     than of global/module function symbols which have only namespace as a confining measure.
   - OOP features can be taken advantage of: &nbsp; polymorphism, inheritance  
