@@ -43,7 +43,8 @@ Vane also includes meta-programming facilities that make meta-programming much e
   - Function specializations can be confined and maintained more conveniently
     than of global/module functions which have only namespace as a confining measure.
   - OOP features can be taken advantage of on the virtual function objects: &nbsp; <!-- polymorphism, inheritance etc-->  
-    - Virtual function objects are polymorphic: [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations  
+    - Virtual function objects are polymorphic:  
+      [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations  
 <!--    - [Virtual functions can be replaced at runtime](replacing-virtual-functions.md) is supported //polymorphism  -->
 <!--    - [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported //polymorphism  -->
     - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.  
