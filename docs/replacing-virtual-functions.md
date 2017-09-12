@@ -88,7 +88,7 @@ namespace detail {
         _CollisionFx_later (const char *version="Later api") : _CollisionFx_early(version) {}
 
         //specializations:
-        using _CollisionFx_early::operator();
+        using _CollisionFx_early::operator();    //reuse the code of base class
         void operator() (Rectangle *p, Ellipse   *q) { print(p,q, "fRE -modified"); }
         void operator() (Ellipse   *p, Rectangle *q) { print(p,q, "fER -added"); }
     };
@@ -343,7 +343,7 @@ namespace detail {
         _CollisionFx_later (const char *version="Later api") : _CollisionFx_early(version) {}
 
         //specializations:
-        using _CollisionFx_early::operator();
+        using _CollisionFx_early::operator();    //reuse the code of base class
         void operator() (Rectangle *p, Ellipse   *q) { print(p,q, "fRE -modified"); }
         void operator() (Ellipse   *p, Rectangle *q) { print(p,q, "fER -added"); }
     };
@@ -593,7 +593,7 @@ namespace detail {
         _CollisionFx_later (const char *version="Later api") : _CollisionFx_early(version) {}
 
         //specializations:
-        using _CollisionFx_early::operator();
+        using _CollisionFx_early::operator();    //reuse the code of base class
         void operator() (Rectangle *p, Ellipse   *q) { print(p,q, "fRE -modified"); }
         void operator() (Ellipse   *p, Rectangle *q) { print(p,q, "fER -added"); }
     };
