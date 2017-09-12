@@ -47,7 +47,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
     - Virtual function objects are polymorphic: [can be replaced at runtime](replacing-virtual-functions.md)  
 <!--    - [Virtual functions can be replaced at runtime](replacing-virtual-functions.md) is supported //polymorphism  -->
 <!--    - [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported //polymorphism  -->
-    - Function sets can be defined reusing existing code easily by inheritance  
+    - Specialization function sets can be defined reusing existing code easily by inheritance  
     - Inheritance gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
 <!-- or for [calling the base implementations](calling_base_implementations) of a virtual function.  -->
 
