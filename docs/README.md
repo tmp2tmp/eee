@@ -42,7 +42,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 <!-- - function pointers are easily implemented as function object pointers.      -->
   - Specialized functions can be confined and controlled more conveniently
     than of global/module functions which have only namespace as a confining measure.
-  - OOP features can be taken advantage of on the function object: &nbsp; polymorphism, inheritance  
+  - OOP features can be taken advantage of on the function object: &nbsp; polymorphism, inheritance etc  
     - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.  
     - [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.  
     - Function sets can be defined reusing existing code by inheritance  
