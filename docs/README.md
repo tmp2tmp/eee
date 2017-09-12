@@ -41,7 +41,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - Virtual functions are implemented as function `objects':
 <!-- - function pointers are easily implemented as function object pointers.      -->
   - Specialized functions can be confined and maintained more conveniently
-    than of global/module functions which have only namespace as a confining measure.
+    than of global/module function symbols which have only namespace as a confining measure.
   - OOP features can be taken advantage of on the virtual function objects: &nbsp; <!-- polymorphism, inheritance etc-->  
     - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.  
     - Virtual function objects are polymorphic: [can be replaced at runtime](replacing-virtual-functions.md)  
