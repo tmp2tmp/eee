@@ -38,7 +38,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
   &nbsp; Three sorts of virtual parameters of Vane can also be freely mixed.
 - [Virtual & mutiple inheritance of virtual argument types](diamond.md) are supported.
 - [Covariant return types are supported.](covariant_return_types.md)
-- Virtual functions are implemented as function `objects':
+- Virtual functions are [implemented as function `objects'](oop_featured.md):
   - Function specializations can be confined and maintained more conveniently than of global/module functions.<!-- which have only namespace as a confining measure.-->
   - OOP features can be taken advantage of on the virtual function objects:
     - Virtual function objects are polymorphic:  
