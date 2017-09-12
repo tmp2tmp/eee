@@ -43,10 +43,10 @@ Vane also includes meta-programming facilities that make meta-programming much e
   - Specialized functions can be confined and controlled more conveniently
     than of global/module functions which have only namespace as a confining measure.
   - OOP features can be taken advantage of: &nbsp; polymorphism, inheritance  
-    Instance specific data can be associated to each function instance while global/module functions can have only common global/static data.  
-    [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.  
-    Function sets can be defined reusing existing code by inheritance  
-    Inheritance gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
+    - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.  
+    - [Replacing virtual functions at runtime](replacing-virtual-functions.md) is supported.  
+    - Function sets can be defined reusing existing code by inheritance  
+    - Inheritance gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
 <!-- or for [calling the base implementations](calling_base_implementations) of a virtual function.  -->
 
 
