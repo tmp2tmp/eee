@@ -8,8 +8,8 @@
 ### Abstract
 Vane implements multiple-dispatch in three ways  
 based on the runtime types of the mutiple arguments of
-- intact ordinary polymorphic classes
-- wrapper classes of polymorphic classes that have the same base
+- intact ordinary polymorphic classes or
+- wrapper classes of polymorphic classes that have the same base or
 - wrapper classes of arbitrary (including non-polymorphic or primitive) types  
 
 None of them requires the existing class code to be modified.  
