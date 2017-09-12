@@ -39,7 +39,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [Virtual & mutiple inheritance of virtual argument types](diamond.md) are supported
 - [Covariant return types are supported](covariant_return_types.md)
 - Virtual functions are implemented as function `objects':
-  - Function specializations can be confined and maintained more conveniently than of global/module functions which have only namespace as a confining measure.
+  - Function specializations can be confined and maintained more conveniently than of global/module functions<!-- which have only namespace as a confining measure.-->
   - OOP features can be taken advantage of on the virtual function objects:
     - Virtual function objects are polymorphic:  
       [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations
