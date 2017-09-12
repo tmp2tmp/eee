@@ -12,18 +12,3 @@ ACM 6th International Conference on Generative Programming and Component Enginee
 - [Visitor pattern   &nbsp; //wikipedia](http://en.wikipedia.org/wiki/Visitor_pattern)
 - [Virtual function  &nbsp; //wikipedia](https://en.wikipedia.org/wiki/Virtual_function)
 
-
-
-<!--
-### WebSites
-### Papers
-["Fast algorithms for compressed multi-method dispatch tables generation"](http://hal.inria.fr/docs/00/07/37/21/PDF/RR-2977.pdf) - Amiel, Dujardin and Simon's paper  
-
-- [Multiple dispatch @wikipedia](http://en.wikipedia.org/wiki/Multiple_dispatch)
-- [Double dispatch @wikipedia](http://en.wikipedia.org/wiki/Double_dispatch)
-- [Dynamic dispatch @wikipedia](https://en.wikipedia.org/wiki/Dynamic_dispatch)
-- [Visitor pattern @wikipedia](http://en.wikipedia.org/wiki/Visitor_pattern)
-- [Virtual function @wikipedia](https://en.wikipedia.org/wiki/Virtual_function)
--->
-
-
