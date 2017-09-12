@@ -45,11 +45,10 @@ Vane also includes meta-programming facilities that make meta-programming much e
   - OOP features can be taken advantage of on the virtual function objects: &nbsp; <!-- polymorphism, inheritance etc-->  
     - Virtual function objects are polymorphic:  
       [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations
-    - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.  
+    - Instance specific data can be associated to each function object
+	  while global/module functions can have only common global/static data.  
     - Specialized function sets can be defined reusing existing code easily by inheritance  
     - Inheritance gives easy means for [forcing static dispatch](forcing_static_dispatch.md) <!-- accessing individual implementatins -->  
-<!-- or for [calling the base implementations](calling_base_implementations) of a virtual function.  -->
-
 
 &nbsp;  
 
