@@ -45,7 +45,6 @@ Vane also includes meta-programming facilities that make meta-programming much e
       [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations
     - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.  
     - Specialized function sets can be defined reusing existing code easily by inheritance
-    - Inheritance gives easy means for [forcing static dispatch](forcing_static_dispatch.md)<!-- accessing individual implementatins -->
 
 &nbsp;  
 
