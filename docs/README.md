@@ -32,19 +32,19 @@ Vane also includes meta-programming facilities that make meta-programming much e
 ### Features
 - Simple & easy syntax  
   No need to attach complicated distracting unwieldy gears to existing class code. There are no messy macro things.
-- [Function call resolutoin is supported](call_resolution.md)  
-  Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported
+- [Function call resolutoin is supported.](call_resolution.md)  
+  Runtime function call resolutoin based on the inheritance hierarchies of the arguments is supported.
 - Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.  
   &nbsp; Three sorts of virtual parameters of Vane can also be freely mixed.
-- [Virtual & mutiple inheritance of virtual argument types](diamond.md) are supported
-- [Covariant return types are supported](covariant_return_types.md)
+- [Virtual & mutiple inheritance of virtual argument types](diamond.md) are supported.
+- [Covariant return types are supported.](covariant_return_types.md)
 - Virtual functions are implemented as function `objects':
-  - Function specializations can be confined and maintained more conveniently than of global/module functions<!-- which have only namespace as a confining measure.-->
+  - Function specializations can be confined and maintained more conveniently than of global/module functions.<!-- which have only namespace as a confining measure.-->
   - OOP features can be taken advantage of on the virtual function objects:
     - Virtual function objects are polymorphic:  
-      [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations
-    - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.  
-    - Specialization function sets can be defined reusing existing code easily by inheritance
+      [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations.
+    - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.
+    - Specialization function sets can be defined reusing existing code easily by inheritance.
 
 &nbsp;  
 
