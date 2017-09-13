@@ -40,11 +40,8 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - [Covariant return types are supported.](covariant_return_types.md)
 - Virtual functions are [implemented as function `objects'](oop_featured.md):  
   OOP features can be taken advantage of on the virtual function objects
-  - Function specializations can be confined and maintained more conveniently than of global/module functions.<!-- which have only namespace as a confining measure.-->
-  - Virtual function objects are polymorphic:  
-    [can be replaced at runtime](replacing_virtual_functions.md) switching the whole set of specializations.
-  - Specialization function sets can be defined reusing existing code easily by inheritance.
-  - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.
+- Virtual function objects are polymorphic:  
+  [can be replaced at runtime](replacing_virtual_functions.md) switching the whole set of specializations.
 
 &nbsp;  
 
