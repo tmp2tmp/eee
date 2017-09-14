@@ -28,7 +28,8 @@ Implementing multi-methods as function objects has advantages over implementing 
 
 ### Double virtual
 <p>
-C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.  Being that the functions - whose calls are dispatched at runtime based on the dynamic type of single one of the arguments -
+C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
+&nbsp; Being that the functions - whose calls are dispatched at runtime based on the dynamic type of single one of the arguments -
   are virtual,
 &nbsp; it's consistent with it that the functions - whose calls are dispatched at runtime based on the dynamic types of two or more of the arguments -
 	are called virtual.
