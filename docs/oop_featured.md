@@ -29,7 +29,7 @@ Implementing multi-methods as function objects has advantages over implementing 
 &nbsp;
 ### Double virtual
 
-C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
+ C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
 Being that the functions - whose calls are dispatched at runtime based on the dynamic type of single one of the arguments -
   are virtual,
 &nbsp; it's consistent with it that the functions - whose calls are dispatched at runtime based on the dynamic types of two or more of the arguments -
@@ -38,8 +38,7 @@ Being that the functions - whose calls are dispatched at runtime based on the dy
 
 
 And a vane::multi\_func itself - as a parameter passed as `this' pointer - is a virtual argument.  
-: this gives the virtual function objects polymorphism of specialization sets
-  - i.e. a virtual function object [can be replaced at runtime](replacing-virtual-functions.md)
+: this gives the virtual function objects polymorphism of specialization sets - i.e. a virtual function object [can be replaced at runtime](replacing-virtual-functions.md)
      switching the whole set of specializations.
 
 
