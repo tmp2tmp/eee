@@ -24,9 +24,8 @@ Implementing multi-methods as function objects has advantages over implementing 
 
 
 &nbsp;  
-&nbsp;  
-&nbsp;  
 &nbsp;
+
 ### Double virtual
 
  C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
