@@ -2,7 +2,7 @@
 &nbsp;  
 &nbsp;  
 &nbsp;
-### open methods as function objects
+### Open methods as function objects
 
 Vane implements open multi-methods as function objects.  
 
