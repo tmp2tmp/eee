@@ -7,8 +7,7 @@
 Vane implements open multi-methods as function objects.  
 
 Thanks to C++, unlike other languages, C++ allows overloading function call operators,
-and this feature alllows implementing free-standing functions as member functions
-- i.e. member functions that have the interfaces of non-member funtions and can be used 
+and this feature alllows implementing free-standing functions as member functions - i.e. member functions that have the interfaces of non-member funtions and can be used 
 	in the contexts where ordinay functions of the same signatures can be used.
 
 
