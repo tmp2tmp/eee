@@ -10,8 +10,7 @@ Thanks to C++, unlike other languages, C++ allows overloading function call oper
 and this feature alllows implementing free-standing functions as member functions - i.e. member functions that have the interfaces of non-member funtions and can be used 
 	in the contexts where ordinay functions of the same signatures can be used.
 
-
-Implementing multi-methods as function objects has advantages over implementing as global/module functions:  
+Implementing multi-methods as function objects has advantages over implementing as global/module functions:
 - Function specializations can be confined and managed more conveniently
   than of global/module functions which have only ```namespace``` as a confining measure.
 - Instance specific data can be associated to each function object
@@ -29,6 +28,7 @@ Implementing multi-methods as function objects has advantages over implementing 
 &nbsp;  
 &nbsp;
 ### Double virtual
+
 C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
 Being that the functions - whose calls are dispatched at runtime based on the dynamic type of single one of the arguments -
   are virtual,
