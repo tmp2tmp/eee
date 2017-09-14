@@ -20,7 +20,7 @@ Implementing multi-methods as function objects has advantages over implementing 
   this also can be used, for [example](runtime_errors.md),
   to check at compile time whether or not a specific combination of argument types
   has an available specialization.
-- and just all the other OOP features.
+- just OOP features.
 
 &nbsp;  
 &nbsp;
