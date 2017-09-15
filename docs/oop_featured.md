@@ -11,11 +11,11 @@ and this feature alllows implementing free-standing functions as member function
 	in the contexts where ordinay functions of the same signatures can be used.
 
 Implementing multi-methods as function objects has advantages over implementing as global/module functions:
-- Function specializations can be confined and managed more conveniently
-  than of global/module functions which have only ```namespace``` as a confining measure.
+- Together with being implemented as function call operators,
+  specializations can be confined and managed more conveniently than of global/module functions.
 - Instance specific data can be associated to each function object
   while global/module functions can have only common global/static data.
-- Specialization function sets can be defined reusing existing code easily by inheritance.
+- Specialized function sets can be defined reusing existing code easily by inheritance.
 - Forcing static dispatch can easily be done using the inherited static dispatch interface of the base class:  
   this also can be used, for [example](runtime_errors.md),
   to check at compile time whether or not a specific combination of argument types
@@ -28,7 +28,7 @@ Implementing multi-methods as function objects has advantages over implementing 
 ### Double virtual
 <p>
 C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
-&nbsp; Being that the functions - whose calls are dispatched at runtime based on the dynamic type of single one of the arguments -
+&nbsp; Being that the functions - whose calls are dispatched at runtime based on the dynamic types of single one of the arguments -
   are virtual,
 &nbsp; it's consistent with it that the functions - whose calls are dispatched at runtime based on the dynamic types of two or more of the arguments -
 	are called virtual.<br>
