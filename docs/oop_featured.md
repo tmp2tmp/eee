@@ -15,7 +15,7 @@ Implementing multi-methods as function objects has advantages over implementing 
 - Instance specific data can be associated to each function object
   while global/module functions can have only common global/static data.
 - Specialized function sets can be defined reusing existing code easily by inheritance.
-- Forcing static dispatch can easily be done using the inherited static dispatch interface of the base class:  
+- Forcing static dispatch can easily be done using the inherited static dispatch interface of the base class:
   this also can be used, for [example](runtime_errors.md),
   to check at compile time whether or not a specific combination of argument types
   has an available specialization.
