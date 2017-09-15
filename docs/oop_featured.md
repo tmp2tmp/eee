@@ -1,6 +1,5 @@
 # Virtual functions as function objects
 &nbsp;  
-&nbsp;  
 &nbsp;
 ### Open methods as function objects
 
