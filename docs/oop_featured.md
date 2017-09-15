@@ -9,13 +9,13 @@ Thanks to C++, C++ allows overloading function call operators,
 and this feature alllows implementing free-standing functions as member functions - i.e. member functions that have the interfaces of non-member funtions and can be used 
 	in the contexts where ordinay functions of the same signatures can be used.
 
-Implementing multi-methods as function objects has advantages over implementing as global/module functions:
+Implementing multi-methods as function objects has advantages over implementing as global/module functions: &nbsp;
 - Together with being implemented as member functions,
   specializations can be confined and managed more conveniently than of global/module functions.
 - Instance specific data can be associated to each function object
   while global/module functions can have only common global/static data.
 - Specialized function sets can be defined reusing existing code easily by inheritance.
-- Forcing static dispatch can easily be done using the inherited static dispatch interface of the base class:
+- Forcing static dispatch can easily be done using the inherited static dispatch interface of the base class: &nbsp;
   this also can be used, for [example](runtime_errors.md),
   to check at compile time whether or not a specific combination of argument types
   has an available specialization.
