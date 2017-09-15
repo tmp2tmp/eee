@@ -21,8 +21,6 @@ Implementing multi-methods as function objects has advantages over implementing 
   has an available specialization.
 
 &nbsp;  
-&nbsp;
-
 
 ### Double virtual
 <p>
