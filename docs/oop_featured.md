@@ -10,7 +10,7 @@ and this feature alllows implementing free-standing functions as member function
 	in the contexts where ordinay functions of the same signatures can be used.
 
 Implementing multi-methods as function objects has advantages over implementing as global/module functions:
-- Together with being implemented as function call operators,
+- Together with being implemented as member functions,
   specializations can be confined and managed more conveniently than of global/module functions.
 - Instance specific data can be associated to each function object
   while global/module functions can have only common global/static data.
