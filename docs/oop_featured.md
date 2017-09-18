@@ -9,7 +9,7 @@ Thanks to C++, C++ allows overloading function call operators,
 and this feature alllows implementing free-standing functions as member functions - i.e. member functions that have the interfaces of non-member funtions and can be used 
 	in the contexts where ordinay functions of the same signatures can be used.
 
-We don't have to be reluctant to implement open methods as objects.
+We don't have to necessarily be reluctant to implement open methods as objects.
 Rather, implementing multi-methods as function objects has advantages over implementing as global/module functions:
 - Specializations, being implemented as member functions, can be confined and managed more conveniently than of global/module functions.
 - Instance specific data can be associated to each function object
