@@ -1,4 +1,4 @@
-# replacing virtual functions
+# replacing virtual functions at runtime
 &nbsp;  
 &nbsp;  
 &nbsp;
