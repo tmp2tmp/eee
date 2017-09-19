@@ -70,8 +70,8 @@ int main() try
     i=30;   mfunc (i, &d, &z);      fx (i, &d, &z);
 
 ____
-    struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> A,Y
-    struct P : D,X  { P(char c='P') : D(c),X(c) {}  };  //--> C,W
+    struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> AY
+    struct P : D,X  { P(char c='P') : D(c),X(c) {}  };  //--> CW
 
     M m;
     P p;
@@ -202,8 +202,8 @@ int main() try
     i=30;   mfunc (i, &d, &z);      fx (i, &d, &z);
 
 ____
-    struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> A,Y
-    struct P : D,X  { P(char c='P') : D(c),X(c) {}  };  //--> C,W
+    struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> AY
+    struct P : D,X  { P(char c='P') : D(c),X(c) {}  };  //--> CW
 
     VA::of<M> ma;
     VW::of<M> mw;
@@ -335,8 +335,8 @@ int main() try
     i=30;   mfunc (i, &d, &z);      fx (i, &d, &z);
 
 ____
-    struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> A,Y
-    struct P : D,X  { P(char c='P') : D(c),X(c) {}  };  //--> C,W
+    struct M : B,Z  { M(char c='M') : B(c),Z(c) {}  };  //--> AY
+    struct P : D,X  { P(char c='P') : D(c),X(c) {}  };  //--> CW
 
     VA::of<M> ma;
     VW::of<M> mw;
