@@ -1,11 +1,13 @@
 # Replacing virtual functions at runtime
 &nbsp;  
-&nbsp;  
 &nbsp;
 
 A vane::multi\_func is implemented as a function object and is polymorphic of the specialization sets.
 The whole set of specializations can be replaced at runtime by switching the vane::multi\_func instances
 pointed by vane::virtual\_func pointers.
+
+&nbsp;  
+&nbsp;
 
 
 ```c++
