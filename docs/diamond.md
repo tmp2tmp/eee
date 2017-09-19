@@ -197,7 +197,7 @@ struct VO_of : VO::of<T> {
 template<typename T>
 struct VO_of : VO::of<T> {
     template<typename...Args>
-    VO_of(char c, Args&&...args) : O(c), VO::of<T>(args...) {}
+	VO_of(char c, Args&&...args) : O(c), VO::of<T>(std::forward<Args>(args)...) {}
 };
 #endif
 
@@ -348,7 +348,7 @@ struct Varg_of : Varg::of<T> {
 template<typename T>
 struct Varg_of : Varg::of<T> {
     template<typename...Args>
-    Varg_of(char c, Args&&...args) : O(c), Varg::of<T>(args...) {}
+	Varg_of(char c, Args&&...args) : O(c), Varg::of<T>(std::forward<Args>(args)...) {}
 };
 #endif
 
