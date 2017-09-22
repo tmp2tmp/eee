@@ -29,12 +29,12 @@ C++ directly supports runtime dispatch on a single argument via C++ <code><b>vir
 &nbsp; Being that the functions - whose calls are dispatched at runtime
 	based on the dynamic types of single one of the arguments - are virtual,
 &nbsp; it's consistent with it that the functions - whose calls are dispatched at runtime based on the dynamic types
-	of two or more of the arguments - are called virtual.<br>
+	of two or more of the arguments - are called virtual
 : &nbsp; vane::multi_func is virtual on multiple arguments, defining a set of specializations for the arguments.
 </p>
 
-And a vane::multi_func itself - as a parameter passed as `this' pointer - is polymorphic, of specialization set.
-<br>: &nbsp; a virtual function object of Vane [can be replaced at runtime](replacing_virtual_functions.md) 
+And a vane::multi_func itself - as a parameter passed as `this' pointer - is polymorphic, of specialization set
+: &nbsp; a virtual function object of Vane [can be replaced at runtime](replacing_virtual_functions.md) 
 switching the whole set of specializations.
 
 
