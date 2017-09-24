@@ -9,7 +9,7 @@ determining at runtime which one in the set to call - based on the types of the 
 is <strong>multiple dispatch</strong>.
 It corresponds to mapping from the possible lists of the argument types to the functions to be called.
 Each argument can be assigned the set of the possible types that it can be of. &nbsp; 
-In Vane this set of types is named as the <strong>type domain of the virtual argument</strong>.
+In Vane this set of types is named the <strong>type domain of the virtual argument</strong>.
 Vane searches the argument type list space confined by the user-given argument type domains,
 for the possible functions in the user-given function set, and makes the mapping table at compile time.<br>
 Specifying this is through a co-class defining three parts:
