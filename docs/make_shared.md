@@ -27,6 +27,9 @@ vane::<b>make_unique</b> &lt;Rectangle, VirtualShape&gt; {...};
 &nbsp;
 
 ```c++
+#include "__tmp.h"  //cols 85ex
+#undef  ____
+//////////////////////////////////////////////////////////////////////
 //file: make_shared-virt.cc
 #include "vane.h"   //required
 #include <stdio.h>
@@ -55,7 +58,7 @@ struct PrintFx {
 
 int main() try
 {
-    vane::multi_func <PrintFx>                   mprint;
+    vane::multi_func <PrintFx>                    mprint;
     vane::virtual_func <void(_virtual<Shape>*)>  &vprint= mprint;
 
     PrintFx  print;   //ordinary function object
@@ -69,7 +72,7 @@ int main() try
     mprint (&*shared_Rp);
     vprint (&*shared_Ep);
     print  (&*shared_Pp);
-    printf ("\n%s", shared_Pp->name);
+    printf ("\n%s  //printf", shared_Pp->name);
 
 
 ____//std::make_unique equiv.
@@ -80,7 +83,7 @@ ____//std::make_unique equiv.
     mprint (&*unique_Rp);
     vprint (&*unique_Ep);
     print  (&*unique_Pp);
-    printf ("\n%s", unique_Pp->name);
+    printf ("\n%s  //printf", unique_Pp->name);
 }
 catch( std::exception &x ) { printf("\nexception: %s\n", x.what()); }
 
@@ -89,12 +92,12 @@ catch( std::exception &x ) { printf("\nexception: %s\n", x.what()); }
 shared_R  @fR
 shared_E  @fE
 unique_P  @fP
-unique_P
+unique_P  //printf
 -----------------------------------------
 unique_R  @fR
 unique_E  @fE
 unique_P  @fP
-unique_P
+unique_P  //printf
 */
 ```
 
@@ -134,6 +137,9 @@ unique_P
 
 
 ```c++
+#include "__tmp.h"  //cols 85ex
+#undef  ____
+//////////////////////////////////////////////////////////////////////
 //file: make_shared-varg.cc
 #include "vane.h"
 #include <stdio.h>
@@ -160,7 +166,7 @@ struct PrintFx {
 
 int main() try
 {
-    vane::multi_func <PrintFx>         mprint;
+    vane::multi_func <PrintFx>          mprint;
     vane::virtual_func <void(Shape*)>  &vprint = mprint;
 
     PrintFx  print;   //ordinary function object
@@ -174,7 +180,7 @@ int main() try
     mprint (&*shared_Rp);
     vprint (&*shared_Ep);
     print  (&*shared_Pp);
-    printf ("\n%s", shared_Pp->name);
+    printf ("\n%s  //printf", shared_Pp->name);
 
 
 ____//std::make_unique equiv.
@@ -185,7 +191,7 @@ ____//std::make_unique equiv.
     mprint (&*unique_Rp);
     vprint (&*unique_Ep);
     print  (&*unique_Pp);
-    printf ("\n%s", unique_Pp->name);
+    printf ("\n%s  //printf", unique_Pp->name);
 }
 catch( std::exception &x ) { printf("\nexception: %s\n", x.what()); }
 
@@ -194,12 +200,12 @@ catch( std::exception &x ) { printf("\nexception: %s\n", x.what()); }
 shared_R  @fR
 shared_E  @fE
 shared_P  @fP
-shared_P
+shared_P  //printf
 -----------------------------------------
 unique_R  @fR
 unique_E  @fE
 unique_P  @fP
-unique_P
+unique_P  //printf
 */
 ```
 
