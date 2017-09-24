@@ -26,8 +26,6 @@ vane::<b>make_unique</b> &lt;Rectangle, VirtualShape&gt; {...};
 &nbsp;  
 &nbsp;
 #### examples
-&nbsp;  
-&nbsp;
 
 ```c++
 //file: make_shared-virt.cc
