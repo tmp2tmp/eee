@@ -36,6 +36,6 @@ C++ directly supports runtime dispatch on a single argument via C++ <code><b>vir
 
 And a vane::multi\_func itself - as a parameter passed as `this' pointer - is polymorphic, of specialization set:
 &nbsp; a virtual function object of Vane [can be replaced at runtime](replacing_virtual_functions.md) 
-switching the whole set of specializations.
+switching the whole set of specializations of it.
 
 
