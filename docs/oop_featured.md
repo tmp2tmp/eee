@@ -12,7 +12,8 @@ and this feature alllows implementing free-standing functions as member function
 
 We don't have to necessarily be reluctant to implement open methods as objects.
 Implementing multi-methods as function objects rather has advantages over implementing as ordinary functions:
-- Specializations, being implemented as member functions, can be confined and managed more conveniently than of ordinary functions.
+- Specializations, being implemented as member functions, can be confined and managed more conveniently 
+  than being associated to a ordinary base function of global/static symbol.
 - Instance specific data can be associated to each function object
   while ordinary functions can have only common global/static data.
 - Specialized function sets can be defined [reusing existing code easily by inheritance](replacing_virtual_functions.md).
