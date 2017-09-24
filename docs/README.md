@@ -31,7 +31,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 
 ### Features
 - Simple & easy syntax : No need to attach complicated distracting unwieldy gears to existing class code. There are no messy macro things.
-- [Function call resolutoin is supported.](call_resolution.md)  
+- [Function call resolutoin is supported.](call_resolution.md) :
   Runtime function call resolutoin based on the inheritance hierarchies of the argument types is supported.
 - Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.  
   &nbsp; Three sorts of virtual parameters of Vane can also be freely mixed.
