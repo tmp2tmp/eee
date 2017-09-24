@@ -27,9 +27,6 @@ vane::<b>make_unique</b> &lt;Rectangle, VirtualShape&gt; {...};
 &nbsp;
 
 ```c++
-#include "__tmp.h"  //cols 85ex
-#undef  ____
-//////////////////////////////////////////////////////////////////////
 //file: make_shared-virt.cc
 #include "vane.h"   //required
 #include <stdio.h>
@@ -137,9 +134,6 @@ unique_P  //printf
 
 
 ```c++
-#include "__tmp.h"  //cols 85ex
-#undef  ____
-//////////////////////////////////////////////////////////////////////
 //file: make_shared-varg.cc
 #include "vane.h"
 #include <stdio.h>
