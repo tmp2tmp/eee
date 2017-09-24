@@ -64,7 +64,7 @@ int main() try
     //std::make_shared equiv.
     auto shared_Rp =  std::make_shared <_virtual<Shape>::of<Rectangle>> ("shared_R");
     auto shared_Ep = vane::make_shared <Ellipse, _virtual<Shape>>       ("shared_E");
-    auto shared_Pp = vane::make_shared <Polygon, _virtual<Shape>>       ("unique_P");
+    auto shared_Pp = vane::make_shared <Polygon, _virtual<Shape>>       ("shared_P");
 
     mprint (&*shared_Rp);
     vprint (&*shared_Ep);
@@ -88,8 +88,8 @@ catch( std::exception &x ) { printf("\nexception: %s\n", x.what()); }
 /* output **********************************************************************
 shared_R  @fR
 shared_E  @fE
-unique_P  @fP
-unique_P  //printf
+shared_P  @fP
+shared_P  //printf
 -----------------------------------------
 unique_R  @fR
 unique_E  @fE
