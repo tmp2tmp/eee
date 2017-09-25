@@ -180,7 +180,7 @@ ____
 //file: collide-varg.cc
 #include "vane.h"   //required
 #include <stdio.h>
-#define	____	printf("\n----------------------------------------");
+#define ____    printf("\n----------------------------------------");
 using std::tuple;
 
 
@@ -195,23 +195,23 @@ using VirtualShape = vane::varg <Rectangle, Ellipse, Polygon>;
 
 ////////////////////////////////////////////////////////////////////////////////
 namespace detail {
-	//co-class that defines the traits & function set for the multi_func
-	struct Fx
-	{
-		using type    = void (VirtualShape*, VirtualShape*);   //signature of the virtual function
+    //co-class that defines the traits & function set for the multi_func
+    struct Fx
+    {
+        using type    = void (VirtualShape*, VirtualShape*);   //signature of the virtual function
 
-		using domains = tuple<  //specialization selector
-							tuple <Rectangle, Ellipse, Polygon>,
-							tuple <Rectangle, Ellipse, Polygon>
-						>;
-		//specializations
-		void operator() (Rectangle *p, Rectangle *q) { printf("\n(%-9s %9s) --> fRR", p->n, q->n);   }
-		void operator() (Rectangle *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fRE !!", p->n, q->n);}
-		void operator() (Rectangle *p, Polygon   *q) { printf("\n(%-9s %9s) --> fRP", p->n, q->n);   }
-		void operator() (Ellipse   *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fEE", p->n, q->n);   }
-		void operator() (Ellipse   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fEP", p->n, q->n);   }
-		void operator() (Polygon   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fPP", p->n, q->n);   }
-	};
+        using domains = tuple<  //specialization selector
+                            tuple <Rectangle, Ellipse, Polygon>,
+                            tuple <Rectangle, Ellipse, Polygon>
+                        >;
+        //specializations
+        void operator() (Rectangle *p, Rectangle *q) { printf("\n(%-9s %9s) --> fRR", p->n, q->n);   }
+        void operator() (Rectangle *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fRE !!", p->n, q->n);}
+        void operator() (Rectangle *p, Polygon   *q) { printf("\n(%-9s %9s) --> fRP", p->n, q->n);   }
+        void operator() (Ellipse   *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fEE", p->n, q->n);   }
+        void operator() (Ellipse   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fEP", p->n, q->n);   }
+        void operator() (Polygon   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fPP", p->n, q->n);   }
+    };
 }
 using collide_multi_func = vane::multi_func <detail::Fx>;
 
@@ -221,7 +221,7 @@ using collide_multi_func = vane::multi_func <detail::Fx>;
 
 void test_call_uniformTyped (collide_multi_func *vfunc,  VirtualShape *p, VirtualShape *q)
 try {
-	(*vfunc)( p, q );
+    (*vfunc)( p, q );
 }
 catch(const std::exception &e) { printf("\nexception: %s", e.what());  }
 
@@ -230,23 +230,23 @@ int main()
 {
     collide_multi_func  collide;
 
-	VirtualShape::of<Rectangle>  r;
-	VirtualShape::of<Ellipse>    e;
-	VirtualShape::of<Polygon>    p;
+    VirtualShape::of<Rectangle>  r;
+    VirtualShape::of<Ellipse>    e;
+    VirtualShape::of<Polygon>    p;
 
     printf("%15s%20s","real args","fx called");
-	test_call_uniformTyped (&collide, &r, &r);
-	test_call_uniformTyped (&collide, &r, &e);
-	test_call_uniformTyped (&collide, &r, &p);
-	test_call_uniformTyped (&collide, &e, &e);
-	test_call_uniformTyped (&collide, &e, &p);
-	test_call_uniformTyped (&collide, &p, &p);
+    test_call_uniformTyped (&collide, &r, &r);
+    test_call_uniformTyped (&collide, &r, &e);
+    test_call_uniformTyped (&collide, &r, &p);
+    test_call_uniformTyped (&collide, &e, &e);
+    test_call_uniformTyped (&collide, &e, &p);
+    test_call_uniformTyped (&collide, &p, &p);
 
 ____
-	struct Square : Rectangle { Square() { n = "~SQUARE~"; } };
-	VirtualShape::of<Square>  square;
+    struct Square : Rectangle { Square() { n = "~SQUARE~"; } };
+    VirtualShape::of<Square>  square;
 
-	test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Ellipse
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Ellipse
 }
 
 
