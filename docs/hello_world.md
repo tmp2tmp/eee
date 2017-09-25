@@ -102,7 +102,7 @@ int main() try
 {
     vane::multi_func <Fx>   multi_func;
     vane::virtual_func <void (const char*, Base&)>
-         *virtual_func = &multi_func;
+                           *virtual_func = &multi_func;
 
     Fx  func;  //ordinary function object
 
@@ -176,7 +176,7 @@ int main() try
 {
     vane::multi_func <Fx>   multi_func;
     vane::virtual_func <void (const char*, _virtual<Base>*)>
-         *virtual_func = &multi_func;
+                           *virtual_func = &multi_func;
 
     Fx  func;  //ordinary function object
 
@@ -247,7 +247,7 @@ int main() try
 {
     vane::multi_func <Fx>   multi_func;
     vane::virtual_func <void (const char*, varg*)>
-         *virtual_func = &multi_func;
+                           *virtual_func = &multi_func;
 
     Fx  func;  //ordinary function object
 
