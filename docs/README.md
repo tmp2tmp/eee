@@ -52,7 +52,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
 - forcing static dispatch / calling base implementations
 -->
 - [runtime errors](runtime_errors.md)
-- [make_shared &nbsp; utility](make_shared.md)  
+- [make_shared &nbsp;utility](make_shared.md)  
 - [vt-vars](vt-vars.md)  
 &nbsp;  
 
