@@ -12,7 +12,7 @@ Each argument can be assigned the set of the possible types that it can be of. &
 In Vane this set of types is named the <strong>type domain of the virtual argument</strong>.
 Vane searches the argument type list space confined by the user-given argument type domains,
 for the possible functions in the user-given function set, and makes the mapping table at compile time.<br>
-Specifying this is through a co-class defining three parts:
+Specifying this is through a <strong>co-class</strong> defining three parts:
 </p>
 <ul>
 <li>declaring the type signature of the <b>virtual function</b> as in:   
