@@ -26,7 +26,7 @@ namespace detail {
     {
         using type    = void (Shape*, Shape*);   //signature of the multi_func
 
-        using domains = tuple<  //specialization selector
+        using domains = tuple<  //specialization confiner
                             tuple <Rectangle, Ellipse, Polygon>,
                             tuple <Rectangle, Ellipse, Polygon>
                         >;
@@ -113,7 +113,7 @@ namespace detail {
     {
         using type    = void (VirtualShape*, VirtualShape*);   //signature of the virtual function
 
-        using domains = tuple<  //specialization selector
+        using domains = tuple<  //specialization confiner
                             tuple <Rectangle, Ellipse, Polygon>,
                             tuple <Rectangle, Ellipse, Polygon>
                         >;
@@ -200,7 +200,7 @@ namespace detail {
     {
         using type    = void (VirtualShape*, VirtualShape*);   //signature of the virtual function
 
-        using domains = tuple<  //specialization selector
+        using domains = tuple<  //specialization confiner
                             tuple <Rectangle, Ellipse, Polygon>,
                             tuple <Rectangle, Ellipse, Polygon>
                         >;
