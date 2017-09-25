@@ -60,226 +60,263 @@ Specifying this is through a <strong>co-class</strong> defining three parts:
 
 #### hello_world's
 ```c++
-//file: hello_world-poly.cc
+//file: collide-poly.cc
 #include "vane.h"   //required
 #include <stdio.h>
+#define ____    printf("\n----------------------------------------");
 using std::tuple;
-    
-
-struct Base         { virtual ~Base(){} };  //required: polymorphic base
-struct Hello : Base { };
-struct World : Base { };
 
 
-////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for the multi_func
-struct Fx
-{
-    //declares the type signature of the multi_func
-    using type = void (const char*, Base&);
-                     // polymorphic Base& is the virtual parameter
-                     //    *,&,&& are supported;   also return types are supported
 
-    //argument type selectors:  eventually confines the specialized function set
-    using domains = tuple<
-        tuple <Base, Hello, World> //types for Base& must be one of them or their subclasses
-        >;
-
-//specify argument-specialized functions:
-    void operator() (const char *p, Base  &) { printf("%12s --> Base??\n", p);  } //f0
-    void operator() (const char *p, Hello &) { printf("%12s --> Hello \n", p);  } //f1
-    void operator() (const char *p, World &) { printf("%12s --> World \n", p);  } //f2
-};
+struct Shape {    const char *n;
+                  virtual ~Shape() {}   //polymorphic base is required
+                           Shape    (const char *c = "shape"    ) : n(c)     {} };
+struct Rectangle : Shape { Rectangle(const char *c = "rectangle") : Shape(c) {} };
+struct Ellipse   : Shape { Ellipse  (const char *c = "ellipse"  ) : Shape(c) {} };
+struct Polygon   : Shape { Polygon  (const char *c = "polygon"  ) : Shape(c) {} };
 
 
 ////////////////////////////////////////////////////////////////////////////////
-template<typename Func>
-void call_test_baseTyped(Func *func, const char *p, Base &base) {
-    (*func) (p, base);
-}
+namespace detail {
+    //co-class that defines the traits & function set for the multi_func
+    struct Fx
+    {
+        using type    = void (Shape*, Shape*);   //signature of the multi_func
 
-int main() try 
+        using domains = tuple<  //specialization selector
+                            tuple <Rectangle, Ellipse, Polygon>,
+                            tuple <Rectangle, Ellipse, Polygon>
+                        >;
+        //specializations
+        void operator() (Rectangle *p, Rectangle *q) { printf("\n(%-9s %9s) --> fRR", p->n, q->n);   }
+        void operator() (Rectangle *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fRE !!", p->n, q->n);}
+        void operator() (Rectangle *p, Polygon   *q) { printf("\n(%-9s %9s) --> fRP", p->n, q->n);   }
+        void operator() (Ellipse   *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fEE", p->n, q->n);   }
+        void operator() (Ellipse   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fEP", p->n, q->n);   }
+        void operator() (Polygon   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fPP", p->n, q->n);   }
+    };
+}
+using collide_multi_func = vane::multi_func <detail::Fx>;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+void test_call_uniformTyped (collide_multi_func *vfunc, Shape *p, Shape *q)
+try {
+    (*vfunc)( p, q );
+}
+catch(const std::exception &e) { printf("\nexception: %s", e.what());  }
+
+
+int main()
 {
-    vane::multi_func <Fx>    multi_func;
-    vane::virtual_func <void (const char*, Base&)>
-                            *virtual_func = &multi_func;
+    collide_multi_func  collide;
 
-    Fx  func;  //ordinary function object
+    Rectangle  r;
+    Ellipse    e;
+    Polygon    p;
 
+    printf("%15s%20s","real args","fx called");
+    test_call_uniformTyped (&collide, &r, &r);
+    test_call_uniformTyped (&collide, &r, &e);
+    test_call_uniformTyped (&collide, &r, &p);
+    test_call_uniformTyped (&collide, &e, &e);
+    test_call_uniformTyped (&collide, &e, &p);
+    test_call_uniformTyped (&collide, &p, &p);
 
-    Hello  hello; 
-    World  world;
+____
+    struct Square : Rectangle { Square() : Rectangle("~SQUARE~") {}; };
+    Square  square;
 
-    call_test_baseTyped (       &func,         "func", hello);
-    call_test_baseTyped (       &func,         "func", world);
-    call_test_baseTyped ( &multi_func,   "multi_func", hello);
-    call_test_baseTyped ( &multi_func,   "multi_func", world);
-    call_test_baseTyped (virtual_func, "virtual_func", hello);
-    call_test_baseTyped (virtual_func, "virtual_func", world);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Ellipse
 }
-catch(const std::exception &e) { printf("\nexception : %s", e.what()); }
+
 
 /* output **********************************************************************
-        func --> Base??
-        func --> Base??
-  multi_func --> Hello 
-  multi_func --> World 
-virtual_func --> Hello 
-virtual_func --> World 
+      real args           fx called
+(rectangle rectangle) --> fRR
+(rectangle   ellipse) --> fRE !!
+(rectangle   polygon) --> fRP
+(ellipse     ellipse) --> fEE
+(ellipse     polygon) --> fEP
+(polygon     polygon) --> fPP
+----------------------------------------
+(~SQUARE~    ellipse) --> fRE !!
 */
 ```
 
 ```c++
-//file: hello_world-virt.cc
+//file: collide-virt.cc
 #include "vane.h"   //required
 #include <stdio.h>
+#define ____    printf("\n----------------------------------------");
 using std::tuple;
-using vane::_virtual;  //for _virtual <Base>
-
-struct Base         { virtual ~Base(){} };  //required: polymorphic base
-struct Hello : Base { };
-struct World : Base { };
 
 
-////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for the multi_func
-struct Fx
-{
-    //declares the type signature of the multi_func
-    using type = void (const char*, _virtual<Base>*);
-                     // _virtual<Base>* is the virtual parameter
-                     //    currently only pointer types are supported; return types are supported
+struct Shape {    const char *n;
+                  virtual ~Shape() {}   //polymorphic base is required
+                           Shape    (const char *c = "shape"    ) : n(c)     {} };
+struct Rectangle : Shape { Rectangle(const char *c = "rectangle") : Shape(c) {} };
+struct Ellipse   : Shape { Ellipse  (const char *c = "ellipse"  ) : Shape(c) {} };
+struct Polygon   : Shape { Polygon  (const char *c = "polygon"  ) : Shape(c) {} };
 
-    //argument type selectors:  eventually confines the specialized function set
-    using domains = tuple<
-        tuple <Base, Hello, World> //types for _virtual<Base>* must be one of them or their subclasses
-        >;
-
-//specify argument-specialized functions:
-    void operator() (const char *p, Base* ) { printf("%12s --> Base??\n", p);  } //f0
-    void operator() (const char *p, Hello*) { printf("%12s --> Hello \n", p);  } //f1
-    void operator() (const char *p, World*) { printf("%12s --> World \n", p);  } //f2
-};
+using VirtualShape = vane::_virtual <Shape>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-template<typename Func>
-void call_test_baseTyped(Func *func, const char *p, _virtual<Base> *base) {
-    (*func) (p, base);
-}
+namespace detail {
+    //co-class that defines the traits & function set for the multi_func
+    struct Fx
+    {
+        using type    = void (VirtualShape*, VirtualShape*);   //signature of the virtual function
 
-void call_test_baseTyped(Fx *func, const char *p, Base *base) {
-    (*func) (p, b);
+        using domains = tuple<  //specialization selector
+                            tuple <Rectangle, Ellipse, Polygon>,
+                            tuple <Rectangle, Ellipse, Polygon>
+                        >;
+        //specializations
+        void operator() (Rectangle *p, Rectangle *q) { printf("\n(%-9s %9s) --> fRR", p->n, q->n);   }
+        void operator() (Rectangle *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fRE !!", p->n, q->n);}
+        void operator() (Rectangle *p, Polygon   *q) { printf("\n(%-9s %9s) --> fRP", p->n, q->n);   }
+        void operator() (Ellipse   *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fEE", p->n, q->n);   }
+        void operator() (Ellipse   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fEP", p->n, q->n);   }
+        void operator() (Polygon   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fPP", p->n, q->n);   }
+    };
 }
+using collide_multi_func = vane::multi_func <detail::Fx>;
 
-int main() try 
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+void test_call_uniformTyped (collide_multi_func *vfunc,  VirtualShape *p, VirtualShape *q)
+try {
+    (*vfunc)( p, q );
+}
+catch(const std::exception &e) { printf("\nexception: %s", e.what());  }
+
+
+int main()
 {
-    vane::multi_func <Fx>    multi_func;
-    vane::virtual_func <void (const char*, _virtual<Base>*)>
-                            *virtual_func = &multi_func;
+    collide_multi_func  collide;
 
-    Fx  func;  //ordinary function object
+    VirtualShape::of<Rectangle>  r;
+    VirtualShape::of<Ellipse>    e;
+    VirtualShape::of<Polygon>    p;
 
+    printf("%15s%20s","real args","fx called");
+    test_call_uniformTyped (&collide, &r, &r);
+    test_call_uniformTyped (&collide, &r, &e);
+    test_call_uniformTyped (&collide, &r, &p);
+    test_call_uniformTyped (&collide, &e, &e);
+    test_call_uniformTyped (&collide, &e, &p);
+    test_call_uniformTyped (&collide, &p, &p);
 
-    _virtual<Base>::of<Hello>  hello; 
-    _virtual<Base>::of<World>  world;
+____
+    struct Square : Rectangle { Square() : Rectangle("~SQUARE~") {}; };
+    VirtualShape::of<Square>  square;
 
-    call_test_baseTyped (       &func,         "func", &hello);   //hello is compatible
-    call_test_baseTyped (       &func,         "func", &world);
-    call_test_baseTyped ( &multi_func,   "multi_func", &hello);
-    call_test_baseTyped ( &multi_func,   "multi_func", &world);
-    call_test_baseTyped (virtual_func, "virtual_func", &hello);
-    call_test_baseTyped (virtual_func, "virtual_func", &world);
+    test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Ellipse
 }
-catch(const std::exception &e) { printf("\nexception : %s", e.what()); }
+
 
 /* output **********************************************************************
-        func --> Base??
-        func --> Base??
-  multi_func --> Hello 
-  multi_func --> World 
-virtual_func --> Hello 
-virtual_func --> World 
+      real args           fx called
+(rectangle rectangle) --> fRR
+(rectangle   ellipse) --> fRE !!
+(rectangle   polygon) --> fRP
+(ellipse     ellipse) --> fEE
+(ellipse     polygon) --> fEP
+(polygon     polygon) --> fPP
+----------------------------------------
+(~SQUARE~    ellipse) --> fRE !!
 */
 ```
 
 ```c++
-//file: hello_world-varg.cc
+//file: collide-varg.cc
 #include "vane.h"   //required
 #include <stdio.h>
+#define	____	printf("\n----------------------------------------");
 using std::tuple;
 
 
-struct Hello { };
-struct World { };
 
-using varg = vane::varg <Hello, World, int, std::string>;  //group arbitrarily
+struct Rectangle { const char *n = "rectangle"; };
+struct Ellipse   { const char *n = "ellipse";   };
+struct Polygon   { const char *n = "polygon";   };
 
-////////////////////////////////////////////////////////////////////////////////
-//co-class that defines the traits & function set for the multi_func
-struct Fx
-{
-    //declares the type signature of the multi_func
-    using type = void (const char*, varg*);
-                     // varg* is the virtual parameter
-                     //    currently only pointer types are supported; return types are supported
 
-    //argument type selectors:  eventually confines the specialized function set
-    using domains = tuple<
-        tuple <Hello, World, int, std::string> //types for varg* must be one of them or their subclasses
-        >;
-
-//specify argument-specialized functions:
-    void operator() (const char *p, Hello*)         { printf("%14s --> Hello \n", p);  } //f0
-    void operator() (const char *p, World*)         { printf("%14s --> World \n", p);  } //f1
-    void operator() (const char *p, int *i)         { printf("%14s --> %d\n", p, *i);  } //f2
-    void operator() (const char *p, std::string *s) { printf("%14s --> %s\n", p, s->c_str());  } //f3
-};
+using VirtualShape = vane::varg <Rectangle, Ellipse, Polygon>;
 
 
 ////////////////////////////////////////////////////////////////////////////////
-template<typename Func>
-void call_test_uniformTyped(Func *func, const char *p, varg *varg) {
-    (*func) (p, varg);
-}
+namespace detail {
+	//co-class that defines the traits & function set for the multi_func
+	struct Fx
+	{
+		using type    = void (VirtualShape*, VirtualShape*);   //signature of the virtual function
 
-int main() try 
+		using domains = tuple<  //specialization selector
+							tuple <Rectangle, Ellipse, Polygon>,
+							tuple <Rectangle, Ellipse, Polygon>
+						>;
+		//specializations
+		void operator() (Rectangle *p, Rectangle *q) { printf("\n(%-9s %9s) --> fRR", p->n, q->n);   }
+		void operator() (Rectangle *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fRE !!", p->n, q->n);}
+		void operator() (Rectangle *p, Polygon   *q) { printf("\n(%-9s %9s) --> fRP", p->n, q->n);   }
+		void operator() (Ellipse   *p, Ellipse   *q) { printf("\n(%-9s %9s) --> fEE", p->n, q->n);   }
+		void operator() (Ellipse   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fEP", p->n, q->n);   }
+		void operator() (Polygon   *p, Polygon   *q) { printf("\n(%-9s %9s) --> fPP", p->n, q->n);   }
+	};
+}
+using collide_multi_func = vane::multi_func <detail::Fx>;
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+void test_call_uniformTyped (collide_multi_func *vfunc,  VirtualShape *p, VirtualShape *q)
+try {
+	(*vfunc)( p, q );
+}
+catch(const std::exception &e) { printf("\nexception: %s", e.what());  }
+
+
+int main()
 {
-    vane::multi_func <Fx>    multi_func;
-    vane::virtual_func <void (const char*, varg*)>
-                            *virtual_func = &multi_func;
+    collide_multi_func  collide;
 
-    Fx  func;  //ordinary function object
+	VirtualShape::of<Rectangle>  r;
+	VirtualShape::of<Ellipse>    e;
+	VirtualShape::of<Polygon>    p;
 
+    printf("%15s%20s","real args","fx called");
+	test_call_uniformTyped (&collide, &r, &r);
+	test_call_uniformTyped (&collide, &r, &e);
+	test_call_uniformTyped (&collide, &r, &p);
+	test_call_uniformTyped (&collide, &e, &e);
+	test_call_uniformTyped (&collide, &e, &p);
+	test_call_uniformTyped (&collide, &p, &p);
 
-    varg::of<Hello>   hello; 
-    varg::of<World>   world;
-    varg::of<int>          number{3};
-    varg::of<std::string>  string{"ways of multi-functioning"};
+____
+	struct Square : Rectangle { Square() { n = "~SQUARE~"; } };
+	VirtualShape::of<Square>  square;
 
-    call_test_uniformTyped ( &multi_func,   "multi_func", &hello);
-    call_test_uniformTyped ( &multi_func,   "multi_func", &world);
-    call_test_uniformTyped (virtual_func, "virtual_func", &hello);
-    call_test_uniformTyped (virtual_func, "virtual_func", &world);
-    call_test_uniformTyped ( &multi_func,   "multi_func", &number);
-    call_test_uniformTyped (virtual_func, "virtual_func", &string);
-
-    func ("func (&hello )", &hello);        //varg<>'s of struct/class types are compatible with the existing code
-    func ("func (&number)", &(int&)number); //varg<>'s of non-struct/class types are not compatible; need type-cast
-    func ("func (&string)", &string);
+	test_call_uniformTyped (&collide, &square, &e);   //fRE !! -- Rectangle-Ellipse
 }
-catch(const std::exception &e) { printf("\nexception : %s", e.what()); }
+
 
 /* output **********************************************************************
-    multi_func --> Hello 
-    multi_func --> World 
-  virtual_func --> Hello 
-  virtual_func --> World 
-    multi_func --> 3
-  virtual_func --> ways of multi-functioning
-func (&hello ) --> Hello 
-func (&number) --> 3
-func (&string) --> ways of multi-functioning
+      real args           fx called
+(rectangle rectangle) --> fRR
+(rectangle   ellipse) --> fRE !!
+(rectangle   polygon) --> fRP
+(ellipse     ellipse) --> fEE
+(ellipse     polygon) --> fEP
+(polygon     polygon) --> fPP
+----------------------------------------
+(~SQUARE~    ellipse) --> fRE !!
 */
 ```
 
