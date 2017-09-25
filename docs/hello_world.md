@@ -100,9 +100,9 @@ void call_test_baseTyped(Func *func, const char *p, Base &base) {
 
 int main() try 
 {
-    vane::multi_func <Fx>   multi_func;
+    vane::multi_func <Fx>    multi_func;
     vane::virtual_func <void (const char*, Base&)>
-                           *virtual_func = &multi_func;
+                            *virtual_func = &multi_func;
 
     Fx  func;  //ordinary function object
 
@@ -174,9 +174,9 @@ void call_test_baseTyped(Fx *func, const char *p, Base *base) {
 
 int main() try 
 {
-    vane::multi_func <Fx>   multi_func;
+    vane::multi_func <Fx>    multi_func;
     vane::virtual_func <void (const char*, _virtual<Base>*)>
-                           *virtual_func = &multi_func;
+                            *virtual_func = &multi_func;
 
     Fx  func;  //ordinary function object
 
@@ -245,9 +245,9 @@ void call_test_uniformTyped(Func *func, const char *p, varg *varg) {
 
 int main() try 
 {
-    vane::multi_func <Fx>   multi_func;
+    vane::multi_func <Fx>    multi_func;
     vane::virtual_func <void (const char*, varg*)>
-                           *virtual_func = &multi_func;
+                            *virtual_func = &multi_func;
 
     Fx  func;  //ordinary function object
 
