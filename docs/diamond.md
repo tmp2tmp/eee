@@ -4,8 +4,8 @@
 &nbsp;
 
 Virtual and multiple inheritance are supported  
-but at the cost of ```dynamic_cast``` when multi-dispatching by-poly ()
-Dispatching by-varg has no such disadvantage of slowdown and is much faster than the other two.
+but at the cost of ```dynamic_cast``` when multi-dispatching `by-poly'. &nbsp; 
+Dispatching `by-varg' has no such disadvantage of slowdown and is much faster than the other two.
 &nbsp;  
 &nbsp;  
 
