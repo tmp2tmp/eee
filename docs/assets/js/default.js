@@ -44,7 +44,7 @@ window.onload=function(ev) {
 			console.log(x.localName,'-------------------------');
 		}
 		if( x.localName=='pre' ) {
-			x.style.height = getComputedStyle(x).height;
+			//x.style.height = getComputedStyle(x).height;
 			x.classList.add('collapse');
 			console.log(x.localName, x.style.hiehgt, x.classList);
 		}
@@ -53,20 +53,12 @@ window.onload=function(ev) {
 			console.log(x.localName,'-------------------------');
 		}
 	});
+
 	console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){
 		console.log(x.localName, x.style.height,  getComputedStyle(x).height,'---------------------------------');
 		if( x.localName=='pre' ) {
-			x.style.height = getComputedStyle(x).height;
-			x.classList.add('collapse');
-			console.log(x.localName, x.style.hiehgt, x.classList);
-		}
-		else if( x.localName=='div' ) {
-			x.classList.remove('highlight');
-			console.log(x.localName,'-------------------------');
-		}
-		if( x.localName=='pre' ) {
-			x.style.height = getComputedStyle(x).height;
+			//x.style.height = getComputedStyle(x).height;
 			x.classList.add('collapse');
 			console.log(x.localName, x.style.hiehgt, x.classList);
 		}
