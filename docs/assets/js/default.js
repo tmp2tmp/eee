@@ -40,6 +40,7 @@ window.onload=function(ev) {
 		}
 		else if( x.localName=='div' ) {
 			x.classList.remove('highlight');
+			console.log(x.localName,'-------------------------');
 		}
 	});
 }
