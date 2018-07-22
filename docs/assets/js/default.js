@@ -35,7 +35,7 @@ window.onload=function(ev) {
 	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){	//for M$ IE-11
 		console.log(x.localName, x.style.height,  getComputedStyle(x).height,'---------------------------------');
 		if( x.localName=='pre' ) {
-			x.style.height = getComputedStyle(x).height;
+			//x.style.height = getComputedStyle(x).height;
 			x.classList.add('collapse');
 			console.log(x.localName, x.style.hiehgt, x.classList);
 		}
