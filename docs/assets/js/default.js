@@ -36,7 +36,7 @@ window.onload=function(ev) {
 	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){ console.log(x.localName); });
 	console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){	//for M$ IE-11
-		console.log(x.localName,'//////////////////////////////////////');
+		console.log(x.localName,'///////////////////////////////////////');
 		console.log(x.localName, x.style.height,  getComputedStyle(x).height,'---------------------------------');
 		if( x.localName=='pre' ) {
 			//x.style.height = getComputedStyle(x).height;
