@@ -1,0 +1,118 @@
+	# Implementing virtual functions as function objects
+	# OOP featured
+	# OOP featured double virtual
+	# Double virtual
+	# Double virtual open multi-methods
+
+
+	# OOP Featured implementation of virtual functions
+	# Virtual functions are implemented as function objects: 
+	# OOP features can be taken advantage of:   polymorphism, inheritance
+	# Open methods as function objects
+	# Virtual functions as member functions
+
+	It may sound contradictory: Beacuse a member function is no more a open method, it sounds controdictory.
+
+	But it's not just as in all the ordianry function objects that overload function call operators
+	IMPLEMENT some functions that can be used in the context where real functions can be used.
+	Just member functions that implements non-member ordinary functions.
+
+  - OOP features can be taken advantage of on the virtual function objects:
+
+https://www.wikiwand.com/en/Predicate_dispatch
+=============================================================================================
+# Virtual functions as function objects
+&nbsp;  
+&nbsp;  
+&nbsp;
+#### open methods as function objects
+
+Vane implements open multi-methods as function objects.  
+
+Thanks to C++, unlike other languages, C++ allows overloading function call operators,
+and this feature alllows implementing non-member functions as member functions
+- i.e. member functions that have the interface of non-member funtions and can be used 
+	in the context where ordinay functions of the same signature can be used.
+
+Implementing multi-methods as function objects has advantages over implementing as global/module functions.
+- Virtual function objects are polymorphic:  
+  [can be replaced at runtime](replacing-virtual-functions.md) switching the whole set of specializations.
+- Function specializations can be confined and managed more conveniently
+  than of global/module functions which have only ```namespace``` as a confining measure.
+- OOP features can be taken advantage of: &nbsp; esp. polymorphism, inheritance...
+  - Instance specific data can be associated to each function object while global/module functions can have only common global/static data.
+  - Specialization function sets can be defined reusing existing code easily by inheritance.
+
+<!--
+  - Inheritance gives easy means for [forcing static dispatch](forcing_static_dispatch.md)
+     accessing individual implementatins 
+    or for [calling the base implementations](calling_base_implementations) of a virtual function.
+-->
+
+
+
+Actually, it's not a open method but a member function that implements an open method.
+
+
+&nbsp;  
+&nbsp;  
+&nbsp;
+#### open methods as member functions
+#### open functions as member functions
+&nbsp;  
+&nbsp;  
+&nbsp;
+#### Vane's open methods are polymorphic : i.e. they are virtual open methods
+#### Vane open virtual function is polymorphic
+	vane::virtual_func //named from virtual function
+	vane::multi_func   //named from says: multi-function
+	'open virtual function' is a proper noun of vane's equivalents to generally-said 'multimothod'.
+
+
+C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
+	selecting the set of functions
+Being that selecting an actual function to call at runtime based on the runtime type of one argument
+is virtual
+
+
+### Double virtual
+Being that the functions - whose calls are dispatched at runtime based on the dynamic type of single one of the arguments -
+  are virtual,
+it's consistent with it that the functions - whose calls are dispatched at runtime based on the dynamic types of two or more of the arguments -
+	are called virtual.
+So vane::multi\_func is double virtual.
+
+
+Being that the functions that are singly dispatched at runtime is virtual
+
+
+
+
+a function whose function to be actually called is selected at runtime based on the type of single one of the arguments
+
+
+
+disto call at runtime based on the runtime type of one argument
+
+
+C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
+
+
+----------------------------------------------------------------------------------------------------
+#### Double virtual
+a vane::multi\_func
+it behaves as a virtual function - dispatching on multiple arguments based on their runtime types.
+
+<!--
+C++ directly supports runtime dispatch on a single argument via C++ <code><b>virtual</b></code> functions.
+Being that the functions that are singly dispatched at runtime is virtual,
+it's consistent with it that the functions that are multi-dispathed at runtime is virtual.
+-->
+
+<br>: &nbsp; this gives the virtual function objects polymorphism of specialization sets -
+
+And a vane::multi_func itself - as a parameter passed as `this' pointer - is a virtual argument.
+<br>: &nbsp; this implies the virtual function objects themselves are polymorphic, of specialization sets -
+i.e.  a virtual function object of Vane [can be replaced at runtime](replacing_virtual_functions.md) switching the whole set of specializations.
+
+

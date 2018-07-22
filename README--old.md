@@ -26,38 +26,38 @@ Vane also includes meta-programming facilities that make meta-programming much e
 
 ### Introduction
 [Implementing multiple dispatch - basic syntax](https://tmp2tmp.github.io/eee/hello_world.html)  
-[Shape collision](collide.md)  
+[Shape collision](https://tmp2tmp.github.io/eee/collide.html)  
 &nbsp;  
 
 ### Features
 - Simple & easy syntax : &nbsp; No need to attach complicated distracting unwieldy gears to existing class code. There are no messy macro things.
-- [Function call resolutoin is supported](call_resolution.md) : &nbsp; 
+- [Function call resolutoin is supported](https://tmp2tmp.github.io/eee/call_resolution.html) : &nbsp; 
   Runtime function call resolutoin based on the inheritance hierarchies of the argument types is supported.
 - Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.  
   &nbsp; Three sorts of virtual parameters of Vane can also be freely mixed.
-- [Virtual & mutiple inheritance (of virtual argument types)](diamond.md) are supported.
-- [Covariant return types are supported.](covariant_return_types.md)
-- Virtual functions are [implemented as function `objects'](oop_featured.md).
+- [Virtual & mutiple inheritance (https://tmp2tmp.github.io/eee/of virtual argument types)](diamond.html) are supported.
+- [Covariant return types are supported.](https://tmp2tmp.github.io/eee/covariant_return_types.html)
+- Virtual functions are [implemented as function `objects'](https://tmp2tmp.github.io/eee/oop_featured.html).
 - Virtual function objects are polymorphic:  
-  [can be replaced at runtime](replacing_virtual_functions.md) switching the whole set of specializations.
+  [can be replaced at runtime](https://tmp2tmp.github.io/eee/replacing_virtual_functions.html) switching the whole set of specializations.
 
 &nbsp;  
 
 ### More Usages
 <!--
-- [utility &nbsp; for std::shared_ptr](make_shared.md)  
-- [std::shared_ptr &nbsp; utility](make_shared.md)  
-- [```make_shared utility```](make_shared.md)  
-- [using with &nbsp; std::shared_ptr](make_shared.md)  
+- [utility &nbsp; for std::shared_ptr](https://tmp2tmp.github.io/eee/make_shared.html)  
+- [std::shared_ptr &nbsp; utility](https://tmp2tmp.github.io/eee/make_shared.html)  
+- [```make_shared utility```](https://tmp2tmp.github.io/eee/make_shared.html)  
+- [using with &nbsp; std::shared_ptr](https://tmp2tmp.github.io/eee/make_shared.html)  
 - forcing static dispatch / calling base implementations
 -->
-- [runtime errors](runtime_errors.md)
-- [make_shared &nbsp;utility](make_shared.md)  
-- [vt-vars](vt-vars.md)  
+- [runtime errors](https://tmp2tmp.github.io/eee/runtime_errors.html)
+- [make_shared &nbsp;utility](https://tmp2tmp.github.io/eee/make_shared.html)  
+- [vt-vars](https://tmp2tmp.github.io/eee/vt-vars.html)  
 &nbsp;  
 
 
-### [Resources & Referrences](resources.md)
+### [Resources & Referrences](https://tmp2tmp.github.io/eee/resources.html)
 
 
 

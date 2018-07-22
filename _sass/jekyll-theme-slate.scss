@@ -277,7 +277,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-#forkme_banner {
+#forkme {
   display: block;
   position: absolute;
   top:0;
@@ -486,7 +486,7 @@ Small Device Styles
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*syntax highlight*/
-.highlight, .highlight * { font-family: Consolas !important}
+pre.highlight, pre.highlight * { font-family: Consolas !important}
 
 
 HEADER{padding-top:1ex!important; padding-bottom:0!important}
@@ -500,9 +500,9 @@ HEADER{padding-top:1ex!important; padding-bottom:0!important}
 #header_wrap .inner {padding-top: 0 !important}
 
 
-#forkme_banner {background-color: gray; padding-top:6px; padding-bottom:6px}
+#forkme {background-color: gray; padding-top:6px; padding-bottom:6px}
 /*
-#forkme_banner {display: none}
+#forkme {display: none}
 
 #home_link {color: #90c0d0; font-family:Trebuchet MS; font-weight:bold; float:left; margin-left: 1em}
 BODY.github_url #home_link {visibility:hidden !important}
@@ -528,8 +528,8 @@ body { background: #f2f2f2}
 .--highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border: 10px solid gray; width: 530px ! important; }
 .--highlight.collapse:hover {font-weight: bold}
 */
-.highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.25s; }
-.highlight:not(.collapse) { margin-bottom: 100px}
+pre.highlight { cursor: pointer; overflow-y:hidden; background:#f8f8f8; transition: height,0.1s, width, 0.25s; }
+pre.highlight:not(.collapse) { margin-bottom: 100px}
 /*
 .highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.2s; }
 .highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.3s; }
@@ -541,8 +541,9 @@ body { background: #f2f2f2}
 /*first line of .highlight*/
 .highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border:0; width: 530px ! important; }
 /*.highlight.collapse * {color:black; font-weight:bold}*/
-.highlight code > :first-child {color:black; font-weight:bold}
-.highlight:not(.collapse) code > :first-child {background: #f1f1f1}
+pre.highlight code > :first-child {color:black; font-weight:bold}
+pre.highlight:not(.collapse) code > :first-child {background: #f1f1f1}
+.highlight {background: inherit}
 
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
@@ -552,7 +553,7 @@ body { background: #f2f2f2}
 BODY.front_page, BODY.front_page #main_content_wrap {background:white}
 body:not(.front_page) { background: #f2f2f2}
 BODY.front_page #header_wrap {background-color: #f2f2f2 !important}
-BODY.front_page #header_wrap .inner :not(#forkme_banner) {display:none}
+BODY.front_page #header_wrap .inner :not(#forkme) {display:none}
 BODY.front_page #main_content_wrap {border-top:0 !important}
 */
 /*BODY.front_page: title stuff -----------------------------------------------------------*/
