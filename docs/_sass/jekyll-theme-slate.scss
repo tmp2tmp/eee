@@ -1,5 +1,5 @@
-@import "rouge-github";
 /*
+@import "rouge-github";
 */
 /*******************************************************************************
 MeyerWeb Reset
@@ -486,7 +486,7 @@ Small Device Styles
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*syntax highlight*/
-.highlight, .highlight * { font-family: Consolas !important}
+pre.highlight, pre.highlight * { font-family: Consolas !important}
 
 
 HEADER{padding-top:1ex!important; padding-bottom:0!important}
@@ -528,8 +528,8 @@ body { background: #f2f2f2}
 .--highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border: 10px solid gray; width: 530px ! important; }
 .--highlight.collapse:hover {font-weight: bold}
 */
-.highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.25s; }
-.highlight:not(.collapse) { margin-bottom: 100px}
+pre.highlight { cursor: pointer; overflow-y:hidden; background:#f8f8f8; transition: height,0.1s, width, 0.25s; }
+pre.highlight:not(.collapse) { margin-bottom: 100px}
 /*
 .highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.2s; }
 .highlight { cursor: pointer; overflow-y:hidden; transition: height,0.1s, width, 0.3s; }
@@ -541,8 +541,9 @@ body { background: #f2f2f2}
 /*first line of .highlight*/
 .highlight.collapse { padding: 0px; height: 26px ! important; overflow: hidden; border:0; width: 530px ! important; }
 /*.highlight.collapse * {color:black; font-weight:bold}*/
-.highlight code > :first-child {color:black; font-weight:bold}
-.highlight:not(.collapse) code > :first-child {background: #f1f1f1}
+pre.highlight code > :first-child {color:black; font-weight:bold}
+pre.highlight:not(.collapse) code > :first-child {background: #f1f1f1}
+.highlight {background: inherit}
 
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
