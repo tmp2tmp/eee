@@ -33,8 +33,12 @@ window.onload=function(ev) {
 //	Array.forEach(document.getElementsByClassName('highlight'),x=>{	//for firefox
 //	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), x=>{	//for M$ Edge
 
+//	Array.forEach(document.getElementsByClassName('highlight'),x=>{	//for firefox
+//	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), x=>{	//for M$ Edge
+
+
 	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){	//for M$ IE-11
-		console.log(x.localName);
+		console.log(x.localName, x.localName=='div', x.localName=='pre', x.localName==='div', x.localName==='pre');
 	});
 	console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){	//for M$ IE-11
@@ -45,8 +49,8 @@ window.onload=function(ev) {
 			console.log(x.localName, x.style.hiehgt, x.classList);
 		}
 		else if( x.localName=='div' ) {
-			x.classList.remove('highlight');
-			console.log(x.localName,'-------------------------');
+			//x.classList.remove('highlight');
+			console.log(x.localName, x.firstChild, '-------------------------');
 		}
 		if( x.localName=='pre' ) {
 			//x.style.height = getComputedStyle(x).height;
@@ -54,7 +58,7 @@ window.onload=function(ev) {
 			console.log(x.localName, x.style.hiehgt, x.classList);
 		}
 		else if( x.localName=='div' ) {
-			x.classList.remove('highlight');
+			//x.classList.remove('highlight');
 			console.log(x.localName,'-------------------------');
 		}
 	});
@@ -68,8 +72,8 @@ window.onload=function(ev) {
 			console.log(x.localName, x.style.hiehgt, x.classList);
 		}
 		else if( x.localName=='div' ) {
-			x.classList.remove('highlight');
-			console.log(x.localName,'-------------------------');
+			//x.classList.remove('highlight');
+			console.log(x.localName, x.firstChild, '-------------------------');
 		}
 	});
 }
