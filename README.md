@@ -35,7 +35,7 @@ Vane also includes meta-programming facilities that make meta-programming much e
   Runtime function call resolutoin based on the inheritance hierarchies of the argument types is supported.
 - Arbitrary number of virtual/non-virtual arguments can be arbitrarily mixed.  
   &nbsp; Three sorts of virtual parameters of Vane can also be freely mixed.
-- [Virtual & mutiple inheritance (https://tmp2tmp.github.io/eee/of virtual argument types)](diamond.html) are supported.
+- [Virtual & mutiple inheritance](https://tmp2tmp.github.io/eee/diamond.html)  virtual argument types are supported.
 - [Covariant return types are supported.](https://tmp2tmp.github.io/eee/covariant_return_types.html)
 - Virtual functions are [implemented as function `objects'](https://tmp2tmp.github.io/eee/oop_featured.html).
 - Virtual function objects are polymorphic:  
