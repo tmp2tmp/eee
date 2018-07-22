@@ -277,7 +277,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-#forkme_banner {
+#forkme {
   display: block;
   position: absolute;
   top:0;
@@ -500,9 +500,9 @@ HEADER{padding-top:1ex!important; padding-bottom:0!important}
 #header_wrap .inner {padding-top: 0 !important}
 
 
-#forkme_banner {background-color: gray; padding-top:6px; padding-bottom:6px}
+#forkme {background-color: gray; padding-top:6px; padding-bottom:6px}
 /*
-#forkme_banner {display: none}
+#forkme {display: none}
 
 #home_link {color: #90c0d0; font-family:Trebuchet MS; font-weight:bold; float:left; margin-left: 1em}
 BODY.github_url #home_link {visibility:hidden !important}
@@ -553,7 +553,7 @@ pre.highlight:not(.collapse) code > :first-child {background: #f1f1f1}
 BODY.front_page, BODY.front_page #main_content_wrap {background:white}
 body:not(.front_page) { background: #f2f2f2}
 BODY.front_page #header_wrap {background-color: #f2f2f2 !important}
-BODY.front_page #header_wrap .inner :not(#forkme_banner) {display:none}
+BODY.front_page #header_wrap .inner :not(#forkme) {display:none}
 BODY.front_page #main_content_wrap {border-top:0 !important}
 */
 /*BODY.front_page: title stuff -----------------------------------------------------------*/
