@@ -38,5 +38,8 @@ window.onload=function(ev) {
 			x.style.height = getComputedStyle(x).height;
 			x.classList.add('collapse');
 		}
+		else if( x.localName=='pre' ) {
+			x.classList.remove('highlight');
+		}
 	});
 }
