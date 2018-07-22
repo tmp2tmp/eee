@@ -32,10 +32,12 @@ window.__onload=function(ev) {
 window.onload=function(ev) {
 //	Array.forEach(document.getElementsByClassName('highlight'),x=>{	//for firefox
 //	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), x=>{	//for M$ Edge
+//	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){	//for M$ IE-11
 
-	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){ console.log(x.localName); });
-	console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){	//for M$ IE-11
+//	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){ console.log(x.localName); });
+//	console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+	Array.prototype.slice.call(document.getElementsByClassName('highlight')).forEach(function(x){
 		console.log(x.localName,'///////////////////////////////////////');
 		console.log(x.localName, x.style.height,  getComputedStyle(x).height,'---------------------------------');
 		if( x.localName=='pre' ) {
