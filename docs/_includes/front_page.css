@@ -3,7 +3,7 @@ BODY, BODY #main_content_wrap {background:white}
 /*
 #header_wrap .inner :not(#forkme) {display:none}
 */
-#forkme {padding:4px 45px 5px 11px!important; line-height:1.2em !important}
+#forkme {padding:4px 45px 5px 11px!important; }
 #main_content_wrap {border-top:0 !important}
 {% if false %} /*title stuff -----------------------------------------------------------*/ {% endif %}
 #main_content h1:first-of-type {font-size:6em; text-align:center}
