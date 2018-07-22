@@ -53,4 +53,8 @@ window.onload=function(ev) {
 			console.log(x.localName,'-------------------------');
 		}
 	});
+	console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+	Array.prototype.forEach.call(document.getElementsByClassName('highlight'), function(x){
+		console.log(x.localName);
+	});
 }
